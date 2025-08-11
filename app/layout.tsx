@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Cinzel, Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 
 const cinzel = Cinzel({
   weight: ['400', '500', '600'],
@@ -79,7 +81,11 @@ export default function RootLayout({
       <body
         className={`${cinzel.variable} ${montserrat.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
