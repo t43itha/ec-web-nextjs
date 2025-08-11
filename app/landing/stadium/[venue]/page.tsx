@@ -7,7 +7,7 @@ import { generateStadiumMetadata, getAllStadiums, stadiums } from '@/app/lib/lan
 import { notFound } from 'next/navigation';
 
 // Enable ISR (24h)
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 86400;
 
 export async function generateStaticParams() {
   return getAllStadiums();
@@ -16,18 +16,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { venue: string };
+  params: Promise<{ venue: string }>;
 }): Promise<Metadata | null> {
-  const metadata = generateStadiumMetadata(params.venue);
+  const { venue } = await params;
+  const metadata = generateStadiumMetadata(venue);
   return metadata || {};
 }
 
 export default async function StadiumLandingPage({
   params,
 }: {
-  params: { venue: string };
+  params: Promise<{ venue: string }>;
 }) {
-  const { venue } = params;
+  const { venue } = await params;
   const stadium = stadiums[venue as keyof typeof stadiums];
 
   if (!stadium) {

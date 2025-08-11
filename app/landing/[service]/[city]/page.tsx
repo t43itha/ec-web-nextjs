@@ -12,7 +12,7 @@ import {
 } from '@/app/lib/landing-data';
 
 // Enable ISR for this route (24 hours)
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 86400;
 
 // Generate static params for all service/city combinations
 export async function generateStaticParams() {
@@ -23,9 +23,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { service: string; city: string };
+  params: Promise<{ service: string; city: string }>;
 }): Promise<Metadata | null> {
-  const { service, city } = params;
+  const { service, city } = await params;
   const metadata = generateLandingPageMetadata(service, city);
   return metadata || {};
 }
@@ -33,9 +33,9 @@ export async function generateMetadata({
 export default async function ServiceCityLandingPage({
   params,
 }: {
-  params: { service: string; city: string };
+  params: Promise<{ service: string; city: string }>;
 }) {
-  const { service, city } = params;
+  const { service, city } = await params;
   const serviceData = services[service as keyof typeof services];
   const cityData = cities[city as keyof typeof cities];
 
