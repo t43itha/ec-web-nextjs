@@ -199,21 +199,21 @@ Message: ${formData.message}`;
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-white/80 font-montserrat mb-2">Your Name *</nlabel>
+                    <label htmlFor="name" className="block text-white/80 font-montserrat mb-2">Your Name *</label>
                     <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white font-montserrat focus:outline-none focus:border-gold-400 transition-colors" placeholder="John Doe" />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white/80 font-montserrat mb-2">Email Address *</nlabel>
+                    <label htmlFor="email" className="block text-white/80 font-montserrat mb-2">Email Address *</label>
                     <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white font-montserrat focus:outline-none focus:border-gold-400 transition-colors" placeholder="john@example.com" />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-white/80 font-montserrat mb-2">Phone Number</nlabel>
+                    <label htmlFor="phone" className="block text-white/80 font-montserrat mb-2">Phone Number</label>
                     <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white font-montserrat focus:outline-none focus:border-gold-400 transition-colors" placeholder="+44 7340 801 274" />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-white/80 font-montserrat mb-2">Subject *</nlabel>
+                    <label htmlFor="subject" className="block text-white/80 font-montserrat mb-2">Subject *</label>
                     <select id="subject" name="subject" value={formData.subject} onChange={handleInputChange} required className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white font-montserrat focus:outline-none focus:border-gold-400 transition-colors">
                       <option value="">Select a subject</option>
                       <option value="booking">New Booking</option>
@@ -225,7 +225,7 @@ Message: ${formData.message}`;
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-white/80 font-montserrat mb-2">Your Message *</nlabel>
+                  <label htmlFor="message" className="block text-white/80 font-montserrat mb-2">Your Message *</label>
                   <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-700 rounded-lg text-white font-montserrat focus:outline-none focus:border-gold-400 transition-colors resize-none" placeholder="Tell us about your transportation needs..." />
                 </div>
                 {submitStatus === 'success' && (
