@@ -33,25 +33,20 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-cinzel leading-tight mb-8">
-              Arrive Relaxed,<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
-                Confident,
-              </span><br />
-              and Ready to Conquer
+            London Chauffeur & Airport Transfers
             </h1>
 
             {/* Subheading */}
             <p className="text-xl md:text-xl lg:text-xl text-white/90 font-montserrat font-light max-w-3xl mx-auto leading-relaxed mb-24">
-              You focus on your day—we handle the rest.<br />
-              Enjoy comfort, luxury and dependable service tailored for you.
+              Arrive Relaxed, Confident and Ready to Conquer.<br />           
             </p>
 
             {/* Dual CTA Section */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
-              {/* Primary CTA - Book Online */}
+              {/* Primary CTA - Book Now */}
               <div className="order-1 lg:order-1">
                 <Link href="/contact#booking" className="group inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 shadow-2xl items-center space-x-3">
-                  <span>Book Online</span>
+                  <span>Book Now</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -83,7 +78,7 @@ const Hero = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/70">
             <div className="flex items-center space-x-2">
               <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
-              <span className="font-montserrat text-xs sm:text-sm">Fully Licensed & Insured</span>
+              <span className="font-montserrat text-xs sm:text-sm">TfL Licensed (0108860101)</span>
             </div>
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
@@ -91,7 +86,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
-              <span className="font-montserrat text-xs sm:text-sm">5-Star Service</span>
+              <span className="font-montserrat text-xs sm:text-sm">5-Star Rated</span>
             </div>
           </div>
         </div>
