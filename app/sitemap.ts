@@ -14,11 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const moneyPages: MetadataRoute.Sitemap = [
     'chauffeur-london',
-    'heathrow-chauffeur',
-    'gatwick-chauffeur',
-    'london-city-airport-chauffeur',
-    'stansted-chauffeur',
-    'luton-chauffeur',
+    'landing/airport/heathrow',
+    'landing/airport/gatwick',
+    'landing/airport/london-city-airport',
+    'landing/airport/stansted',
+    'landing/airport/luton',
   ].map((slug) => ({
     url: `${base}/${slug}`,
     lastModified: now,

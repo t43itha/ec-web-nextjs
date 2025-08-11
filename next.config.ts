@@ -48,26 +48,52 @@ const nextConfig: NextConfig = {
   },
 
   // Redirects for old routes (temporarily disabled)
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/home',
-  //       destination: '/',
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: '/service',
-  //       destination: '/services',
-  //       permanent: true,
-  //     },
-  //     // Redirect old landing pages to new structure
-  //     {
-  //       source: '/landing-pages/:path*',
-  //       destination: '/landing/:path*',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/service',
+        destination: '/services',
+        permanent: true,
+      },
+      // Legacy landing paths to new equivalents
+      {
+        source: '/landing-pages/airport-transfers-heathrow',
+        destination: '/landing/airport/heathrow',
+        permanent: true,
+      },
+      {
+        source: '/landing-pages/airport-transfers-gatwick',
+        destination: '/landing/airport/gatwick',
+        permanent: true,
+      },
+      {
+        source: '/landing-pages/airport-london',
+        destination: '/landing/airport/london-city-airport',
+        permanent: true,
+      },
+      // Old root airport pages to new landing paths
+      { source: '/heathrow-chauffeur', destination: '/landing/airport/heathrow', permanent: true },
+      { source: '/gatwick-chauffeur', destination: '/landing/airport/gatwick', permanent: true },
+      { source: '/london-city-airport-chauffeur', destination: '/landing/airport/london-city-airport', permanent: true },
+      { source: '/stansted-chauffeur', destination: '/landing/airport/stansted', permanent: true },
+      { source: '/luton-chauffeur', destination: '/landing/airport/luton', permanent: true },
+      {
+        source: '/landing-pages/stamford-bridge',
+        destination: '/landing/stadium/stamford-bridge',
+        permanent: true,
+      },
+      {
+        source: '/landing-pages/tottenham-stadium',
+        destination: '/landing/stadium/tottenham-stadium',
+        permanent: true,
+      },
+    ];
+  },
 
   // Environment variables (for build time)
   env: {

@@ -1,3 +1,8 @@
-export { revalidate } from '../../landing/stadium/[venue]/page';
-export { default } from '../../landing/stadium/[venue]/page';
+import { redirect } from 'next/navigation';
+
+export const revalidate = 86400;
+
+export default function Page() {
+  redirect('/landing/stadium/stamford-bridge');
+}
 
