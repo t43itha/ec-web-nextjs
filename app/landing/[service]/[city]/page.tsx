@@ -20,19 +20,21 @@ export async function generateStaticParams() {
 export async function generateMetadata({ 
   params 
 }: { 
-  params: { service: string; city: string } 
+  params: Promise<{ service: string; city: string }> 
 }): Promise<Metadata | null> {
-  const metadata = generateLandingPageMetadata(params.service, params.city);
+  const { service, city } = await params;
+  const metadata = generateLandingPageMetadata(service, city);
   return metadata || {};
 }
 
-export default function ServiceCityLandingPage({ 
+export default async function ServiceCityLandingPage({ 
   params 
 }: { 
-  params: { service: string; city: string } 
+  params: Promise<{ service: string; city: string }> 
 }) {
-  const serviceData = services[params.service as keyof typeof services];
-  const cityData = cities[params.city as keyof typeof cities];
+  const { service, city } = await params;
+  const serviceData = services[service as keyof typeof services];
+  const cityData = cities[city as keyof typeof cities];
 
   // 404 if invalid service or city
   if (!serviceData || !cityData) {

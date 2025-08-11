@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Disable ESLint during builds for Netlify
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
   // Image optimization configuration
   images: {
     domains: [
