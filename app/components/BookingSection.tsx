@@ -1,4 +1,5 @@
 import React from 'react';
+import Script from 'next/script';
 import { Calendar, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -13,6 +14,24 @@ const BookingSection = () => {
           <p className="text-xl text-white/80 font-montserrat">
             Experience luxury transportation tailored to your needs
           </p>
+        </div>
+
+        {/* Embedded Online Booking Form */}
+        <div className="mb-16 bg-zinc-900/50 backdrop-blur-sm rounded-2xl border border-gold-500/20 overflow-hidden">
+          <div className="px-4 sm:px-6 lg:px-8 py-4 border-b border-gold-500/10">
+            <h3 className="text-2xl font-bold text-white font-cinzel">Book Online</h3>
+            <p className="text-white/70 font-montserrat text-sm mt-1">Secure, instant booking via our dispatch system</p>
+          </div>
+          <div className="p-0">
+            <iframe
+              id="booking-form-iframe"
+              src="https://dispatch.deversoftware.com/Dispatch/Booking/?cRegNo=oyHr8V4xISzpZ40&coID=1&embed=1"
+              frameBorder={0}
+              scrolling="yes"
+              width="100%"
+              height="700"
+            />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -120,6 +139,11 @@ const BookingSection = () => {
           </div>
         </div>
       </div>
+      {/* External script for embedded booking form */}
+      <Script
+        src="https://dispatch.deversoftware.com/Dispatch/Booking//util.js"
+        strategy="afterInteractive"
+      />
     </section>
   );
 };
