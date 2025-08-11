@@ -2,6 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import LDJson from '@/app/components/LDJson';
+import StickyCTA from '@/app/components/StickyCTA';
 
 export const revalidate = 86400;
 
@@ -13,19 +15,7 @@ export const metadata: Metadata = {
 export default function ChauffeurLondonPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Chauffeur Service London',
-            areaServed: 'London, Greater London',
-            provider: { '@type': 'LocalBusiness', name: 'Eugene Chauffeurs' },
-          }),
-        }}
-      />
+      <LDJson json={{ '@context': 'https://schema.org', '@type': 'Service', name: 'Chauffeur Service London', areaServed: 'London, Greater London', provider: { '@type': 'LocalBusiness', name: 'Eugene Chauffeurs' } }} />
       <section className="relative bg-gradient-to-br from-black via-zinc-900 to-black pt-32 pb-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-gold-600/5" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -52,6 +42,7 @@ export default function ChauffeurLondonPage() {
           </div>
         </div>
       </section>
+      <StickyCTA label="Get a Quote" />
     </>
   );
 }
