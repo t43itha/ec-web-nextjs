@@ -33,7 +33,7 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-cinzel leading-tight mb-8">
-            London Chauffeur & Airport Transfers
+            London Chauffeur <br /> & Airport Transfers
             </h1>
 
             {/* Subheading */}

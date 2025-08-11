@@ -127,7 +127,7 @@ const BookingSection = () => {
               Book your journey now and arrive in style
             </p>
             <Link
-              href="/contact"
+              href="#booking"
               className="inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 shadow-2xl items-center space-x-3"
             >
               <span>Book Now</span>
