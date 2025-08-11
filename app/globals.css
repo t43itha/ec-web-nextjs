@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+  
+  body {
+    @apply bg-black text-white antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cinzel;
+  }
+  
+  p, span, div, li, a {
+    @apply font-montserrat;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-luxury-gradient {
+    @apply bg-gradient-to-br from-zinc-900 to-black;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent;
+  }
+  
+  .card-luxury {
+    @apply bg-zinc-900/50 backdrop-blur-sm border border-gold-500/20 rounded-lg;
+  }
+  
+  .btn-luxury {
+    @apply bg-gradient-to-r from-gold-500 to-gold-600 text-black font-semibold py-3 px-8 rounded-lg 
+           hover:from-gold-400 hover:to-gold-500 transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
