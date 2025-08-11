@@ -47,27 +47,27 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Redirects for old routes
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/service',
-        destination: '/services',
-        permanent: true,
-      },
-      // Redirect old landing pages to new structure
-      {
-        source: '/landing-pages/:path*',
-        destination: '/landing/:path*',
-        permanent: true,
-      },
-    ];
-  },
+  // Redirects for old routes (temporarily disabled)
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/home',
+  //       destination: '/',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/service',
+  //       destination: '/services',
+  //       permanent: true,
+  //     },
+  //     // Redirect old landing pages to new structure
+  //     {
+  //       source: '/landing-pages/:path*',
+  //       destination: '/landing/:path*',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 
   // Environment variables (for build time)
   env: {
