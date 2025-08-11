@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-6">
+            <div className="space-y-6">
             <div className="group">
               <Link href="/">
                 <Image
@@ -25,6 +25,12 @@ const Footer = () => {
               Premium luxury chauffeur services for discerning professionals. 
               Experience comfort, reliability, and discretion tailored to your needs.
             </p>
+            <div className="text-white/80 font-montserrat text-sm space-y-1">
+              <p className="text-white font-semibold">Eugene Chauffeurs Ltd</p>
+              <p>Registered in England & Wales</p>
+              <p>TfL Operator Licence: 0108860101</p>
+              <p>Fully insured • All major cards accepted</p>
+            </div>
             <div className="flex space-x-4">
               <a href="https://wa.me/447340801274" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-zinc-800 rounded-lg flex items-center justify-center hover:bg-gold-400 hover:text-black transition-all duration-200 cursor-pointer">
                 <MessageCircle className="w-5 h-5" />
@@ -42,6 +48,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold font-cinzel mb-6">Services</h4>
             <ul className="space-y-3 font-montserrat">
+              <li><Link href="/chauffeur-london" className="text-white/80 hover:text-gold-400 transition-colors">Chauffeur London</Link></li>
+              <li><Link href="/heathrow-chauffeur" className="text-white/80 hover:text-gold-400 transition-colors">Heathrow Chauffeur</Link></li>
+              <li><Link href="/gatwick-chauffeur" className="text-white/80 hover:text-gold-400 transition-colors">Gatwick Chauffeur</Link></li>
+              <li><Link href="/london-city-airport-chauffeur" className="text-white/80 hover:text-gold-400 transition-colors">London City Chauffeur</Link></li>
+              <li><Link href="/stansted-chauffeur" className="text-white/80 hover:text-gold-400 transition-colors">Stansted Chauffeur</Link></li>
+              <li><Link href="/luton-chauffeur" className="text-white/80 hover:text-gold-400 transition-colors">Luton Chauffeur</Link></li>
               <li><Link href="/services#airport" className="text-white/80 hover:text-gold-400 transition-colors">Airport Transfers</Link></li>
               <li><Link href="/services#corporate" className="text-white/80 hover:text-gold-400 transition-colors">Corporate Travel</Link></li>
               <li><Link href="/services#events" className="text-white/80 hover:text-gold-400 transition-colors">Event Transportation</Link></li>

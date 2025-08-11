@@ -22,6 +22,7 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Airports', href: '/heathrow-chauffeur' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
@@ -32,6 +33,16 @@ const Header = () => {
 
   return (
     <>
+      {/* Mobile sticky actions */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden">
+        <div className="mx-auto max-w-7xl px-4 pb-4">
+          <div className="grid grid-cols-3 gap-3">
+            <a href="tel:+447340801274" className="text-center bg-zinc-900/90 border border-zinc-700/50 text-white py-3 rounded-lg font-montserrat text-sm">Call</a>
+            <a href="https://wa.me/447340801274" target="_blank" rel="noopener noreferrer" className="text-center bg-green-600 text-white py-3 rounded-lg font-montserrat text-sm">WhatsApp</a>
+            <Link href="/contact#booking" className="text-center bg-gradient-to-r from-gold-400 to-gold-600 text-black py-3 rounded-lg font-montserrat text-sm font-semibold">Get a Quote</Link>
+          </div>
+        </div>
+      </div>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-black/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'
       }`}>

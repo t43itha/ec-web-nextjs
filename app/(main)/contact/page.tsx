@@ -75,6 +75,38 @@ Message: ${formData.message}`;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Eugene Chauffeurs',
+            url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://ec-web-nextjs.netlify.app').replace(/\/$/, ''),
+            telephone: '+44 7340 801 274',
+            email: 'bookings@eugenechauffeurs.com',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'London',
+              addressRegion: 'Greater London',
+              addressCountry: 'GB',
+            },
+            areaServed: 'London and Greater London',
+            openingHours: 'Mo-Su 00:00-23:59',
+            hasCredential: {
+              '@type': 'EducationalOccupationalCredential',
+              credentialCategory: 'TfL Operator Licence',
+              name: 'TfL Operator Licence 0108860101',
+              identifier: '0108860101',
+            },
+            sameAs: [
+              'https://www.facebook.com/',
+              'https://www.instagram.com/',
+            ],
+          }),
+        }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-black via-zinc-900 to-black pt-32 pb-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-gold-600/5"></div>
@@ -359,3 +391,4 @@ Message: ${formData.message}`;
 };
 
 export default ContactPage;
+export const revalidate = 86400;

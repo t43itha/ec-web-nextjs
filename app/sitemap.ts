@@ -2,51 +2,43 @@ import { MetadataRoute } from 'next';
 import { getAllServiceCityCombinations, getAllStadiums } from '@/app/lib/landing-data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://eugenechauffeurs.com';
-  
-  // Main pages
-  const mainPages = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
+  const base = (process.env.NEXT_PUBLIC_SITE_URL || 'https://ec-web-nextjs.netlify.app').replace(/\/$/, '');
+  const now = new Date();
+
+  const mainPages: MetadataRoute.Sitemap = [
+    { url: `${base}`, lastModified: now, changeFrequency: 'weekly', priority: 1 },
+    { url: `${base}/services`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
   ];
 
-  // Generate landing page URLs for all service/city combinations
-  const landingPages = getAllServiceCityCombinations().map(({ service, city }) => ({
-    url: `${baseUrl}/landing/${service}/${city}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+  const moneyPages: MetadataRoute.Sitemap = [
+    'chauffeur-london',
+    'heathrow-chauffeur',
+    'gatwick-chauffeur',
+    'london-city-airport-chauffeur',
+    'stansted-chauffeur',
+    'luton-chauffeur',
+  ].map((slug) => ({
+    url: `${base}/${slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
+
+  const landingPages: MetadataRoute.Sitemap = getAllServiceCityCombinations().map(({ service, city }) => ({
+    url: `${base}/landing/${service}/${city}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
     priority: 0.7,
   }));
 
-  // Generate stadium page URLs
-  const stadiumPages = getAllStadiums().map(({ venue }) => ({
-    url: `${baseUrl}/landing/stadium/${venue}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+  const stadiumPages: MetadataRoute.Sitemap = getAllStadiums().map(({ venue }) => ({
+    url: `${base}/landing/stadium/${venue}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
     priority: 0.7,
   }));
 
-  return [...mainPages, ...landingPages, ...stadiumPages];
+  return [...mainPages, ...moneyPages, ...landingPages, ...stadiumPages];
 }
