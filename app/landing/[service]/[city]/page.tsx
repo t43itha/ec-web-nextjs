@@ -4,12 +4,15 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
-import { 
-  cities, 
-  services, 
-  getAllServiceCityCombinations, 
-  generateLandingPageMetadata 
+import {
+  cities,
+  services,
+  getAllServiceCityCombinations,
+  generateLandingPageMetadata,
 } from '@/app/lib/landing-data';
+
+// Enable ISR for this route (24 hours)
+export const revalidate = 60 * 60 * 24;
 
 // Generate static params for all service/city combinations
 export async function generateStaticParams() {
@@ -17,22 +20,22 @@ export async function generateStaticParams() {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: Promise<{ service: string; city: string }> 
+export async function generateMetadata({
+  params,
+}: {
+  params: { service: string; city: string };
 }): Promise<Metadata | null> {
-  const { service, city } = await params;
+  const { service, city } = params;
   const metadata = generateLandingPageMetadata(service, city);
   return metadata || {};
 }
 
-export default async function ServiceCityLandingPage({ 
-  params 
-}: { 
-  params: Promise<{ service: string; city: string }> 
+export default async function ServiceCityLandingPage({
+  params,
+}: {
+  params: { service: string; city: string };
 }) {
-  const { service, city } = await params;
+  const { service, city } = params;
   const serviceData = services[service as keyof typeof services];
   const cityData = cities[city as keyof typeof cities];
 

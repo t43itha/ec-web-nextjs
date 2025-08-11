@@ -6,10 +6,3 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-# Force redirect handling to prevent loops
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
