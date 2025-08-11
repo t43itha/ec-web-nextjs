@@ -66,4 +66,17 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+  
+  .animate-slide-left-right {
+    animation: slideLeftRight 4s ease-in-out infinite;
+  }
+}
+
+@keyframes slideLeftRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
 }
