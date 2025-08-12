@@ -39,7 +39,7 @@ const Header = () => {
           <div className="grid grid-cols-3 gap-3">
             <a href="tel:+447340801274" className="text-center bg-zinc-900/90 border border-zinc-700/50 text-white py-3 rounded-lg font-montserrat text-sm">Call</a>
             <a href="https://wa.me/447340801274" target="_blank" rel="noopener noreferrer" className="text-center bg-green-600 text-white py-3 rounded-lg font-montserrat text-sm">WhatsApp</a>
-            <Link href="/contact#booking" className="text-center bg-gradient-to-r from-gold-400 to-gold-600 text-black py-3 rounded-lg font-montserrat text-sm font-semibold">Get a Quote</Link>
+            <Link href="#booking" className="text-center bg-gradient-to-r from-gold-400 to-gold-600 text-black py-3 rounded-lg font-montserrat text-sm font-semibold">Get a Quote</Link>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@ const Header = () => {
             <div className="flex items-center space-x-4">
               {/* Book Now Button - Always visible */}
               <Link 
-                href="/contact#booking"
+                href="#booking"
                 className="bg-gradient-to-r from-gold-400 to-gold-600 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-montserrat font-semibold text-sm sm:text-base hover:from-gold-500 hover:to-gold-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
               >
                 Book Now
