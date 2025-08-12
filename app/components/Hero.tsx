@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, Shield, Clock, Star, Phone } from 'lucide-react';
+import { ArrowRight, Shield, Clock, Star, Phone, Building2 } from 'lucide-react';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
             {/* Premium Service Badge - Hidden on mobile, visible on sm and up */}
             <div className="hidden sm:inline-flex items-center justify-center space-x-2 bg-gold-400/10 border border-gold-400/20 rounded-full px-6 py-2 backdrop-blur-sm mb-6 md:mb-8">
               <Star className="w-4 h-4 text-gold-400 flex-shrink-0" />
-              <span className="text-gold-400 font-montserrat font-medium text-sm">Premium Chauffeur Service</span>
+              <span className="text-gold-400 font-montserrat font-medium text-sm">Premium Service</span>
             </div>
 
             {/* Main Heading */}
@@ -53,13 +53,13 @@ const Hero = () => {
 
               {/* Secondary CTA - Call Us Now */}
               <div className="order-2 lg:order-2">
-                <a href="tel:+447340801274" className="group flex items-center space-x-3 hover:scale-105 transition-all duration-300">
+                <a href="tel:+447340801274" className="group flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center group-hover:bg-white/20 group-hover:border-gold-400/50 transition-all duration-300">
                       <Phone className="w-6 h-6 text-white group-hover:text-gold-400 transition-colors" />
                     </div>
                     {/* Pulse ring effect */}
-                    <div className="absolute inset-0 w-14 h-14 rounded-full border-2 border-white/30 animate-ping group-hover:border-gold-400/50"></div>
+                    <div className="absolute inset-0 w-14 h-14 rounded-full border-2 border-white/30 group-hover:border-gold-400/50"></div>
                   </div>
                   <div className="text-left">
                     <p className="text-white/80 font-montserrat text-xs uppercase tracking-wider">Call Us Now</p>
@@ -87,6 +87,10 @@ const Hero = () => {
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
               <span className="font-montserrat text-xs sm:text-sm">5-Star Rated</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
+              <span className="font-montserrat text-xs sm:text-sm">Corporate Accounts</span>
             </div>
           </div>
         </div>
