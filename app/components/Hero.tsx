@@ -7,23 +7,27 @@ import { trackPhoneCall, trackWhatsApp } from '@/app/lib/analytics';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[100svh] md:min-h-screen flex flex-col justify-between md:justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/ec hero-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"></div>
+        {/* Mobile-optimized video container */}
+        <div className="relative w-full h-full md:static">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover object-top md:object-center"
+            style={{ objectPosition: '50% 30%' }}
+          >
+            <source src="/ec hero-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/85 md:from-black/80 md:via-black/60 md:to-black/80"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 flex items-center justify-center">
+      <div className="relative z-10 flex-1 flex items-center justify-center pt-20 md:pt-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-6 animate-fade-in">
             {/* Premium Service Badge - Hidden on mobile, visible on sm and up */}
@@ -32,17 +36,17 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-cinzel leading-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-cinzel leading-tight mb-4 md:mb-8">
             London Chauffeur <br /> & Airport Transfers
             </h1>
 
             {/* Subheading */}
-            <p className="text-xl md:text-xl lg:text-xl text-white/90 font-montserrat font-light max-w-3xl mx-auto leading-relaxed mb-24">
+            <p className="text-lg md:text-xl lg:text-xl text-white/90 font-montserrat font-light max-w-3xl mx-auto leading-relaxed mb-8 md:mb-24">
               Arrive Relaxed, Confident and Ready to Conquer.<br />           
             </p>
 
             {/* Dual CTA Section */}
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-12">
               {/* Primary CTA - Book Now */}
               <div className="order-1 lg:order-1">
                 <Link href="#booking" className="group inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 shadow-2xl items-center space-x-3">
@@ -77,9 +81,9 @@ const Hero = () => {
       </div>
 
       {/* Trust Indicators - Anchored at Bottom */}
-      <div className="relative z-10 pb-8 sm:pb-12">
+      <div className="relative z-10 pb-20 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/70">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 text-white/70">
             <div className="flex items-center space-x-2">
               <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 flex-shrink-0" />
               <span className="font-montserrat text-xs sm:text-sm">TfL Licensed (0108860101)</span>
