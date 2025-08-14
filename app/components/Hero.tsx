@@ -49,9 +49,8 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-6 lg:gap-12">
               {/* Primary CTA - Book Now */}
               <div className="order-1 lg:order-1">
-                <Link href="#booking" className="group inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 shadow-2xl items-center space-x-3">
+                <Link href="#booking" className="group inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105 shadow-2xl items-center justify-center">
                   <span>Book Now</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
