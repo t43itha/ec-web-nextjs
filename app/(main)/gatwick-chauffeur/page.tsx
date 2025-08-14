@@ -2,7 +2,6 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { CheckCircle } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
-import StickyCTA from '@/app/components/StickyCTA';
 
 export const revalidate = 86400;
 
@@ -27,7 +26,6 @@ export default function GatwickChauffeurPage() {
         </div>
       </section>
       <LDJson json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: 'Gatwick Chauffeur Service', provider: { '@type': 'LocalBusiness', name: 'Eugene Chauffeurs' }, areaServed: 'Gatwick' }} />
-      <StickyCTA label="Get a Gatwick Quote" />
     </>
   );
 }

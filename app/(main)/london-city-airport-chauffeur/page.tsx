@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import LDJson from '@/app/components/LDJson';
-import StickyCTA from '@/app/components/StickyCTA';
 
 export const revalidate = 86400;
 
@@ -20,7 +19,6 @@ export default function LCYChauffeurPage() {
         </div>
       </section>
       <LDJson json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: 'London City Airport Chauffeur Service', provider: { '@type': 'LocalBusiness', name: 'Eugene Chauffeurs' }, areaServed: 'London City Airport' }} />
-      <StickyCTA label="Get an LCY Quote" />
     </>
   );
 }

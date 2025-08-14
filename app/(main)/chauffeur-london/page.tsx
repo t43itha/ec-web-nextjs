@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
-import StickyCTA from '@/app/components/StickyCTA';
 
 export const revalidate = 86400;
 
@@ -42,7 +41,6 @@ export default function ChauffeurLondonPage() {
           </div>
         </div>
       </section>
-      <StickyCTA label="Get a Quote" />
     </>
   );
 }
