@@ -6,8 +6,13 @@
       "Bash(rm:*)",
       "Bash(yarn install)",
       "Bash(npm cache clean:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\Users\\tabit\\.claude"
+    ]
   }
 }
