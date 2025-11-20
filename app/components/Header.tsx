@@ -22,7 +22,6 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Airports', href: '/landing/airport/heathrow' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { CheckCircle, Star, Wifi, Coffee } from 'lucide-react';
+import { CheckCircle, Mountain, Wifi, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
@@ -10,34 +10,34 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes S-Class Chauffeur London | Eugene Chauffeurs',
-  description: 'Hire a Mercedes-Benz S-Class with professional chauffeur in London. The ultimate in luxury, comfort, and style for business and leisure.',
+  title: 'Range Rover Chauffeur Hire London | Eugene Chauffeurs',
+  description: 'Hire a Range Rover Autobiography with professional chauffeur in London. Commanding presence, luxury interior, and 4x4 capability.',
 };
 
-export default function SClassPage() {
+export default function RangeRoverPage() {
   const features = [
+    { icon: <Mountain className="w-5 h-5" />, text: "Commanding View" },
+    { icon: <Shield className="w-5 h-5" />, text: "Enhanced Privacy" },
     { icon: <Wifi className="w-5 h-5" />, text: "On-board Wi-Fi" },
-    { icon: <Coffee className="w-5 h-5" />, text: "Bottled Water" },
-    { icon: <Star className="w-5 h-5" />, text: "Nappa Leather Seats" },
-    { icon: <CheckCircle className="w-5 h-5" />, text: "Rear Climate Control" },
+    { icon: <CheckCircle className="w-5 h-5" />, text: "Panoramic Roof" },
   ];
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Mercedes-Benz S-Class Chauffeur Hire",
-    "description": "Luxury chauffeur-driven Mercedes-Benz S-Class for business meetings, airport transfers, and special events in London.",
+    "name": "Range Rover Chauffeur Hire",
+    "description": "Luxury chauffeur-driven Range Rover Autobiography for business, events, and airport transfers in London.",
     "brand": {
       "@type": "Brand",
-      "name": "Mercedes-Benz"
+      "name": "Land Rover"
     },
     "offers": {
       "@type": "Offer",
-      "price": HOURLY_RATES.s_class,
+      "price": HOURLY_RATES.range_rover,
       "priceCurrency": "GBP",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.s_class,
+        "price": HOURLY_RATES.range_rover,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
       },
@@ -56,13 +56,13 @@ export default function SClassPage() {
         
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="max-w-4xl">
-            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">The Flagship</p>
+            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Luxury SUV</p>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-italiana text-white leading-[0.9] mb-8">
-              Mercedes <br />
-              <span className="text-white/30">S-Class.</span>
+              Range <br />
+              <span className="text-white/30">Rover.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The definitive luxury saloon. Unrivaled comfort, advanced technology, and a presence that commands respect.
+              The pinnacle of refined capability. Arrive in style with the commanding presence of the Range Rover Autobiography.
             </p>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function SClassPage() {
         <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl font-italiana text-white">First Class Travel</h2>
+              <h2 className="text-4xl font-italiana text-white">Commanding Presence</h2>
               <p className="text-white/70 font-manrope font-light text-lg leading-relaxed">
-                The Mercedes-Benz S-Class is the benchmark for luxury travel. Whether you are heading to a crucial board meeting or a red-carpet event, the S-Class delivers a serene, comfortable, and stylish journey.
+                The Range Rover offers an elevated perspective on the city. With its iconic design, luxurious interior, and smooth ride, it is the perfect choice for those who demand the best.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {features.map((f, i) => (
@@ -91,12 +91,12 @@ export default function SClassPage() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Hourly Rate</p>
-                    <p className="text-3xl font-italiana text-gold-400">£{HOURLY_RATES.s_class}</p>
+                    <p className="text-3xl font-italiana text-gold-400">£{HOURLY_RATES.range_rover}</p>
                     <p className="text-xs text-white/40 mt-1">Min. {HOURLY_MIN_HOURS} hours</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Day Rate ({DAY_RATE_HOURS}h)</p>
-                    <p className="text-3xl font-italiana text-gold-400">£{DAY_RATES.s_class}</p>
+                    <p className="text-3xl font-italiana text-gold-400">£{DAY_RATES.range_rover}</p>
                   </div>
                 </div>
               </div>
@@ -104,9 +104,9 @@ export default function SClassPage() {
 
             <div className="relative h-[500px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
-                {/* Placeholder for S-Class Image - using generic for now */}
+                {/* Placeholder for Range Rover Image */}
                 <div className="absolute inset-0 flex items-center justify-center text-white/20 font-italiana text-4xl">
-                  S-Class Image
+                  Range Rover Image
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function SClassPage() {
       </section>
 
       <BookingSection />
-      <StickyCTA label="Book S-Class" />
+      <StickyCTA label="Book Range Rover" />
     </>
   );
 }

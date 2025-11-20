@@ -58,9 +58,11 @@ const Footer = () => {
               <ul className="space-y-3">
                 {[
                   { name: 'Chauffeur London', href: '/chauffeur-london' },
-                  { name: 'Airport Transfers', href: '/services#airport' },
-                  { name: 'Corporate Travel', href: '/services#corporate' },
-                  { name: 'Event Transport', href: '/services#events' },
+                  { name: 'Mercedes S-Class', href: '/mercedes-s-class-chauffeur' },
+                  { name: 'Mercedes E-Class', href: '/mercedes-e-class-chauffeur' },
+                  { name: 'Mercedes V-Class', href: '/mercedes-v-class-chauffeur' },
+                  { name: 'Mercedes EQV', href: '/mercedes-eqv-chauffeur' },
+                  { name: 'Range Rover', href: '/range-rover-chauffeur' },
                   { name: 'Private Jet', href: '/private-jet-charter-assistance-uk' },
                   { name: 'Wedding Service', href: '/wedding-chauffeur-service' }
                 ].map((link) => (

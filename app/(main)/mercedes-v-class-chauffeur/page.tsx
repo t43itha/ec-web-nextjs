@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { CheckCircle, Star, Wifi, Coffee } from 'lucide-react';
+import { CheckCircle, Users, Wifi, Briefcase } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
@@ -10,34 +10,34 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes S-Class Chauffeur London | Eugene Chauffeurs',
-  description: 'Hire a Mercedes-Benz S-Class with professional chauffeur in London. The ultimate in luxury, comfort, and style for business and leisure.',
+  title: 'Mercedes V-Class Chauffeur Hire London | Eugene Chauffeurs',
+  description: 'Luxury MPV chauffeur service in London. Mercedes-Benz V-Class for group travel, airport transfers, and corporate roadshows. Seats up to 7.',
 };
 
-export default function SClassPage() {
+export default function VClassPage() {
   const features = [
+    { icon: <Users className="w-5 h-5" />, text: "Seats up to 7" },
+    { icon: <Briefcase className="w-5 h-5" />, text: "Large Luggage Capacity" },
     { icon: <Wifi className="w-5 h-5" />, text: "On-board Wi-Fi" },
-    { icon: <Coffee className="w-5 h-5" />, text: "Bottled Water" },
-    { icon: <Star className="w-5 h-5" />, text: "Nappa Leather Seats" },
-    { icon: <CheckCircle className="w-5 h-5" />, text: "Rear Climate Control" },
+    { icon: <CheckCircle className="w-5 h-5" />, text: "Conference Seating" },
   ];
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Mercedes-Benz S-Class Chauffeur Hire",
-    "description": "Luxury chauffeur-driven Mercedes-Benz S-Class for business meetings, airport transfers, and special events in London.",
+    "name": "Mercedes-Benz V-Class Chauffeur Hire",
+    "description": "Luxury chauffeur-driven Mercedes-Benz V-Class MPV for group travel, airport transfers, and corporate events in London.",
     "brand": {
       "@type": "Brand",
       "name": "Mercedes-Benz"
     },
     "offers": {
       "@type": "Offer",
-      "price": HOURLY_RATES.s_class,
+      "price": HOURLY_RATES.v_class,
       "priceCurrency": "GBP",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.s_class,
+        "price": HOURLY_RATES.v_class,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
       },
@@ -56,13 +56,13 @@ export default function SClassPage() {
         
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="max-w-4xl">
-            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">The Flagship</p>
+            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Luxury MPV</p>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-italiana text-white leading-[0.9] mb-8">
               Mercedes <br />
-              <span className="text-white/30">S-Class.</span>
+              <span className="text-white/30">V-Class.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The definitive luxury saloon. Unrivaled comfort, advanced technology, and a presence that commands respect.
+              Space, style, and versatility. The ultimate luxury people carrier for business groups, families, and airport transfers.
             </p>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function SClassPage() {
         <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
-              <h2 className="text-4xl font-italiana text-white">First Class Travel</h2>
+              <h2 className="text-4xl font-italiana text-white">Group Travel Redefined</h2>
               <p className="text-white/70 font-manrope font-light text-lg leading-relaxed">
-                The Mercedes-Benz S-Class is the benchmark for luxury travel. Whether you are heading to a crucial board meeting or a red-carpet event, the S-Class delivers a serene, comfortable, and stylish journey.
+                The Mercedes-Benz V-Class combines the comfort of a luxury saloon with the practicality of an MPV. Perfect for corporate roadshows, airport transfers with extra luggage, or family trips.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 {features.map((f, i) => (
@@ -91,12 +91,12 @@ export default function SClassPage() {
                 <div className="grid grid-cols-2 gap-8">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Hourly Rate</p>
-                    <p className="text-3xl font-italiana text-gold-400">£{HOURLY_RATES.s_class}</p>
+                    <p className="text-3xl font-italiana text-gold-400">£{HOURLY_RATES.v_class}</p>
                     <p className="text-xs text-white/40 mt-1">Min. {HOURLY_MIN_HOURS} hours</p>
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Day Rate ({DAY_RATE_HOURS}h)</p>
-                    <p className="text-3xl font-italiana text-gold-400">£{DAY_RATES.s_class}</p>
+                    <p className="text-3xl font-italiana text-gold-400">£{DAY_RATES.v_class}</p>
                   </div>
                 </div>
               </div>
@@ -104,9 +104,9 @@ export default function SClassPage() {
 
             <div className="relative h-[500px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
-                {/* Placeholder for S-Class Image - using generic for now */}
+                {/* Placeholder for V-Class Image */}
                 <div className="absolute inset-0 flex items-center justify-center text-white/20 font-italiana text-4xl">
-                  S-Class Image
+                  V-Class Image
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function SClassPage() {
       </section>
 
       <BookingSection />
-      <StickyCTA label="Book S-Class" />
+      <StickyCTA label="Book V-Class" />
     </>
   );
 }

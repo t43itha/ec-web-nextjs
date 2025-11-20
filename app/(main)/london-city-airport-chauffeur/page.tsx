@@ -1,19 +1,20 @@
 import React from 'react';
-import { Plane, Clock, MapPin, Shield, CheckCircle, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Metadata } from 'next';
-import BookingSection from '@/app/components/BookingSection';
+import { Plane, Clock, MapPin, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
-
-export const metadata: Metadata = {
-  title: 'London City Airport Chauffeur Service | Luxury Airport Transfers London',
-  description: 'Premium chauffeur service to and from London City Airport. Real-time flight monitoring, meet & greet, and luxury vehicles for a seamless journey.',
-};
+import StickyCTA from '@/app/components/StickyCTA';
+import BookingSection from '@/app/components/BookingSection';
+import { AIRPORT_FARES } from '@/app/lib/pricing';
 
 export const revalidate = 3600;
 
-const LCYPage = () => {
+export const metadata: Metadata = {
+  title: 'London City Airport Chauffeur | Eugene Chauffeurs — Meet & Greet, Flight Tracking',
+  description: 'Executive LCY transfers with meet & greet, 60 mins free waiting (arrivals) / 15 mins (departures).',
+};
+
+export default function LCYPage() {
   const features = [
     {
       icon: <Clock className="w-6 h-6 text-gold-400" />,
@@ -32,13 +33,63 @@ const LCYPage = () => {
     },
     {
       icon: <Plane className="w-6 h-6 text-gold-400" />,
-      title: "Private Aviation",
-      description: "Specialized service for the Private Jet Centre at London City Airport, ensuring discreet and direct access."
+      title: "Terminal Expertise",
+      description: "Intimate knowledge of London City Airport for the most efficient drop-offs and pickups."
     }
   ];
 
+  const faqs = [
+    {
+      q: "Where will my chauffeur meet me at LCY?",
+      a: "In the arrivals hall after customs, holding a nameboard."
+    },
+    {
+      q: "What if my flight is delayed or early?",
+      a: "We track your flight and adjust pickup automatically. Waiting time policy: 60 minutes free for arrivals (then billed); 15 minutes free for departures."
+    },
+    {
+      q: "How much luggage can you take?",
+      a: "S-Class: 2–3 medium cases; V-Class: up to 6 medium cases (or 4 large + 2 carry-ons)."
+    },
+    {
+      q: "Can you add extra stops?",
+      a: "Yes—include the stop in your request; extra time/distance may apply."
+    }
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "London City Airport Chauffeur Service",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://ec-web-nextjs.netlify.app/",
+      "telephone": "+44 7340 801 274",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "London City Airport",
+        "addressLocality": "London",
+        "postalCode": "E16 2PX",
+        "addressCountry": "GB"
+      },
+      "hasCredential": "TfL Operator Licence: 0108860101"
+    },
+    "areaServed": "London City Airport",
+    "termsOfService": "Free waiting time: 60 minutes arrivals / 15 minutes departures & non-airport pick-ups.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "GBP",
+      "lowPrice": "165",
+      "highPrice": "200",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
   return (
     <>
+      <LDJson json={jsonLd} />
+
       {/* Hero Section - Minimalist Noir */}
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')] pointer-events-none"></div>
@@ -52,7 +103,7 @@ const LCYPage = () => {
               <span className="text-white/30">Chauffeur.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The ultimate in airport luxury. Seamless connections between Central London and London City Airport.
+              Executive LCY transfers with meet & greet, flight tracking, and luxury vehicles for a seamless journey.
             </p>
           </div>
         </div>
@@ -107,6 +158,52 @@ const LCYPage = () => {
         </div>
       </section>
 
+      {/* Pricing Table */}
+      <section className="py-20 bg-black border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+          <div className="grid lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <h2 className="text-4xl font-italiana text-white mb-6">
+                LCY <br /> Fares.
+              </h2>
+              <p className="text-white/60 font-manrope font-light mb-8">
+                Fixed fares to/from Central London. Includes meet & greet and 60 minutes waiting time.
+              </p>
+              <p className="text-xs text-white/40 font-manrope">
+                Prices subject to VAT where applicable. Congestion/ULEZ, tolls & parking beyond the free window are passed at cost.
+              </p>
+            </div>
+            
+            <div className="lg:col-span-8">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr>
+                      <th className="py-4 px-4 border-b border-white/10 text-gold-400 font-italiana text-lg">Vehicle</th>
+                      <th className="py-4 px-4 border-b border-white/10 text-white/80 font-manrope text-sm text-right">Fixed Fare (from)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-4 px-4 text-white font-manrope">Mercedes-Benz S-Class</td>
+                      <td className="py-4 px-4 text-white/60 font-manrope text-right">£{AIRPORT_FARES.lcy.s_class}</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-4 px-4 text-white font-manrope">Mercedes-Benz V-Class</td>
+                      <td className="py-4 px-4 text-white/60 font-manrope text-right">£{AIRPORT_FARES.lcy.v_class}</td>
+                    </tr>
+                    <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                      <td className="py-4 px-4 text-white font-manrope">Range Rover</td>
+                      <td className="py-4 px-4 text-white/60 font-manrope text-right">£{AIRPORT_FARES.lcy.range_rover}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Service Standards - Minimalist List */}
       <section className="py-32 bg-black border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
@@ -116,7 +213,7 @@ const LCYPage = () => {
                 The Gold <br /> Standard.
               </h2>
               <p className="text-white/60 font-manrope font-light">
-                Every London City Airport transfer includes our signature premium amenities as standard.
+                Every LCY transfer includes our signature premium amenities as standard.
               </p>
             </div>
             
@@ -143,11 +240,24 @@ const LCYPage = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-black border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+          <h2 className="text-4xl font-italiana text-white mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {faqs.map((faq, index) => (
+              <div key={index} className="space-y-3">
+                <h3 className="text-lg font-italiana text-gold-400">{faq.q}</h3>
+                <p className="text-white/60 font-manrope text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Booking Section */}
       <BookingSection />
-      <LDJson json={{ '@context': 'https://schema.org', '@type': 'Service', serviceType: 'London City Airport Chauffeur Service', provider: { '@type': 'LocalBusiness', name: 'Eugene Chauffeurs' }, areaServed: 'London City Airport' }} />
+      <StickyCTA label="Get an LCY Quote" />
     </>
   );
 };
-
-export default LCYPage;
