@@ -1,6 +1,6 @@
 export const HOURLY_MIN_HOURS = 4;
 
-export type VehicleKey = "s_class" | "v_class" | "range_rover" | "e_class" | "eqv";
+export type VehicleKey = "s_class" | "v_class" | "range_rover" | "e_class" | "eqv" | "rolls_royce";
 
 export const HOURLY_RATES: Record<VehicleKey, number> = {
   s_class: 80,
@@ -8,6 +8,7 @@ export const HOURLY_RATES: Record<VehicleKey, number> = {
   range_rover: 100,
   e_class: 60,
   eqv: 80,
+  rolls_royce: 150,
 };
 
 export const DAY_RATE_HOURS = 8;
@@ -17,14 +18,15 @@ export const DAY_RATES: Record<VehicleKey, number> = {
   range_rover: 800,
   e_class: 480,
   eqv: 640,
+  rolls_royce: 1200,
 };
 
 export const AIRPORT_FARES = {
-  heathrow:   { s_class: 170, v_class: 170, range_rover: 210, e_class: 130, eqv: 180 },
-  gatwick:    { s_class: 250, v_class: 250, range_rover: 290, e_class: 200, eqv: 260 },
-  lcy:        { s_class: 165, v_class: 165, range_rover: 200, e_class: 125, eqv: 175 },
-  stansted:   { s_class: 260, v_class: 260, range_rover: 300, e_class: 210, eqv: 270 },
-  luton:      { s_class: 250, v_class: 250, range_rover: 290, e_class: 200, eqv: 260 },
+  heathrow:   { s_class: 170, v_class: 170, range_rover: 210, e_class: 130, eqv: 180, rolls_royce: 350 },
+  gatwick:    { s_class: 250, v_class: 250, range_rover: 290, e_class: 200, eqv: 260, rolls_royce: 450 },
+  lcy:        { s_class: 165, v_class: 165, range_rover: 200, e_class: 125, eqv: 175, rolls_royce: 350 },
+  stansted:   { s_class: 260, v_class: 260, range_rover: 300, e_class: 210, eqv: 270, rolls_royce: 450 },
+  luton:      { s_class: 250, v_class: 250, range_rover: 290, e_class: 200, eqv: 260, rolls_royce: 450 },
 };
 
 export const VEHICLE_LABELS: Record<VehicleKey, string> = {
@@ -33,4 +35,5 @@ export const VEHICLE_LABELS: Record<VehicleKey, string> = {
   range_rover: "Range Rover",
   e_class: "Mercedes-Benz E-Class",
   eqv: "Mercedes-Benz EQV",
+  rolls_royce: "Rolls-Royce Ghost",
 };

@@ -17,6 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'mercedes-v-class-chauffeur',
     'mercedes-eqv-chauffeur',
     'range-rover-chauffeur',
+    'rolls-royce-chauffeur',
+    'chauffeur-mayfair',
+    'chauffeur-chelsea',
+    'chauffeur-kensington',
+    'blog',
+    'blog/definitive-guide-london-chauffeur-services',
+    'blog/luton-airport-terminal-guide',
+    'blog/what-do-professional-chauffeurs-wear',
   ];
   const now = new Date().toISOString();
   return routes.map((r) => ({

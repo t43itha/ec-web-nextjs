@@ -62,6 +62,7 @@ const Footer = () => {
                   { name: 'Mercedes E-Class', href: '/mercedes-e-class-chauffeur' },
                   { name: 'Mercedes V-Class', href: '/mercedes-v-class-chauffeur' },
                   { name: 'Mercedes EQV', href: '/mercedes-eqv-chauffeur' },
+                  { name: 'Rolls-Royce Ghost', href: '/rolls-royce-chauffeur' },
                   { name: 'Range Rover', href: '/range-rover-chauffeur' },
                   { name: 'Private Jet', href: '/private-jet-charter-assistance-uk' },
                   { name: 'Wedding Service', href: '/wedding-chauffeur-service' }
@@ -79,10 +80,10 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Airports */}
+            {/* Airports & Locations */}
             <div>
               <h4 className="text-sm font-italiana text-white mb-6">Airports</h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {[
                   { name: 'Heathrow', href: '/heathrow-chauffeur' },
                   { name: 'Gatwick', href: '/gatwick-chauffeur' },
@@ -90,6 +91,25 @@ const Footer = () => {
                   { name: 'Stansted', href: '/stansted-chauffeur' },
                   { name: 'London City', href: '/london-city-airport-chauffeur' },
                   { name: 'Farnborough', href: '/landing/airport/farnborough' }
+                ].map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-white/50 hover:text-gold-400 text-xs transition-colors duration-300 flex items-center group"
+                    >
+                      <span className="w-0 group-hover:w-2 h-[1px] bg-gold-400 mr-0 group-hover:mr-2 transition-all duration-300"></span>
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="text-sm font-italiana text-white mb-6">Locations</h4>
+              <ul className="space-y-3">
+                {[
+                  { name: 'Mayfair', href: '/chauffeur-mayfair' },
+                  { name: 'Chelsea', href: '/chauffeur-chelsea' },
+                  { name: 'Kensington', href: '/chauffeur-kensington' }
                 ].map((link) => (
                   <li key={link.name}>
                     <Link
@@ -132,6 +152,7 @@ const Footer = () => {
             © 2025 Eugene Chauffeurs Ltd. All rights reserved.
           </p>
           <div className="flex items-center space-x-8">
+            <Link href="/blog" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Journal</Link>
             <Link href="/privacy" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Privacy</Link>
             <Link href="/terms" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Terms</Link>
             <Link href="/sitemap" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Sitemap</Link>
