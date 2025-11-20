@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUpRight, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,11 +16,12 @@ const Footer = () => {
           <div className="md:col-span-4 space-y-6">
             <Link href="/" className="block w-fit">
               <Image
-                src="/EC logo 2 color cropped.png"
+                src="/RGB-Eugene-Chauffeurs-Concierge-Logo.webp"
                 alt="Eugene Chauffeurs"
                 width={180}
                 height={72}
                 className="h-14 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                unoptimized
               />
             </Link>
             <p className="text-white/50 font-light leading-relaxed text-xs max-w-sm">
@@ -30,7 +31,10 @@ const Footer = () => {
               {[
                 { icon: MessageCircle, href: "https://wa.me/447340801274" },
                 { icon: Phone, href: "tel:+447340801274" },
-                { icon: Mail, href: "mailto:bookings@eugenechauffeurs.com" }
+                { icon: Mail, href: "mailto:bookings@eugenechauffeurs.com" },
+                { icon: Instagram, href: "https://instagram.com/eugenechauffeurs" },
+                { icon: Linkedin, href: "https://linkedin.com/company/eugenechauffeurs" },
+                { icon: Twitter, href: "https://x.com/eugenechauffeurs" }
               ].map((item, i) => (
                 <a
                   key={i}

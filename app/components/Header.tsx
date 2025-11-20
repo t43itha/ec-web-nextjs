@@ -42,12 +42,13 @@ const Header = () => {
             {/* Logo Area */}
             <Link href="/" className="relative z-50 group">
               <Image
-                src="/EC logo 2 color cropped.png"
+                src="/RGB-Eugene-Chauffeurs-Concierge-Logo.webp"
                 alt="Eugene Chauffeurs"
-                width={180}
-                height={60}
-                className="h-12 w-auto transition-all duration-500 group-hover:brightness-110"
+                width={220}
+                height={73}
+                className="h-16 w-auto transition-all duration-500 group-hover:brightness-110"
                 priority
+                unoptimized
               />
             </Link>
 
