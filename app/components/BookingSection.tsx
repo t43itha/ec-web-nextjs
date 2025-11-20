@@ -32,10 +32,10 @@ const BookingSection = () => {
             <div className="space-y-6 pt-8 border-t border-white/10">
               <h3 className="text-lg font-italiana text-white">Direct Concierge</h3>
               
-              <a href="tel:+447340801274" className="group flex items-center justify-between p-6 border border-white/10 hover:border-gold-400/30 hover:bg-white/5 transition-all duration-500">
+              <a href="tel:+442081911882" className="group flex items-center justify-between p-6 border border-white/10 hover:border-gold-400/30 hover:bg-white/5 transition-all duration-500">
                 <div className="flex items-center space-x-4">
                   <Phone className="w-5 h-5 text-gold-400" />
-                  <span className="text-white font-manrope text-sm tracking-wide">+44 7340 801 274</span>
+                  <span className="text-white font-manrope text-sm tracking-wide">+44 20 8191 1882</span>
                 </div>
                 <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-gold-400 group-hover:translate-x-1 transition-all" />
               </a>
