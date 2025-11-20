@@ -131,7 +131,7 @@ const Header = () => {
               <span className="absolute inset-0 w-full h-full bg-gold-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></span>
               <Phone className="w-5 h-5 text-gold-400 mr-4 group-hover:scale-110 transition-transform duration-500" />
               <span className="text-3xl font-italiana text-white group-hover:text-gold-100 transition-colors duration-300">
-                +44 7340 801 274
+                +44 20 8191 1882
               </span>
             </a>
           </div>

@@ -63,7 +63,7 @@ const Hero = () => {
               onClick={() => trackPhoneCall('hero_section', '+447340801274')}
             >
               <Phone className="w-4 h-4" />
-              <span>+44 7340 801 274</span>
+              <span>+44 20 8191 1882</span>
             </a>
           </div>
         </div>

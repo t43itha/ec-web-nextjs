@@ -30,7 +30,7 @@ const Footer = () => {
             <div className="flex gap-3 pt-2">
               {[
                 { icon: MessageCircle, href: "https://wa.me/447340801274" },
-                { icon: Phone, href: "tel:+447340801274" },
+                { icon: Phone, href: "tel:+442081911882" },
                 { icon: Mail, href: "mailto:bookings@eugenechauffeurs.com" },
                 { icon: Instagram, href: "https://instagram.com/eugenechauffeurs" },
                 { icon: Linkedin, href: "https://linkedin.com/company/eugenechauffeurs" },
@@ -108,7 +108,7 @@ const Footer = () => {
               <div className="space-y-4">
                 <div className="group">
                   <p className="text-[10px] uppercase tracking-widest text-white/30 mb-1">24/7 Booking Line</p>
-                  <p className="text-white text-sm font-light hover:text-gold-400 transition-colors cursor-pointer">+44 7340 801 274</p>
+                  <p className="text-white text-sm font-light hover:text-gold-400 transition-colors cursor-pointer">+44 20 8191 1882</p>
                 </div>
                 <div className="group">
                   <p className="text-[10px] uppercase tracking-widest text-white/30 mb-1">Email Enquiries</p>
