@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Plus, Minus, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const FAQ = () => {
@@ -9,28 +9,28 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "What makes Eugene Chauffeurs different from Uber or taxis?",
-      answer: "We're a luxury concierge chauffeur service, offering bespoke comfort, privacy, and detailed attention to your needs—not just transportation. Our professional chauffeurs are trained to provide discretion, punctuality, and personalized service that traditional ride-sharing cannot match."
+      question: "What distinguishes your service?",
+      answer: "We are a dedicated luxury concierge service, not a ride-share platform. We offer bespoke comfort, absolute privacy, and vetted professional chauffeurs trained in discretion and punctuality."
     },
     {
-      question: "Can you accommodate last-minute bookings?",
-      answer: "Absolutely. While advance booking ensures availability, we handle urgent requests whenever possible. Our 24/7 operations team is equipped to coordinate last-minute services, though we recommend booking in advance for guaranteed availability, especially during peak hours."
+      question: "Can you accommodate urgent requests?",
+      answer: "Yes. While advance booking is recommended, our 24/7 dispatch team is equipped to handle last-minute requirements with the same level of precision."
     },
     {
-      question: "Do you provide international chauffeur services?",
-      answer: "Yes, we partner with trusted global affiliates, ensuring the same seamless luxury experience abroad. Whether you need service in Paris, New York, or Dubai, we coordinate with our verified partners to maintain our high standards wherever you travel."
+      question: "Do you operate internationally?",
+      answer: "Yes. Through our network of verified global affiliates, we ensure the same gold-standard experience in major cities worldwide, from New York to Dubai."
     },
     {
-      question: "What types of vehicles are available?",
-      answer: "Our premium fleet includes luxury sedans, executive SUVs, and high-end vehicles from brands like Mercedes-Benz, BMW, and Audi. All vehicles are meticulously maintained, fully insured, and equipped with modern amenities for your comfort and productivity."
+      question: "What vehicles are in your fleet?",
+      answer: "Our fleet consists exclusively of late-model luxury vehicles, including the Mercedes-Benz S-Class, V-Class, and BMW 7 Series. All are meticulously maintained and equipped with premium amenities."
     },
     {
-      question: "How do you ensure privacy and discretion?",
-      answer: "All our chauffeurs sign comprehensive confidentiality agreements and undergo thorough background checks. We maintain strict protocols for client privacy, including secure communication channels and discreet service delivery. Your personal and business information remains completely confidential."
+      question: "How is privacy ensured?",
+      answer: "All chauffeurs sign strict non-disclosure agreements. We maintain rigorous protocols for client confidentiality and secure communication."
     },
     {
-      question: "What are your payment options?",
-      answer: "We accept all major credit cards, bank transfers, and corporate accounts. For regular clients, we offer convenient monthly billing options. All transactions are processed securely, and detailed invoices are provided for expense reporting."
+      question: "What are the payment terms?",
+      answer: "We accept all major credit cards and corporate accounts. Monthly billing is available for regular clients, with detailed invoicing for expense management."
     }
   ];
 
@@ -39,65 +39,75 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zinc-900 to-black">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white font-cinzel mb-4">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-white/80 font-montserrat">
-            Everything you need to know about our service
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-zinc-900/50 backdrop-blur-sm rounded-lg border border-zinc-800/50 hover:border-gold-500/30 transition-all duration-300"
-            >
-              <button
-                className="w-full px-6 py-5 text-left flex items-center justify-between group"
-                onClick={() => toggleFAQ(index)}
-                aria-expanded={openIndex === index}
-              >
-                <span className="font-montserrat font-semibold text-white group-hover:text-gold-400 transition-colors duration-300 pr-4">
-                  {faq.question}
-                </span>
-                <span className="flex-shrink-0 text-gold-400">
-                  {openIndex === index ? (
-                    <ChevronUp className="w-5 h-5" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5" />
-                  )}
-                </span>
-              </button>
+    <section className="py-32 bg-black border-t border-white/5">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+        
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24">
+          {/* Left: Header (Span 4) */}
+          <div className="lg:col-span-4">
+            <div className="sticky top-32">
+              <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Information</p>
+              <h2 className="text-5xl md:text-6xl font-italiana text-white leading-none mb-8">
+                Common <br />
+                <span className="text-white/30">Questions.</span>
+              </h2>
+              <p className="text-white/60 font-manrope font-light text-sm leading-relaxed mb-8">
+                Everything you need to know about our premium chauffeur services. For specific inquiries, our concierge team is available 24/7.
+              </p>
               
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
-                }`}
+              <Link
+                href="/contact"
+                className="inline-flex items-center space-x-2 text-white hover:text-gold-400 transition-colors group"
               >
-                <div className="px-6 pb-5">
-                  <p className="text-white/80 font-montserrat leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </div>
+                <span className="font-manrope text-xs uppercase tracking-widest">Contact Concierge</span>
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="text-center mt-12">
-          <p className="text-white/60 font-montserrat mb-4">
-            Still have questions?
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-3 rounded-lg font-montserrat font-semibold hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105"
-          >
-            Contact Us
-          </Link>
+          {/* Right: Accordion (Span 8) */}
+          <div className="lg:col-span-8">
+            <div className="space-y-0">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="border-b border-white/10 last:border-0"
+                >
+                  <button
+                    className="w-full py-8 text-left flex items-center justify-between group"
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <span className={`font-manrope text-lg transition-colors duration-300 ${
+                      openIndex === index ? 'text-gold-400' : 'text-white group-hover:text-white/80'
+                    }`}>
+                      {faq.question}
+                    </span>
+                    <span className={`flex-shrink-0 ml-6 transition-all duration-300 ${
+                      openIndex === index ? 'text-gold-400 rotate-180' : 'text-white/30 group-hover:text-white'
+                    }`}>
+                      {openIndex === index ? (
+                        <Minus className="w-4 h-4" />
+                      ) : (
+                        <Plus className="w-4 h-4" />
+                      )}
+                    </span>
+                  </button>
+                  
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      openIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="pb-8 pr-8">
+                      <p className="text-white/50 font-manrope font-light leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

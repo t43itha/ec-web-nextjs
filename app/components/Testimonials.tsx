@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,38 +9,34 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: "Mark T.",
-      title: "CEO, London-based FinTech firm",
-      content: "Eugene Chauffeurs made travel effortless. The care, attention to detail, and discretion exceeded every expectation. I can now focus completely on my meetings instead of worrying about transport.",
+      title: "CEO, FinTech",
+      content: "Eugene Chauffeurs made travel effortless. The care, attention to detail, and discretion exceeded every expectation. I can now focus completely on my meetings.",
       rating: 5,
-      initials: "MT"
     },
     {
       name: "Sarah L.",
-      title: "Managing Director, Investment Bank",
-      content: "The level of professionalism is outstanding. Our international clients are consistently impressed with the service quality. Eugene Chauffeurs has become an integral part of our client experience.",
+      title: "Managing Director",
+      content: "The level of professionalism is outstanding. Our international clients are consistently impressed with the service quality. An integral part of our client experience.",
       rating: 5,
-      initials: "SL"
     },
     {
       name: "James R.",
-      title: "Senior Partner, Legal Firm",
-      content: "Reliability and discretion are paramount in our business. Eugene Chauffeurs delivers both consistently. The peace of mind knowing our transport is handled professionally is invaluable.",
+      title: "Senior Partner",
+      content: "Reliability and discretion are paramount in our business. Eugene Chauffeurs delivers both consistently. The peace of mind is invaluable.",
       rating: 5,
-      initials: "JR"
     },
     {
       name: "Emma K.",
-      title: "Executive Director, Consulting",
+      title: "Executive Director",
       content: "The seamless coordination across different cities and countries is remarkable. Whether I'm in London or travelling internationally, the service standard never drops.",
       rating: 5,
-      initials: "EK"
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
@@ -54,80 +50,66 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zinc-900 to-black relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-gold-600/5"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white font-cinzel mb-4">
-            What Our Clients Say
-          </h2>
-          <p className="text-xl text-white/80 font-montserrat">
-            Excellence isn't just a promise—it's what our clients experience
-          </p>
-        </div>
+    <section className="py-32 bg-black relative overflow-hidden border-t border-white/5">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+        
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Left: Heading & Controls */}
+          <div className="space-y-12">
+            <div>
+              <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Testimonials</p>
+              <h2 className="text-5xl md:text-6xl font-italiana text-white leading-none">
+                Client <br />
+                <span className="text-white/30">Experiences.</span>
+              </h2>
+            </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <div className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gold-500/20">
-            <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-black font-cinzel font-bold text-xl">
-                {testimonials[currentIndex].initials}
-              </div>
-              
-              <div className="flex-1 space-y-4">
-                <div className="flex items-center space-x-1">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-white/90 font-montserrat text-lg leading-relaxed italic">
-                  "{testimonials[currentIndex].content}"
-                </p>
-                
-                <div>
-                  <p className="text-white font-montserrat font-semibold">
-                    {testimonials[currentIndex].name}
-                  </p>
-                  <p className="text-white/60 font-montserrat text-sm">
-                    {testimonials[currentIndex].title}
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={prevTestimonial}
+                className="w-14 h-14 border border-white/10 flex items-center justify-center text-white/50 hover:text-black hover:bg-white transition-all duration-500"
+                aria-label="Previous testimonial"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                className="w-14 h-14 border border-white/10 flex items-center justify-center text-white/50 hover:text-black hover:bg-white transition-all duration-500"
+                aria-label="Next testimonial"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
             </div>
           </div>
 
-          <div className="flex items-center justify-center space-x-4 mt-8">
-            <button
-              onClick={prevTestimonial}
-              className="w-12 h-12 bg-zinc-800/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gold-500/20 hover:text-gold-400 transition-all duration-300 border border-zinc-700/50 hover:border-gold-500/30"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? 'w-8 bg-gold-400'
-                      : 'bg-zinc-600 hover:bg-zinc-500'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
+          {/* Right: Testimonial Card */}
+          <div className="relative">
+            <div className="absolute -top-12 -left-12 text-white/[0.03]">
+              <Quote size={120} />
             </div>
+            
+            <div className="relative z-10 min-h-[300px] flex flex-col justify-between">
+              <div className="space-y-8">
+                <div className="flex space-x-1">
+                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-gold-400 fill-current" />
+                  ))}
+                </div>
+                
+                <blockquote className="text-2xl md:text-3xl text-white font-italiana leading-relaxed">
+                  "{testimonials[currentIndex].content}"
+                </blockquote>
+              </div>
 
-            <button
-              onClick={nextTestimonial}
-              className="w-12 h-12 bg-zinc-800/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gold-500/20 hover:text-gold-400 transition-all duration-300 border border-zinc-700/50 hover:border-gold-500/30"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+              <div className="mt-12 pt-8 border-t border-white/10">
+                <p className="text-white font-manrope text-sm tracking-widest uppercase">
+                  {testimonials[currentIndex].name}
+                </p>
+                <p className="text-white/40 font-manrope text-xs mt-1">
+                  {testimonials[currentIndex].title}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

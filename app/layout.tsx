@@ -1,21 +1,20 @@
 import type { Metadata } from "next";
-import { Cinzel, Montserrat } from "next/font/google";
+import { Italiana, Manrope } from "next/font/google";
 import "./globals.css";
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 
-const cinzel = Cinzel({
-  weight: ['400', '500', '600'],
+const italiana = Italiana({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-cinzel'
+  variable: '--font-italiana'
 });
 
-const montserrat = Montserrat({
-  weight: ['300', '400', '500', '600', '700'],
+const manrope = Manrope({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-montserrat'
+  variable: '--font-manrope'
 });
 
 export const metadata: Metadata = {
@@ -93,7 +92,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${cinzel.variable} ${montserrat.variable} antialiased`}
+        className={`${italiana.variable} ${manrope.variable} antialiased`}
       >
         <Header />
         <main className="min-h-screen">
