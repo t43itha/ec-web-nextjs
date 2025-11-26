@@ -94,7 +94,7 @@ export default function GatwickPage() {
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')] pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold-400/5 blur-[120px] rounded-full pointer-events-none"></div>
-        
+
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Airport Transfer</p>
@@ -118,7 +118,7 @@ export default function GatwickPage() {
                 <h2 className="text-4xl md:text-5xl font-italiana text-white mb-8">
                   Effortless <span className="text-gold-400">Arrivals.</span>
                 </h2>
-                
+
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
                     Navigating Gatwick requires precision. Our service transforms the chaos of international travel into a moment of calm. From the moment you land, our team is tracking your progress.
@@ -158,6 +158,23 @@ export default function GatwickPage() {
         </div>
       </section>
 
+      {/* Meeting Point Guide */}
+      <section className="py-20 bg-zinc-900 border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+          <h2 className="text-4xl font-italiana text-white mb-12 text-center">Meeting Points</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-black/50 p-6 border border-white/10">
+              <h3 className="text-xl font-italiana text-gold-400 mb-2">North Terminal</h3>
+              <p className="text-white/60 font-manrope text-sm">Wait near the Costa Coffee in the arrivals hall.</p>
+            </div>
+            <div className="bg-black/50 p-6 border border-white/10">
+              <h3 className="text-xl font-italiana text-gold-400 mb-2">South Terminal</h3>
+              <p className="text-white/60 font-manrope text-sm">Wait near the Costa Coffee in the arrivals hall.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Table */}
       <section className="py-20 bg-black border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
@@ -173,7 +190,7 @@ export default function GatwickPage() {
                 Prices subject to VAT where applicable. Congestion/ULEZ, tolls & parking beyond the free window are passed at cost.
               </p>
             </div>
-            
+
             <div className="lg:col-span-8">
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
@@ -216,7 +233,7 @@ export default function GatwickPage() {
                 Every Gatwick transfer includes our signature premium amenities as standard.
               </p>
             </div>
-            
+
             <div className="lg:col-span-8">
               <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
                 {[

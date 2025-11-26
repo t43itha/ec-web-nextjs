@@ -5,7 +5,7 @@ import { CheckCircle, Star, Wifi, Coffee } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
-import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app/lib/pricing';
+import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS, AIRPORT_FARES } from '@/app/lib/pricing';
 
 export const revalidate = 86400;
 
@@ -53,7 +53,7 @@ export default function SClassPage() {
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')] pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold-400/5 blur-[120px] rounded-full pointer-events-none"></div>
-        
+
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">The Flagship</p>
@@ -85,10 +85,10 @@ export default function SClassPage() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="pt-8 border-t border-white/10">
                 <h3 className="text-2xl font-italiana text-white mb-4">Rates</h3>
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-2 gap-8 mb-8">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Hourly Rate</p>
                     <p className="text-3xl font-italiana text-gold-400">£{HOURLY_RATES.s_class}</p>
@@ -97,6 +97,28 @@ export default function SClassPage() {
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/40 mb-1">Day Rate ({DAY_RATE_HOURS}h)</p>
                     <p className="text-3xl font-italiana text-gold-400">£{DAY_RATES.s_class}</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/40 mb-3">Airport Transfers</p>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                      <span className="text-white/70 font-manrope text-sm">Heathrow</span>
+                      <span className="text-gold-400 font-italiana text-lg">£{AIRPORT_FARES.heathrow.s_class}</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                      <span className="text-white/70 font-manrope text-sm">Gatwick</span>
+                      <span className="text-gold-400 font-italiana text-lg">£{AIRPORT_FARES.gatwick.s_class}</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                      <span className="text-white/70 font-manrope text-sm">City</span>
+                      <span className="text-gold-400 font-italiana text-lg">£{AIRPORT_FARES.lcy.s_class}</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-white/10 pb-2">
+                      <span className="text-white/70 font-manrope text-sm">Stansted</span>
+                      <span className="text-gold-400 font-italiana text-lg">£{AIRPORT_FARES.stansted.s_class}</span>
+                    </div>
                   </div>
                 </div>
               </div>

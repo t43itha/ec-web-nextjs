@@ -1,13 +1,18 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Shield, Clock, Star, Phone, Building2 } from 'lucide-react';
 import Link from 'next/link';
 import { trackPhoneCall, trackWhatsApp } from '@/app/lib/analytics';
+import BookingModal from './BookingModal';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -27,7 +32,7 @@ const Hero = () => {
       {/* Main Content - Asymmetrical Editorial Layout */}
       <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20 flex flex-col justify-center">
         <div className="max-w-3xl space-y-10 animate-fade-in-up">
-          
+
           {/* Minimalist Badge */}
           <div className="inline-flex items-center space-x-3">
             <div className="h-[1px] w-12 bg-gold-400"></div>
@@ -47,15 +52,15 @@ const Hero = () => {
 
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-start gap-6 pt-4">
-            <Link
-              href="#booking"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="btn-luxury group"
             >
               <span className="flex items-center gap-4">
                 Reserve Now
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </span>
-            </Link>
+            </button>
 
             <a
               href="tel:+447340801274"
@@ -83,7 +88,7 @@ const Hero = () => {
                 <span className="text-xs tracking-[0.2em] uppercase">Five Star Service</span>
               </div>
             </div>
-            
+
             {/* Scroll Indicator */}
             <div className="flex items-center space-x-4 text-white/40">
               <span className="text-[10px] uppercase tracking-widest">Scroll</span>
