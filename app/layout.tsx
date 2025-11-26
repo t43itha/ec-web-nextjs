@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Eugene Chauffeurs - Luxury Chauffeur Service London",
     template: "%s | Eugene Chauffeurs"
   },
-  description: "Premium chauffeur service in London offering luxury transportation for business, events, airport transfers, and special occasions. Professional drivers, luxury vehicles.",
+  description: "London's premier personal chauffeur service. Luxury executive transfers for business, airport travel & special occasions. Driven by Eugene Chauffeurs.",
   keywords: "chauffeur service, luxury transport, London chauffeur, airport transfer, executive travel, corporate transport",
   authors: [{ name: "Eugene Chauffeurs" }],
   creator: "Eugene Chauffeurs",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Eugene Chauffeurs - Luxury Chauffeur Service London',
-    description: 'Premium chauffeur service in London offering luxury transportation for business, events, airport transfers, and special occasions.',
+    description: "London's premier personal chauffeur service. Luxury executive transfers for business, airport travel & special occasions. Driven by Eugene Chauffeurs.",
     url: BASE_URL,
     siteName: 'Eugene Chauffeurs',
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Eugene Chauffeurs - Luxury Chauffeur Service London',
-    description: 'Premium chauffeur service in London offering luxury transportation for business, events, airport transfers, and special occasions.',
+    description: "London's premier personal chauffeur service. Luxury executive transfers for business, airport travel & special occasions. Driven by Eugene Chauffeurs.",
     images: ['/og-image.png'],
     creator: '@eugenechauffeurs',
   },
