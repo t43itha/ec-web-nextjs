@@ -1,7 +1,6 @@
-'use client';
 import React from "react";
 
-type Props = { json: any };
+type Props = { json: Record<string, unknown> };
 
 export default function LDJson({ json }: Props) {
   return (

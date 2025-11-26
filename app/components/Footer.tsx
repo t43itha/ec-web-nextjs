@@ -21,7 +21,6 @@ const Footer = () => {
                 width={180}
                 height={72}
                 className="h-14 w-auto opacity-90 hover:opacity-100 transition-opacity"
-                unoptimized
               />
             </Link>
             <p className="text-white/50 font-light leading-relaxed text-xs max-w-sm">

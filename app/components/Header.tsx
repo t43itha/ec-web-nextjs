@@ -47,7 +47,6 @@ const Header = () => {
                 height={73}
                 className="h-16 w-auto transition-all duration-500 group-hover:brightness-110"
                 priority
-                unoptimized
               />
             </Link>
 

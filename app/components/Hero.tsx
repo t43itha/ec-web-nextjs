@@ -36,18 +36,18 @@ const Hero = () => {
           {/* Minimalist Badge */}
           <div className="inline-flex items-center space-x-3">
             <div className="h-[1px] w-12 bg-gold-400"></div>
-            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">LONDON'S PREMIER CHAUFFEURS</span>
+            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">BEYOND TRAVEL</span>
           </div>
 
           {/* Editorial Heading */}
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-italiana leading-[0.9] tracking-tight">
-            Beyond <br />
-            <span className="text-white/40 ml-12 sm:ml-24">Travel.</span>
+            Luxury <br />
+            <span className="text-white/40 ml-12 sm:ml-24">Chauffeur.</span>
           </h1>
 
           {/* Refined Subheading */}
           <p className="text-lg md:text-xl text-white/70 font-light max-w-md leading-relaxed pl-2 border-l border-white/20">
-            Experience the art of movement. Precision chauffeur services for the world's most discerning travelers.
+            More than just a driver. Your personal chauffeur for life, business, events, and airport transfers in London.
           </p>
 
           {/* CTA Group */}
