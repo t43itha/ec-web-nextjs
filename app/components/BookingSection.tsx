@@ -1,5 +1,4 @@
 import React from 'react';
-import Script from 'next/script';
 import { Phone, Mail, ArrowRight, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
@@ -73,15 +72,13 @@ const BookingSection = () => {
                 </div>
 
                 {/* Iframe Container */}
-                <div className="pt-12 h-full bg-white">
+                <div className="pt-12 h-full">
                   <iframe
                     id="booking-form-iframe"
-                    src="https://dispatch.deversoftware.com/Dispatch/Booking/?cRegNo=oyHr8V4xISzpZ40&coID=1&embed=1"
-                    frameBorder={0}
-                    scrolling="yes"
+                    src="https://www.elitedispatch.app/widget?id=org_362LT85nqt97BHyVplTc0csnGQS"
                     width="100%"
                     height="700"
-                    className="w-full h-[700px]"
+                    style={{ border: 'none', borderRadius: '24px' }}
                   />
                 </div>
               </div>
@@ -90,12 +87,6 @@ const BookingSection = () => {
 
         </div>
       </div>
-      
-      {/* External script for embedded booking form */}
-      <Script
-        src="https://dispatch.deversoftware.com/Dispatch/Booking//util.js"
-        strategy="afterInteractive"
-      />
     </section>
   );
 };

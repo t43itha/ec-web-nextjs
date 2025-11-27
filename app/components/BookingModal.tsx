@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import Script from 'next/script';
 
 interface BookingModalProps {
     isOpen: boolean;
@@ -50,22 +49,16 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Iframe Container */}
-                <div className="pt-14 h-full bg-white">
+                <div className="pt-14 h-full">
                     <iframe
-                        src="https://dispatch.deversoftware.com/Dispatch/Booking/?cRegNo=oyHr8V4xISzpZ40&coID=1&embed=1"
-                        frameBorder={0}
-                        scrolling="yes"
+                        src="https://www.elitedispatch.app/widget?id=org_362LT85nqt97BHyVplTc0csnGQS"
                         width="100%"
                         height="100%"
+                        style={{ border: 'none', borderRadius: '24px' }}
                         className="w-full h-full"
                     />
                 </div>
             </div>
-
-            <Script
-                src="https://dispatch.deversoftware.com/Dispatch/Booking//util.js"
-                strategy="afterInteractive"
-            />
         </div>
     );
 };
