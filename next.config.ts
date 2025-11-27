@@ -55,7 +55,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https://www.google-analytics.com https://api.emailjs.com https://dispatch.deversoftware.com",
-              "frame-src 'self' https://dispatch.deversoftware.com https://www.google.com",
+              "frame-src 'self' https://www.elitedispatch.app https://www.google.com",
               "frame-ancestors 'self'",
               "base-uri 'self'",
               "form-action 'self'",
