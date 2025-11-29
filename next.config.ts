@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Disable dev indicators (N logo)
+  devIndicators: false,
+
   // Disable ESLint during builds for Netlify
   eslint: {
     ignoreDuringBuilds: true,
