@@ -1,26 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Users, Briefcase } from 'lucide-react';
 import { HOURLY_RATES, VEHICLE_LABELS } from '@/app/lib/pricing';
 
 const vehicles = [
     {
         key: 'e_class',
-        image: '/placeholder-e-class.jpg', // Placeholder
+        image: '/Mercedes-E-Class-cutout-2021-520x320.webp',
         passengers: 3,
         luggage: 2,
         description: "Business Class comfort for executive travel."
     },
     {
         key: 's_class',
-        image: '/placeholder-s-class.jpg', // Placeholder
+        image: '/Mercedes-S-Class-cutout-2021-581x450.webp',
         passengers: 3,
         luggage: 2,
         description: "The ultimate in luxury and sophistication."
     },
     {
         key: 'v_class',
-        image: '/placeholder-v-class.jpg', // Placeholder
+        image: '/Mercedes-V-Class-cutout-2021-581x450.webp',
         passengers: 7,
         luggage: 7,
         description: "Spacious luxury for groups and families."
@@ -41,12 +42,16 @@ const FleetPreview = () => {
                 <div className="grid md:grid-cols-3 gap-8">
                     {vehicles.map((v) => (
                         <div key={v.key} className="group relative bg-white/5 border border-white/10 overflow-hidden hover:border-gold-400/30 transition-all duration-500">
-                            {/* Image Placeholder */}
-                            <div className="aspect-[16/10] bg-zinc-900 relative flex items-center justify-center overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                                <span className="text-white/10 font-italiana text-4xl z-0 group-hover:scale-110 transition-transform duration-700">
-                                    {v.key.replace('_', ' ').toUpperCase()}
-                                </span>
+                            {/* Vehicle Image */}
+                            <div className="aspect-[16/10] bg-gradient-to-b from-zinc-100 to-zinc-200 relative overflow-hidden">
+                                <Image
+                                    src={v.image}
+                                    alt={VEHICLE_LABELS[v.key]}
+                                    fill
+                                    className="object-contain p-4 group-hover:scale-105 transition-all duration-700"
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
                             </div>
 
                             <div className="p-8 space-y-6 relative z-20 -mt-12">

@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     title: "The Definitive Guide to London's Top Chauffeur Services",
     description: "Discover what separates a standard car service from a true luxury chauffeur experience in London. From fleet quality to chauffeur etiquette.",
     date: "2025-11-20",
-    image: "/business.png",
+    image: "/business.jpg",
     content: `
       <h2>Defining Luxury in London Transport</h2>
       <p>London is a global hub for business and luxury tourism, and the demand for high-end transportation reflects this status. But with so many operators, how do you distinguish the best from the rest?</p>
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
     title: "What Do Professional Chauffeurs Wear?",
     description: "The dress code of a professional chauffeur is a hallmark of the trade. Learn about the standards of attire in the luxury transport industry.",
     date: "2025-11-15",
-    image: "/event.png",
+    image: "/event.jpg",
     content: `
       <h2>The Uniform of Excellence</h2>
       <p>First impressions count. In the chauffeur industry, the driver's attire is as important as the vehicle's cleanliness. It signals professionalism, respect, and discipline.</p>

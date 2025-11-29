@@ -122,7 +122,7 @@ export default function EssexPage() {
                         <div className="relative h-[600px] border border-white/10 p-2">
                             <div className="relative h-full w-full overflow-hidden bg-zinc-900">
                                 <Image
-                                    src="/business.png"
+                                    src="/business.jpg"
                                     alt="Chauffeur Service Essex"
                                     fill
                                     className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

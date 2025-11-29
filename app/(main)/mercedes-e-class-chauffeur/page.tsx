@@ -126,10 +126,14 @@ export default function EClassPage() {
 
             <div className="relative h-[500px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
-                {/* Placeholder for E-Class Image */}
-                <div className="absolute inset-0 flex items-center justify-center text-white/20 font-italiana text-4xl">
-                  E-Class Image
-                </div>
+                <Image
+                  src="/e-class.jpg"
+                  alt="Mercedes-Benz E-Class Chauffeur"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
             </div>
           </div>

@@ -183,7 +183,7 @@ export default function CorporateEventChauffeurPage() {
             <div className="relative h-[600px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
                 <Image
-                  src="/event.png"
+                  src="/event.jpg"
                   alt="Corporate Event Chauffeur Service"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

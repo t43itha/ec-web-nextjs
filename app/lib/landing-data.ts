@@ -71,7 +71,7 @@ export const services = {
     title: "Corporate Chauffeur Service",
     description: "Executive chauffeur services for business professionals and corporate clients",
     keywords: "business travel, corporate chauffeur, executive transport, company car service",
-    hero_image: "/business.png",
+    hero_image: "/business.jpg",
     service_description: "Professional corporate transportation with discretion and reliability",
     features: [
       "Corporate accounts",
@@ -101,7 +101,7 @@ export const services = {
     title: "Event Chauffeur Service",
     description: "Luxury chauffeur services for weddings, galas, and special events",
     keywords: "event transport, wedding car, gala chauffeur, special occasion transport",
-    hero_image: "/event.png",
+    hero_image: "/event.jpg",
     service_description: "Make your special occasion memorable with our luxury chauffeur service",
     features: [
       "Red carpet service",

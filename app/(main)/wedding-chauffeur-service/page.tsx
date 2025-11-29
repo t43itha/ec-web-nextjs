@@ -193,7 +193,7 @@ export default function WeddingChauffeurServicePage() {
             <div className="relative h-[600px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
                 <Image
-                  src="/event.png"
+                  src="/event.jpg"
                   alt="Wedding Chauffeur Service London"
                   fill
                   className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

@@ -104,10 +104,14 @@ export default function RangeRoverPage() {
 
             <div className="relative h-[500px] border border-white/10 p-2">
               <div className="relative h-full w-full overflow-hidden bg-zinc-900">
-                {/* Placeholder for Range Rover Image */}
-                <div className="absolute inset-0 flex items-center justify-center text-white/20 font-italiana text-4xl">
-                  Range Rover Image
-                </div>
+                <Image
+                  src="/range-rover.jpg"
+                  alt="Range Rover Chauffeur"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
             </div>
           </div>
