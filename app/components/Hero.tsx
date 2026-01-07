@@ -22,7 +22,7 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover scale-x-[-1]"
         >
-          <source src="/Adding_Driver_to_Car_Video.mp4" type="video/mp4" />
+          <source src="/ec-hero-v3.mp4" type="video/mp4" />
         </video>
         {/* Cinematic Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
