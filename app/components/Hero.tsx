@@ -1,29 +1,71 @@
 "use client";
 
-import React, { useState } from 'react';
-import { ArrowRight, Shield, Clock, Star, Phone, Building2 } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { ArrowRight, Shield, Star, Phone, Play, Pause } from 'lucide-react';
 import { trackPhoneCall, trackWhatsApp } from '@/app/lib/analytics';
 import BookingModal from './BookingModal';
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [videoError, setVideoError] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Handle Reduced Motion preference & hydration safety
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = () => setPrefersReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Sync video play state with user controls
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isPlaying && !prefersReducedMotion) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
+    }
+  }, [isPlaying, prefersReducedMotion]);
+
+  // Skip video entirely if user prefers reduced motion or video errored
+  const shouldRenderVideo = !videoError && !prefersReducedMotion;
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
       <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover scale-x-[-1]"
-        >
-          <source src="/ec-hero-v3.mp4" type="video/mp4" />
-        </video>
+      {/* Video Background with Accessibility & Performance Improvements */}
+      <div className="absolute inset-0 z-0" aria-hidden="true">
+        {shouldRenderVideo ? (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/ec-hero-fallback.png"
+            className="w-full h-full object-cover scale-x-[-1]"
+            onError={() => setVideoError(true)}
+            aria-label="Background video: Luxury chauffeur driving through London"
+          >
+            <source src="/ec-hero-v3.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src="/ec-hero-fallback.png"
+            alt="Luxury chauffeur service in London"
+            fill
+            priority
+            className="object-cover scale-x-[-1]"
+          />
+        )}
         {/* Cinematic Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
@@ -73,6 +115,18 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Play/Pause Toggle - WCAG 2.2.2 Compliance */}
+      {shouldRenderVideo && (
+        <button
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="absolute bottom-28 right-8 z-30 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all duration-300 text-white/70 hover:text-white"
+          aria-label={isPlaying ? "Pause background video" : "Play background video"}
+          title={isPlaying ? "Pause Video" : "Play Video"}
+        >
+          {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+        </button>
+      )}
 
       {/* Bottom Bar - Minimalist Indicators */}
       <div className="absolute bottom-0 left-0 right-0 z-20 border-t border-white/10 bg-black/20 backdrop-blur-sm">
