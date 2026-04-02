@@ -51,7 +51,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                 {/* Iframe Container */}
                 <div className="pt-14 h-full">
                     <iframe
-                        src="https://elite-dispatch-gemini.vercel.app/widget?id=org_362LT85nqt97BHyVplTc0csnGQS"
+                        src="https://dispatch.deversoftware.com/Dispatch/Booking/?cRegNo=oyHr8V4xISzpZ40&coID=1&embed=1"
                         width="100%"
                         height="100%"
                         style={{ border: 'none', borderRadius: '24px' }}

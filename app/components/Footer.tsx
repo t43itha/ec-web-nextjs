@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowUpRight, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import TfLBadge from '@/app/components/TfLBadge';
 
 const Footer = () => {
   return (
@@ -108,7 +109,13 @@ const Footer = () => {
                 {[
                   { name: 'Mayfair', href: '/chauffeur-mayfair' },
                   { name: 'Chelsea', href: '/chauffeur-chelsea' },
-                  { name: 'Kensington', href: '/chauffeur-kensington' }
+                  { name: 'Kensington', href: '/chauffeur-kensington' },
+                  { name: 'Knightsbridge', href: '/chauffeur-knightsbridge' },
+                  { name: 'Belgravia', href: '/chauffeur-belgravia' },
+                  { name: 'Westminster', href: '/chauffeur-westminster' },
+                  { name: 'Canary Wharf', href: '/chauffeur-canary-wharf' },
+                  { name: 'Marylebone', href: '/chauffeur-marylebone' },
+                  { name: 'City of London', href: '/chauffeur-city-of-london' }
                 ].map((link) => (
                   <li key={link.name}>
                     <Link
@@ -147,9 +154,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/30 text-xs tracking-wider">
-            © 2025 Eugene Chauffeurs Ltd. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-white/30 text-xs tracking-wider">
+              &copy; 2025 Eugene Chauffeurs Ltd. All rights reserved.
+            </p>
+            <TfLBadge />
+          </div>
           <div className="flex items-center space-x-8">
             <Link href="/blog" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Journal</Link>
             <Link href="/privacy" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Privacy</Link>

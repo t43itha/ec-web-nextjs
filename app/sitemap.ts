@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { getAllServiceCityCombinations, getAllStadiums } from '@/app/lib/landing-data';
 import { blogPosts } from '@/app/lib/blog-data';
+import { getAllBoroughs } from '@/app/lib/borough-data';
+import { events } from '@/app/lib/event-data';
 
 const BASE_URL = 'https://eugenechauffeurs.com';
 
@@ -132,12 +134,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // Borough pages
+  const boroughSlugs = getAllBoroughs();
+  const boroughPages: MetadataRoute.Sitemap = boroughSlugs.map(({ borough }) => ({
+    url: `${BASE_URL}/chauffeur-${borough}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  // Event pages
+  const eventSlugs: Record<string, string> = {
+    'royal-ascot': 'royal-ascot-chauffeur',
+    'wimbledon': 'wimbledon-chauffeur',
+    'cheltenham': 'cheltenham-festival-chauffeur',
+    'henley': 'henley-regatta-chauffeur',
+    'goodwood': 'goodwood-chauffeur',
+    'chelsea-flower-show': 'chelsea-flower-show-chauffeur',
+    'farnborough-airshow': 'farnborough-airshow-chauffeur',
+    'bafta': 'bafta-chauffeur',
+  };
+  const eventPages: MetadataRoute.Sitemap = Object.keys(events).map(key => ({
+    url: `${BASE_URL}/${eventSlugs[key]}`,
+    lastModified: now,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
+
+  // Additional service pages
+  const additionalPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/chauffeur-hire-by-the-hour`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/battersea-heliport-chauffeur`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+  ];
+
   return [
     ...corePages,
     ...servicePages,
     ...vehiclePages,
     ...locationPages,
     ...airportPages,
+    ...boroughPages,
+    ...eventPages,
+    ...additionalPages,
     ...landingPages,
     ...stadiumPages,
     ...blogIndex,

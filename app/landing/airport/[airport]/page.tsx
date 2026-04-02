@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Plane, Clock, MapPin, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
+import FAQSchema from '@/app/components/FAQSchema';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
 import { AIRPORT_FARES } from '@/app/lib/pricing';
@@ -228,6 +229,7 @@ export default async function AirportLandingPage({
   return (
     <>
       <LDJson json={jsonLd} />
+      <FAQSchema faqs={data.faqs.map(f => ({ question: f.q, answer: f.a }))} />
 
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">

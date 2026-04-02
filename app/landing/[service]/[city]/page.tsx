@@ -10,6 +10,8 @@ import {
   getAllServiceCityCombinations,
   generateLandingPageMetadata,
 } from '@/app/lib/landing-data';
+import BookingSection from '@/app/components/BookingSection';
+import StickyCTA from '@/app/components/StickyCTA';
 
 // Enable ISR for this route (24 hours)
 export const revalidate = 86400;
@@ -204,40 +206,8 @@ export default async function ServiceCityLandingPage({
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-zinc-900 to-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white font-cinzel mb-6">
-            Book Your {serviceData.name} in {cityData.name} Today
-          </h2>
-          <p className="text-xl text-white/80 font-montserrat mb-8">
-            Experience luxury transportation with Eugene Chauffeurs
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+447340801274"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call +44 7340 801 274
-            </a>
-            <a
-              href="https://wa.me/447340801274"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:bg-green-700 transition-all duration-300"
-            >
-              WhatsApp Now
-            </a>
-          </div>
-          
-          <div className="mt-8 flex items-center justify-center space-x-2 text-white/60">
-            <Clock className="w-5 h-5" />
-            <span className="font-montserrat">Available 24/7 • Instant Confirmation</span>
-          </div>
-        </div>
-      </section>
+      <BookingSection />
+      <StickyCTA label={`Book ${serviceData.name}`} />
     </>
   );
 }

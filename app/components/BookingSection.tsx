@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, ArrowRight, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import TfLBadge from '@/app/components/TfLBadge';
 
 const BookingSection = () => {
   return (
@@ -68,14 +69,17 @@ const BookingSection = () => {
                     <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
                     <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest text-white/30">Secure Dispatch System</span>
+                  <div className="flex items-center gap-4">
+                    <TfLBadge />
+                    <span className="text-[10px] uppercase tracking-widest text-white/30">Secure Dispatch System</span>
+                  </div>
                 </div>
 
                 {/* Iframe Container */}
                 <div className="pt-12 h-full">
                   <iframe
                     id="booking-form-iframe"
-                    src="https://elite-dispatch-gemini.vercel.app/widget?id=org_362LT85nqt97BHyVplTc0csnGQS"
+                    src="https://dispatch.deversoftware.com/Dispatch/Booking/?cRegNo=oyHr8V4xISzpZ40&coID=1&embed=1"
                     width="100%"
                     height="700"
                     style={{ border: 'none', borderRadius: '24px' }}
