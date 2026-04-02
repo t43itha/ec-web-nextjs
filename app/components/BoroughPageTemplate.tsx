@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import { MapPin, Clock, Shield, Star } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
@@ -8,45 +7,11 @@ import BookingSection from '@/app/components/BookingSection';
 import TfLBadge from '@/app/components/TfLBadge';
 import RelatedServices from '@/app/components/RelatedServices';
 import FAQSchema from '@/app/components/FAQSchema';
-import { boroughs, getAllBoroughs } from '@/app/lib/borough-data';
+import type { BoroughData } from '@/app/lib/borough-data';
 import { HOURLY_RATES, HOURLY_MIN_HOURS, VEHICLE_LABELS } from '@/app/lib/pricing';
 import { COMPANY } from '@/app/lib/config';
 
-export const revalidate = 86400;
-
-type BoroughKey = keyof typeof boroughs;
-
-export async function generateStaticParams() {
-  return getAllBoroughs();
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ borough: string }>;
-}): Promise<Metadata> {
-  const { borough } = await params;
-  const data = boroughs[borough as BoroughKey];
-  if (!data) return {};
-  return {
-    title: data.metaTitle,
-    description: data.metaDescription,
-    alternates: { canonical: `/chauffeur-${data.slug}` },
-  };
-}
-
-export default async function BoroughPage({
-  params,
-}: {
-  params: Promise<{ borough: string }>;
-}) {
-  const { borough } = await params;
-  const data = boroughs[borough as BoroughKey];
-
-  if (!data) {
-    return <div className="py-24 text-center text-white">Area not found</div>;
-  }
-
+export default function BoroughPageTemplate({ data }: { data: BoroughData }) {
   const features = [
     {
       icon: <MapPin className="w-6 h-6 text-gold-400" />,
