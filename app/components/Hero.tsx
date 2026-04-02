@@ -138,6 +138,10 @@ const Hero = () => {
                 <span className="text-xs tracking-[0.2em] uppercase">TfL Licensed</span>
               </div>
               <div className="flex items-center space-x-3 text-white/60">
+                <Image src="/iata-logo.png" alt="IATA Accredited" width={28} height={20} className="opacity-70" />
+                <span className="text-xs tracking-[0.2em] uppercase">IATA Accredited</span>
+              </div>
+              <div className="flex items-center space-x-3 text-white/60">
                 <Star className="w-4 h-4 text-gold-400" />
                 <span className="text-xs tracking-[0.2em] uppercase">Five Star Service</span>
               </div>
