@@ -3,100 +3,78 @@
 import React, { useState, useEffect } from 'react';
 import { Star, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 
-interface GoogleReview {
-  authorAttribution: {
-    displayName: string;
-    photoUri: string;
-  };
-  rating: number;
-  text: { text: string };
-  relativePublishTimeDescription: string;
-}
+const reviews = [
+  {
+    name: "Michael Schoonover",
+    rating: 5,
+    text: "We had an incredible experience with Eugene Chauffeurs during our recent trip to London. From start to finish, the service was professional, punctual, and extremely accommodating. Eugene helped us with transportation for both lunch and dinner reservations, ensuring we arrived on time and in style.",
+    time: "6 months ago",
+  },
+  {
+    name: "Dr. Lois O.",
+    rating: 5,
+    text: "I can't say enough good things about Eugene Chauffeur and Concierge Services! The entire experience was exceptional. Eugene went above and beyond to ensure everything was flawless. The vehicle was immaculate, the ride was smooth, and his professionalism was outstanding.",
+    time: "a year ago",
+  },
+  {
+    name: "Kofi Dofo",
+    rating: 5,
+    text: "I had an exceptional experience with Eugene Chauffeurs during my visit to London in March. The chauffeur was punctual, professional, and extremely courteous. The vehicle was immaculate and comfortable, making my journey smooth and enjoyable.",
+    time: "a year ago",
+  },
+  {
+    name: "Emily Kirsty",
+    rating: 5,
+    text: "I recently had the pleasure of using Eugene Chauffeurs for my ride to Gatwick Airport, and I must say, it was an immaculate experience from start to finish.",
+    time: "a year ago",
+  },
+  {
+    name: "Asiedua Asamoah",
+    rating: 5,
+    text: "Excellent service with professional drivers. Vehicles are always clean and in great condition. I've used this company for more than 14 months each time we are in London and the service has been consistently outstanding.",
+    time: "a year ago",
+  },
+  {
+    name: "Ali Rahnama",
+    rating: 5,
+    text: "We (The V1 Club) have worked with Eugene Chauffeurs since 2015 regarding Ground Transportation for our high profile clients. They have always provided us exceptional service, with maximum privacy and discretion at all times. A highly trusted partner.",
+    time: "a year ago",
+  },
+  {
+    name: "Karen Kkw",
+    rating: 5,
+    text: "Professionally executed transportation services. No need to worry about airport pickup and drop off. They arrive on time, help with your bags. The team of drivers are attentive and friendly.",
+    time: "a year ago",
+  },
+  {
+    name: "Maame Dufie Cudjoe",
+    rating: 5,
+    text: "I recently had the pleasure of using Eugene Chauffeurs for our family trip to Dubai, and I am absolutely thrilled with the exceptional service they provided. Eugene Chauffeurs is more than just a car rental company — they took care of our every need.",
+    time: "a year ago",
+  },
+];
 
-interface ReviewsData {
-  rating: number;
-  userRatingCount: number;
-  reviews: GoogleReview[];
-}
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Eugene+Chauffeurs-Covering+London+%26+UK/@51.5287398,-0.2664059,11z";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reviewsData, setReviewsData] = useState<ReviewsData | null>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/reviews')
-      .then(res => res.json())
-      .then((data: ReviewsData) => {
-        if (data.reviews) {
-          setReviewsData(data);
-        }
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
-
-  // Auto-rotate reviews
-  useEffect(() => {
-    if (!reviewsData?.reviews?.length) return;
     const timer = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % reviewsData.reviews.length);
+      setCurrentIndex(prev => (prev + 1) % reviews.length);
     }, 8000);
     return () => clearInterval(timer);
-  }, [reviewsData]);
+  }, []);
 
   const nextReview = () => {
-    if (!reviewsData?.reviews?.length) return;
-    setCurrentIndex(prev => (prev + 1) % reviewsData.reviews.length);
+    setCurrentIndex(prev => (prev + 1) % reviews.length);
   };
 
   const prevReview = () => {
-    if (!reviewsData?.reviews?.length) return;
-    setCurrentIndex(prev => (prev - 1 + reviewsData.reviews.length) % reviewsData.reviews.length);
+    setCurrentIndex(prev => (prev - 1 + reviews.length) % reviews.length);
   };
 
-  if (loading) {
-    return (
-      <section className="py-32 bg-black relative overflow-hidden border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
-          <div className="h-[400px] flex items-center justify-center">
-            <div className="w-8 h-8 border border-gold-400/30 border-t-gold-400 rounded-full animate-spin"></div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
-  if (!reviewsData?.reviews?.length) {
-    return (
-      <section className="py-32 bg-black relative overflow-hidden border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Google Reviews</p>
-          <h2 className="text-5xl md:text-6xl font-italiana text-white leading-none mb-8">
-            4.9 <span className="text-white/30">Stars.</span>
-          </h2>
-          <div className="flex justify-center space-x-1 mb-6">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 text-gold-400 fill-current" />
-            ))}
-          </div>
-          <p className="text-white/50 font-manrope text-sm">
-            Rated 4.9/5 from 31 reviews on Google
-          </p>
-          <a
-            href="https://www.google.com/maps/place/Eugene+Chauffeurs-Covering+London+%26+UK/@51.5287398,-0.2664059,11z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6 text-gold-400 text-xs uppercase tracking-[0.2em] hover:text-white transition-colors"
-          >
-            Read our reviews on Google
-          </a>
-        </div>
-      </section>
-    );
-  }
-
-  const review = reviewsData.reviews[currentIndex];
+  const review = reviews[currentIndex];
 
   return (
     <section className="py-32 bg-black relative overflow-hidden border-t border-white/5">
@@ -115,19 +93,21 @@ const Testimonials = () => {
 
             {/* Aggregate Rating */}
             <div className="flex items-center gap-6 pt-4">
-              <div className="text-5xl font-italiana text-gold-400">{reviewsData.rating}</div>
+              <div className="text-5xl font-italiana text-gold-400">4.9</div>
               <div className="space-y-2">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-5 h-5 ${i < Math.round(reviewsData.rating) ? 'text-gold-400 fill-current' : 'text-white/20'}`}
-                    />
+                    <Star key={i} className="w-5 h-5 text-gold-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-white/50 font-manrope text-sm">
-                  {reviewsData.userRatingCount} reviews on Google
-                </p>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 font-manrope text-sm hover:text-gold-400 transition-colors"
+                >
+                  31 reviews on Google
+                </a>
               </div>
             </div>
 
@@ -147,7 +127,7 @@ const Testimonials = () => {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <span className="text-white/30 font-manrope text-xs ml-2">
-                {currentIndex + 1} / {reviewsData.reviews.length}
+                {currentIndex + 1} / {reviews.length}
               </span>
             </div>
           </div>
@@ -167,17 +147,17 @@ const Testimonials = () => {
                 </div>
 
                 <blockquote className="text-2xl md:text-3xl text-white font-italiana leading-relaxed">
-                  &ldquo;{review.text.text}&rdquo;
+                  &ldquo;{review.text}&rdquo;
                 </blockquote>
               </div>
 
               <div className="mt-12 pt-8 border-t border-white/10 flex items-center justify-between">
                 <div>
                   <p className="text-white font-manrope text-sm tracking-widest uppercase">
-                    {review.authorAttribution.displayName}
+                    {review.name}
                   </p>
                   <p className="text-white/40 font-manrope text-xs mt-1">
-                    {review.relativePublishTimeDescription}
+                    {review.time}
                   </p>
                 </div>
                 <svg className="w-5 h-5 text-white/30" viewBox="0 0 24 24" fill="currentColor">
