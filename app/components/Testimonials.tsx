@@ -67,7 +67,34 @@ const Testimonials = () => {
     );
   }
 
-  if (!reviewsData?.reviews?.length) return null;
+  if (!reviewsData?.reviews?.length) {
+    return (
+      <section className="py-32 bg-black relative overflow-hidden border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20 text-center">
+          <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Google Reviews</p>
+          <h2 className="text-5xl md:text-6xl font-italiana text-white leading-none mb-8">
+            4.9 <span className="text-white/30">Stars.</span>
+          </h2>
+          <div className="flex justify-center space-x-1 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 text-gold-400 fill-current" />
+            ))}
+          </div>
+          <p className="text-white/50 font-manrope text-sm">
+            Rated 4.9/5 from 31 reviews on Google
+          </p>
+          <a
+            href="https://www.google.com/maps/place/Eugene+Chauffeurs-Covering+London+%26+UK/@51.5287398,-0.2664059,11z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-6 text-gold-400 text-xs uppercase tracking-[0.2em] hover:text-white transition-colors"
+          >
+            Read our reviews on Google
+          </a>
+        </div>
+      </section>
+    );
+  }
 
   const review = reviewsData.reviews[currentIndex];
 
