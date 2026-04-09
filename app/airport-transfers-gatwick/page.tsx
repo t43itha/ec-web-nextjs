@@ -1,4 +1,5 @@
-export { revalidate } from '../gatwick-chauffeur/page';
-export { metadata } from '../gatwick-chauffeur/page';
-export { default } from '../gatwick-chauffeur/page';
+import { redirect } from 'next/navigation';
 
+export default function Page() {
+  redirect('/landing/airport/gatwick');
+}

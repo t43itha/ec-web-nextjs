@@ -1,4 +1,5 @@
-export { revalidate } from '../heathrow-chauffeur/page';
-export { metadata } from '../heathrow-chauffeur/page';
-export { default } from '../heathrow-chauffeur/page';
+import { redirect } from 'next/navigation';
 
+export default function Page() {
+  redirect('/landing/airport/heathrow');
+}

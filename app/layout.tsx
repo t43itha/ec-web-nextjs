@@ -45,14 +45,6 @@ export const metadata: Metadata = {
     description: "London's premier personal chauffeur service. Luxury executive transfers for business, airport travel & special occasions. Driven by Eugene Chauffeurs.",
     url: BASE_URL,
     siteName: 'Eugene Chauffeurs',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Eugene Chauffeurs - Luxury Chauffeur Service London',
-      }
-    ],
     locale: 'en_GB',
     type: 'website',
   },
@@ -60,7 +52,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Eugene Chauffeurs - Luxury Chauffeur Service London',
     description: "London's premier personal chauffeur service. Luxury executive transfers for business, airport travel & special occasions. Driven by Eugene Chauffeurs.",
-    images: ['/og-image.png'],
     creator: '@eugenechauffeurs',
   },
   robots: {
