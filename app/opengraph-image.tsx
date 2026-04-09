@@ -1,77 +1,75 @@
 import { ImageResponse } from 'next/og';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
-export const runtime = 'edge';
 export const alt = 'Eugene Chauffeurs - Luxury Chauffeur Service London';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image() {
+  const heroData = await readFile(join(process.cwd(), 'public', 'ec-hero-fallback.png'));
+  const heroBase64 = `data:image/png;base64,${heroData.toString('base64')}`;
+
+  const logoData = await readFile(join(process.cwd(), 'public', 'EC logo 2 color cropped.png'));
+  const logoBase64 = `data:image/png;base64,${logoData.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '60px',
+          position: 'relative',
         }}
       >
+        {/* Hero background */}
+        <img
+          src={heroBase64}
+          width={1200}
+          height={630}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
+        {/* Dark overlay */}
         <div
           style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.3) 100%)',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            gap: '24px',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-start',
+            padding: '60px',
           }}
         >
+          {/* Logo */}
+          <img
+            src={logoBase64}
+            width={300}
+            height={120}
+            style={{ objectFit: 'contain', marginBottom: '16px' }}
+          />
+          {/* Tagline */}
           <div
             style={{
-              fontSize: '24px',
-              color: '#c8a45e',
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase',
+              fontSize: '22px',
+              color: 'rgba(255,255,255,0.7)',
+              lineHeight: 1.5,
+              maxWidth: '500px',
             }}
           >
-            Luxury Chauffeur Service
-          </div>
-          <div
-            style={{
-              fontSize: '72px',
-              color: '#ffffff',
-              fontWeight: 700,
-              textAlign: 'center',
-              lineHeight: 1.1,
-            }}
-          >
-            Eugene Chauffeurs
-          </div>
-          <div
-            style={{
-              fontSize: '20px',
-              color: 'rgba(255,255,255,0.6)',
-              textAlign: 'center',
-              maxWidth: '600px',
-              lineHeight: 1.6,
-            }}
-          >
-            London's premier personal chauffeur service for airports, business, and special occasions
-          </div>
-          <div
-            style={{
-              marginTop: '16px',
-              padding: '12px 32px',
-              border: '1px solid #c8a45e',
-              color: '#c8a45e',
-              fontSize: '16px',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-            }}
-          >
-            eugenechauffeurs.com
+            London&apos;s premier personal chauffeur service for airports, business, and special occasions
           </div>
         </div>
       </div>
