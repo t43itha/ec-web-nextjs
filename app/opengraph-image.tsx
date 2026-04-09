@@ -10,7 +10,7 @@ export default async function Image() {
   const heroData = await readFile(join(process.cwd(), 'public', 'ec-hero-fallback.png'));
   const heroBase64 = `data:image/png;base64,${heroData.toString('base64')}`;
 
-  const logoData = await readFile(join(process.cwd(), 'public', 'EC logo 2 color cropped.png'));
+  const logoData = await readFile(join(process.cwd(), 'public', 'RGB-Eugene-Chauffeurs-Concierge-Logo.png'));
   const logoBase64 = `data:image/png;base64,${logoData.toString('base64')}`;
 
   return new ImageResponse(
