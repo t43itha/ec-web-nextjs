@@ -15,7 +15,7 @@ export default function OrganizationSchema() {
       "width": 220,
       "height": 73,
     },
-    "image": `${BASE_URL}/og-image.png`,
+    "image": `${BASE_URL}/opengraph-image`,
     "description": "Premium chauffeur service in London offering luxury transportation for business, events, airport transfers, and special occasions.",
     "telephone": "+442081911882",
     "email": "bookings@eugenechauffeurs.com",
