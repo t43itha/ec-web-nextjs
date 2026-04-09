@@ -51,7 +51,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     ],
     pricingKey: 'heathrow',
     areaServed: 'Heathrow Airport, London',
-    canonicalPath: '/heathrow-chauffeur'
+    canonicalPath: '/landing/airport/heathrow'
   },
   gatwick: {
     title: 'Gatwick Chauffeur Service | Eugene Chauffeurs',
@@ -74,7 +74,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     ],
     pricingKey: 'gatwick',
     areaServed: 'Gatwick Airport, London',
-    canonicalPath: '/gatwick-chauffeur'
+    canonicalPath: '/landing/airport/gatwick'
   },
   luton: {
     title: 'Luton Chauffeur Service | Eugene Chauffeurs',
@@ -97,7 +97,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     ],
     pricingKey: 'luton',
     areaServed: 'Luton Airport',
-    canonicalPath: '/luton-chauffeur'
+    canonicalPath: '/landing/airport/luton'
   },
   stansted: {
     title: 'Stansted Chauffeur Service | Eugene Chauffeurs',
@@ -120,7 +120,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     ],
     pricingKey: 'stansted',
     areaServed: 'Stansted Airport',
-    canonicalPath: '/stansted-chauffeur'
+    canonicalPath: '/landing/airport/stansted'
   },
   'london-city-airport': {
     title: 'London City Airport Chauffeur | Eugene Chauffeurs',
@@ -143,7 +143,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     ],
     pricingKey: 'lcy',
     areaServed: 'London City Airport',
-    canonicalPath: '/london-city-airport-chauffeur'
+    canonicalPath: '/landing/airport/london-city-airport'
   },
 };
 
