@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Chauffeur Service Kensington | Luxury Car Hire London W8',
   description: 'Premium chauffeur service in Kensington. S-Class & V-Class hire for Kensington High Street, Holland Park, and private residences in W8. Discreet, professional, and punctual.',
+  alternates: { canonical: '/chauffeur-kensington' },
 };
 
 export default function KensingtonPage() {

@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: "The Definitive Guide to London's Top Chauffeur Services (2025)",
     description: "An unbiased guide to choosing the best chauffeur service in London. Comparing fleet quality, vetting standards, and technology. Find your perfect ride.",
+  alternates: { canonical: '/blog/definitive-guide-london-chauffeurs' },
 };
 
 export default function DefinitiveGuidePage() {

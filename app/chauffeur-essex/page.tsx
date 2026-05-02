@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Chauffeur Service Essex | Luxury Car Hire Chigwell & Brentwood',
     description: 'Premium chauffeur service in Essex. Serving Chigwell, Loughton, Brentwood, and Epping. Luxury airport transfers and wedding car hire.',
+  alternates: { canonical: '/chauffeur-essex' },
 };
 
 export default function EssexPage() {

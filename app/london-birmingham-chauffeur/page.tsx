@@ -7,6 +7,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'London to Birmingham Chauffeur | Eugene Chauffeurs',
   description: 'Executive chauffeur from London to Birmingham and return. Professional drivers, premium vehicles, fixed pricing.',
+  alternates: { canonical: '/london-birmingham-chauffeur' },
 };
 
 export default function LondonBirminghamChauffeurPage() {

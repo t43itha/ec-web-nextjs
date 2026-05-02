@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Chauffeur Service Knightsbridge | Luxury Car Hire London SW1',
     description: 'Premium chauffeur service in Knightsbridge. S-Class & V-Class hire for Harrods, Harvey Nichols, and Sloane Street. Discreet, professional, and punctual.',
+  alternates: { canonical: '/chauffeur-knightsbridge' },
 };
 
 export default function KnightsbridgePage() {

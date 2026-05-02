@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Chauffeur Service Mayfair | Luxury Car Hire London W1',
   description: 'Premium chauffeur service in Mayfair. S-Class & V-Class hire for hotels, boutiques, and private residences in W1. Discreet, professional, and punctual.',
+  alternates: { canonical: '/chauffeur-mayfair' },
 };
 
 export default function MayfairPage() {

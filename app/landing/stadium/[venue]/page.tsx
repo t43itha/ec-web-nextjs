@@ -20,7 +20,12 @@ export async function generateMetadata({
 }): Promise<Metadata | null> {
   const { venue } = await params;
   const metadata = generateStadiumMetadata(venue);
-  return metadata || {};
+  return metadata
+    ? {
+        ...metadata,
+        alternates: { canonical: `/landing/stadium/${venue}` },
+      }
+    : {};
 }
 
 export default async function StadiumLandingPage({

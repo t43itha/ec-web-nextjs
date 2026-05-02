@@ -6,6 +6,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Event Chauffeur Birmingham | Eugene Chauffeurs',
   description: 'Luxury event chauffeur service in Birmingham for galas, concerts, and private events.',
+  alternates: { canonical: '/event-birmingham' },
 };
 
 export default function EventBirminghamPage() {

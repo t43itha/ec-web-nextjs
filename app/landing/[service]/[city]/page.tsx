@@ -29,7 +29,12 @@ export async function generateMetadata({
 }): Promise<Metadata | null> {
   const { service, city } = await params;
   const metadata = generateLandingPageMetadata(service, city);
-  return metadata || {};
+  return metadata
+    ? {
+        ...metadata,
+        alternates: { canonical: `/landing/${service}/${city}` },
+      }
+    : {};
 }
 
 export default async function ServiceCityLandingPage({
