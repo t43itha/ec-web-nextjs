@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Mercedes V-Class Chauffeur Hire London | Eugene Chauffeurs',
   description: 'Luxury MPV chauffeur service in London. Mercedes-Benz V-Class for group travel, airport transfers, and corporate roadshows. Seats up to 7.',
+  alternates: { canonical: '/mercedes-v-class-chauffeur' },
 };
 
 export default function VClassPage() {

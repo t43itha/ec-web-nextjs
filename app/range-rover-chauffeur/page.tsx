@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Range Rover Chauffeur Hire London | Eugene Chauffeurs',
   description: 'Hire a Range Rover Autobiography with professional chauffeur in London. Commanding presence, luxury interior, and 4x4 capability.',
+  alternates: { canonical: '/range-rover-chauffeur' },
 };
 
 export default function RangeRoverPage() {

@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Chauffeur Service Chelsea | Luxury Car Hire London SW3',
   description: 'Premium chauffeur service in Chelsea. S-Class & V-Class hire for Sloane Square, King\'s Road, and private residences in SW3. Discreet, professional, and punctual.',
+  alternates: { canonical: '/chauffeur-chelsea' },
 };
 
 export default function ChelseaPage() {

@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'London Chauffeur Service | Eugene Chauffeurs — On-Time, Discreet, Immaculate',
   description: 'Premium London chauffeur service for business and leisure. Mercedes S-Class & V-Class, meet & greet, flight tracking, 60 mins free waiting (airport arrivals) / 15 mins elsewhere.',
+  alternates: { canonical: '/chauffeur-london' },
 };
 
 export default function ChauffeurLondonPage() {

@@ -6,6 +6,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Business Chauffeur London | Eugene Chauffeurs',
   description: 'Executive business chauffeur services in London for meetings, roadshows, and corporate hospitality.',
+  alternates: { canonical: '/business-london' },
 };
 
 export default function BusinessLondonPage() {

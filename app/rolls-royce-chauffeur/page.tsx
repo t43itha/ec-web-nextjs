@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Rolls-Royce Chauffeur Hire London | Eugene Chauffeurs',
   description: 'Hire a Rolls-Royce Ghost with professional chauffeur in London. The ultimate symbol of luxury and prestige for weddings and VIP events.',
+  alternates: { canonical: '/rolls-royce-chauffeur' },
 };
 
 export default function RollsRoycePage() {

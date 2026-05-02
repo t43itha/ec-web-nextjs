@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Mercedes E-Class Chauffeur Hire London | Eugene Chauffeurs',
   description: 'Hire a Mercedes-Benz E-Class with professional chauffeur in London. The smart choice for business travel and airport transfers.',
+  alternates: { canonical: '/mercedes-e-class-chauffeur' },
 };
 
 export default function EClassPage() {

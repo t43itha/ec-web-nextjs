@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Chauffeur Service Surrey | Luxury Car Hire Virginia Water & Esher',
     description: 'Premium chauffeur service in Surrey. Serving Virginia Water, Wentworth, Esher, and Cobham. Airport transfers to Heathrow & Gatwick.',
+  alternates: { canonical: '/chauffeur-surrey' },
 };
 
 export default function SurreyPage() {

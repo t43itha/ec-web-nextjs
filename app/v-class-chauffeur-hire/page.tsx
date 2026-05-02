@@ -6,6 +6,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Mercedes V-Class Chauffeur Hire | Eugene Chauffeurs',
   description: 'Hire a Mercedes-Benz V-Class (MPV) with chauffeur for groups and families. Spacious and versatile.',
+  alternates: { canonical: '/v-class-chauffeur-hire' },
 };
 
 export default function VClassChauffeurHirePage() {

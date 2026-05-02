@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Chauffeur Service Kent | Luxury Car Hire Sevenoaks & Tunbridge Wells',
     description: 'Premium chauffeur service in Kent. Serving Sevenoaks, Tunbridge Wells, and beyond. Luxury airport transfers to Gatwick & Heathrow.',
+  alternates: { canonical: '/chauffeur-kent' },
 };
 
 export default function KentPage() {

@@ -11,6 +11,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
     title: 'Farnborough Airport Chauffeur | Private Jet Transfers | Eugene Chauffeurs',
     description: 'Premium chauffeur service for Farnborough Airport (FAB). Seamless private jet transfers to London and beyond. Tarmac access available on request.',
+  alternates: { canonical: '/farnborough-chauffeur' },
 };
 
 export default function FarnboroughPage() {

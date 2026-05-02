@@ -12,6 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: 'Mercedes EQV Electric Chauffeur Hire London | Eugene Chauffeurs',
   description: 'Hire a Mercedes-Benz EQV electric MPV with professional chauffeur in London. Sustainable luxury travel for groups and airport transfers.',
+  alternates: { canonical: '/mercedes-eqv-chauffeur' },
 };
 
 export default function EQVPage() {

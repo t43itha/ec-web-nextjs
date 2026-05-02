@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | Eugene Chauffeurs Blog`,
     description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
   };
 }
 
