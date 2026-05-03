@@ -25,12 +25,28 @@ export default function SClassPage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Mercedes-Benz S-Class Chauffeur Hire",
+    "serviceType": "Mercedes-Benz S-Class Chauffeur Hire",
     "description": "Luxury chauffeur-driven Mercedes-Benz S-Class for business meetings, airport transfers, and special events in London.",
     "brand": {
       "@type": "Brand",
       "name": "Mercedes-Benz"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function SClassPage() {
         "price": HOURLY_RATES.s_class,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 

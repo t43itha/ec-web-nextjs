@@ -25,12 +25,28 @@ export default function EQVPage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Mercedes-Benz EQV Chauffeur Hire",
+    "serviceType": "Mercedes-Benz EQV Chauffeur Hire",
     "description": "Sustainable, fully electric chauffeur-driven Mercedes-Benz EQV MPV for eco-conscious group travel in London.",
     "brand": {
       "@type": "Brand",
       "name": "Mercedes-Benz"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function EQVPage() {
         "price": HOURLY_RATES.eqv,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 

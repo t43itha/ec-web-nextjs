@@ -25,12 +25,28 @@ export default function RangeRoverPage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Range Rover Chauffeur Hire",
+    "serviceType": "Range Rover Chauffeur Hire",
     "description": "Luxury chauffeur-driven Range Rover Autobiography for business, events, and airport transfers in London.",
     "brand": {
       "@type": "Brand",
       "name": "Land Rover"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function RangeRoverPage() {
         "price": HOURLY_RATES.range_rover,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 

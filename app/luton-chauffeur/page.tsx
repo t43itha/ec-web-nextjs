@@ -82,7 +82,6 @@ export default function LutonPage() {
       "priceCurrency": "GBP",
       "lowPrice": "165",
       "highPrice": "290",
-      "availability": "https://schema.org/InStock"
     }
   };
 

@@ -107,12 +107,13 @@ export default function WeddingChauffeurServicePage() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Wedding Vehicles",
+      "name": "Wedding Chauffeur Vehicle Services",
       "itemListElement": vehicles.map(v => ({
         "@type": "Offer",
         "itemOffered": {
-          "@type": "Product",
-          "name": v.name
+          "@type": "Service",
+          "name": `${v.name} Chauffeur Service`,
+          "serviceType": "Wedding chauffeur service"
         },
         "price": v.hourly,
         "priceCurrency": "GBP",

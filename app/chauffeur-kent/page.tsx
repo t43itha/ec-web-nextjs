@@ -60,7 +60,6 @@ export default function KentPage() {
             "priceCurrency": "GBP",
             "lowPrice": "80",
             "highPrice": "120",
-            "availability": "https://schema.org/InStock"
         }
     };
 

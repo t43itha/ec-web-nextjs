@@ -82,7 +82,6 @@ export default function GatwickPage() {
       "priceCurrency": "GBP",
       "lowPrice": "165",
       "highPrice": "300",
-      "availability": "https://schema.org/InStock"
     }
   };
 

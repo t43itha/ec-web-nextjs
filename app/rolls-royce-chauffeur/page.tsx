@@ -25,12 +25,28 @@ export default function RollsRoycePage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Rolls-Royce Ghost Chauffeur Hire",
+    "serviceType": "Rolls-Royce Ghost Chauffeur Hire",
     "description": "The pinnacle of automotive luxury. Chauffeur-driven Rolls-Royce Ghost for weddings, red carpet events, and VIP transport in London.",
     "brand": {
       "@type": "Brand",
       "name": "Rolls-Royce"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function RollsRoycePage() {
         "price": HOURLY_RATES.rolls_royce,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 

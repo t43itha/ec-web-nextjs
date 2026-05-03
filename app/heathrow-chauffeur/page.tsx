@@ -82,7 +82,6 @@ export default function HeathrowPage() {
       "priceCurrency": "GBP",
       "lowPrice": "170",
       "highPrice": "300",
-      "availability": "https://schema.org/InStock"
     }
   };
 

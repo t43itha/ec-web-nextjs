@@ -25,12 +25,28 @@ export default function VClassPage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Mercedes-Benz V-Class Chauffeur Hire",
+    "serviceType": "Mercedes-Benz V-Class Chauffeur Hire",
     "description": "Luxury chauffeur-driven Mercedes-Benz V-Class MPV for group travel, airport transfers, and corporate events in London.",
     "brand": {
       "@type": "Brand",
       "name": "Mercedes-Benz"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function VClassPage() {
         "price": HOURLY_RATES.v_class,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 
