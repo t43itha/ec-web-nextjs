@@ -82,7 +82,6 @@ export default function LCYPage() {
       "priceCurrency": "GBP",
       "lowPrice": "165",
       "highPrice": "200",
-      "availability": "https://schema.org/InStock"
     }
   };
 

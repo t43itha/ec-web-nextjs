@@ -43,7 +43,6 @@ export default function ByTheHourPage() {
       priceCurrency: 'GBP',
       lowPrice: String(HOURLY_RATES.e_class),
       highPrice: String(HOURLY_RATES.rolls_royce),
-      availability: 'https://schema.org/InStock',
     },
   };
 

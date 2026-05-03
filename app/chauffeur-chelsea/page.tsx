@@ -61,7 +61,6 @@ export default function ChelseaPage() {
       "priceCurrency": "GBP",
       "lowPrice": "80",
       "highPrice": "100",
-      "availability": "https://schema.org/InStock"
     }
   };
 

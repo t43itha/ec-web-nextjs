@@ -61,7 +61,6 @@ export default function FarnboroughPage() {
             "priceCurrency": "GBP",
             "lowPrice": "150",
             "highPrice": "250",
-            "availability": "https://schema.org/InStock"
         }
     };
 

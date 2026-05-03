@@ -25,12 +25,28 @@ export default function EClassPage() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     "name": "Mercedes-Benz E-Class Chauffeur Hire",
+    "serviceType": "Mercedes-Benz E-Class Chauffeur Hire",
     "description": "Executive chauffeur-driven Mercedes-Benz E-Class for business meetings and airport transfers in London.",
     "brand": {
       "@type": "Brand",
       "name": "Mercedes-Benz"
+    },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eugene Chauffeurs",
+      "url": "https://eugenechauffeurs.com",
+      "telephone": "+442081911882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "London"
     },
     "offers": {
       "@type": "Offer",
@@ -41,8 +57,7 @@ export default function EClassPage() {
         "price": HOURLY_RATES.e_class,
         "priceCurrency": "GBP",
         "unitCode": "HUR"
-      },
-      "availability": "https://schema.org/InStock"
+      }
     }
   };
 

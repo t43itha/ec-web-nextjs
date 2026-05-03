@@ -222,7 +222,6 @@ export default async function AirportLandingPage({
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "GBP",
-      "availability": "https://schema.org/InStock"
     }
   };
 
