@@ -47,17 +47,6 @@ export default function EQVPage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": HOURLY_RATES.eqv,
-      "priceCurrency": "GBP",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.eqv,
-        "priceCurrency": "GBP",
-        "unitCode": "HUR"
-      }
     }
   };
 

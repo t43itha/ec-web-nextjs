@@ -218,11 +218,7 @@ export default async function AirportLandingPage({
         "addressCountry": "GB"
       }
     },
-    "areaServed": data.areaServed,
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-    }
+    "areaServed": data.areaServed
   };
 
   return (

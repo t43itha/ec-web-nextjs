@@ -107,13 +107,6 @@ export default function CorporateTravelChauffeurPage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": HOURLY_RATES.e_class,
-      "highPrice": HOURLY_RATES.rolls_royce,
-      "offerCount": "6"
     }
   };
 

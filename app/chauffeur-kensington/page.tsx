@@ -55,13 +55,7 @@ export default function KensingtonPage() {
         "addressCountry": "GB"
       }
     },
-    "areaServed": "Kensington, London",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": "80",
-      "highPrice": "100",
-    }
+    "areaServed": "Kensington, London"
   };
 
   return (

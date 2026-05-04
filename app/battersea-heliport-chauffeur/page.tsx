@@ -59,13 +59,7 @@ export default function BatterseaHeliportPage() {
         addressCountry: 'GB',
       },
     },
-    areaServed: 'Battersea Heliport, London',
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'GBP',
-      lowPrice: String(HOURLY_RATES.e_class),
-      highPrice: String(HOURLY_RATES.rolls_royce),
-    },
+    areaServed: 'Battersea Heliport, London'
   };
 
   const relatedLinks = [

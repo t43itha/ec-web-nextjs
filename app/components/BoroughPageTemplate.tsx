@@ -52,13 +52,7 @@ export default function BoroughPageTemplate({ data }: { data: BoroughData }) {
         addressCountry: 'GB',
       },
     },
-    areaServed: `${data.name}, London`,
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'GBP',
-      lowPrice: String(HOURLY_RATES.e_class),
-      highPrice: String(HOURLY_RATES.rolls_royce),
-    },
+    areaServed: `${data.name}, London`
   };
 
   const faqSchema = data.faqs.map(f => ({ question: f.q, answer: f.a }));

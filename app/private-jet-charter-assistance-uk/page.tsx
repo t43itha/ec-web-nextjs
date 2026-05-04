@@ -107,12 +107,6 @@ export default function PrivateJetCharterAssistanceUKPage() {
     "areaServed": {
       "@type": "Country",
       "name": "United Kingdom"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": HOURLY_RATES.s_class,
-      "highPrice": HOURLY_RATES.rolls_royce
     }
   };
 

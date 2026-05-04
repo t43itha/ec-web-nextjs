@@ -47,17 +47,6 @@ export default function RangeRoverPage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": HOURLY_RATES.range_rover,
-      "priceCurrency": "GBP",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.range_rover,
-        "priceCurrency": "GBP",
-        "unitCode": "HUR"
-      }
     }
   };
 

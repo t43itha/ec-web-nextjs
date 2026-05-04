@@ -54,13 +54,7 @@ export default function EssexPage() {
                 "addressCountry": "GB"
             }
         },
-        "areaServed": "Essex, Chigwell, Loughton, Brentwood",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "lowPrice": "80",
-            "highPrice": "120",
-        }
+        "areaServed": "Essex, Chigwell, Loughton, Brentwood"
     };
 
     return (
