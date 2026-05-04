@@ -104,26 +104,6 @@ export default function WeddingChauffeurServicePage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Wedding Chauffeur Vehicle Services",
-      "itemListElement": vehicles.map(v => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": `${v.name} Chauffeur Service`,
-          "serviceType": "Wedding chauffeur service"
-        },
-        "price": v.hourly,
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": v.hourly,
-          "priceCurrency": "GBP",
-          "unitCode": "HUR"
-        }
-      }))
     }
   };
 

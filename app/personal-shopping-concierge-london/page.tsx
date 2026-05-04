@@ -107,12 +107,6 @@ export default function PersonalShoppingConciergeLondonPage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": HOURLY_RATES.e_class,
-      "highPrice": HOURLY_RATES.range_rover
     }
   };
 

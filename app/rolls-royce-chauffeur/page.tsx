@@ -47,17 +47,6 @@ export default function RollsRoycePage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": HOURLY_RATES.rolls_royce,
-      "priceCurrency": "GBP",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.rolls_royce,
-        "priceCurrency": "GBP",
-        "unitCode": "HUR"
-      }
     }
   };
 

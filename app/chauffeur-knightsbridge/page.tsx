@@ -55,13 +55,7 @@ export default function KnightsbridgePage() {
                 "addressCountry": "GB"
             }
         },
-        "areaServed": "Knightsbridge, London",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "lowPrice": "80",
-            "highPrice": "100",
-        }
+        "areaServed": "Knightsbridge, London"
     };
 
     return (

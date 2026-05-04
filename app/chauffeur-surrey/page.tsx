@@ -54,13 +54,7 @@ export default function SurreyPage() {
                 "addressCountry": "GB"
             }
         },
-        "areaServed": "Surrey, Virginia Water, Esher, Cobham",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "lowPrice": "80",
-            "highPrice": "120",
-        }
+        "areaServed": "Surrey, Virginia Water, Esher, Cobham"
     };
 
     return (

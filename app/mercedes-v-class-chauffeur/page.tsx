@@ -47,17 +47,6 @@ export default function VClassPage() {
     "areaServed": {
       "@type": "City",
       "name": "London"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": HOURLY_RATES.v_class,
-      "priceCurrency": "GBP",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": HOURLY_RATES.v_class,
-        "priceCurrency": "GBP",
-        "unitCode": "HUR"
-      }
     }
   };
 

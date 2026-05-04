@@ -54,13 +54,7 @@ export default function KentPage() {
                 "addressCountry": "GB"
             }
         },
-        "areaServed": "Kent, Sevenoaks, Tunbridge Wells",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "lowPrice": "80",
-            "highPrice": "120",
-        }
+        "areaServed": "Kent, Sevenoaks, Tunbridge Wells"
     };
 
     return (

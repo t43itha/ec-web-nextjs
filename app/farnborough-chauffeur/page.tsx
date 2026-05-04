@@ -55,13 +55,7 @@ export default function FarnboroughPage() {
                 "addressCountry": "GB"
             }
         },
-        "areaServed": "Farnborough Airport, London",
-        "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "GBP",
-            "lowPrice": "150",
-            "highPrice": "250",
-        }
+        "areaServed": "Farnborough Airport, London"
     };
 
     return (

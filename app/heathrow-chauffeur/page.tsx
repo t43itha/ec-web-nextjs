@@ -76,13 +76,7 @@ export default function HeathrowPage() {
       "hasCredential": "TfL Operator Licence: 0108860101"
     },
     "areaServed": "Heathrow",
-    "termsOfService": "Free waiting time: 60 minutes arrivals / 15 minutes departures & non-airport pick-ups.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": "170",
-      "highPrice": "300",
-    }
+    "termsOfService": "Free waiting time: 60 minutes arrivals / 15 minutes departures & non-airport pick-ups."
   };
 
   return (

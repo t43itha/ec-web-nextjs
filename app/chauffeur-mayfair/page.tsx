@@ -55,13 +55,7 @@ export default function MayfairPage() {
         "addressCountry": "GB"
       }
     },
-    "areaServed": "Mayfair, London",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": "80",
-      "highPrice": "100",
-    }
+    "areaServed": "Mayfair, London"
   };
 
   return (

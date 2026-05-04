@@ -76,13 +76,7 @@ export default function LCYPage() {
       "hasCredential": "TfL Operator Licence: 0108860101"
     },
     "areaServed": "London City Airport",
-    "termsOfService": "Free waiting time: 60 minutes arrivals / 15 minutes departures & non-airport pick-ups.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "GBP",
-      "lowPrice": "165",
-      "highPrice": "200",
-    }
+    "termsOfService": "Free waiting time: 60 minutes arrivals / 15 minutes departures & non-airport pick-ups."
   };
 
   return (

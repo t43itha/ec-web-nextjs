@@ -37,13 +37,7 @@ export default function ByTheHourPage() {
       url: 'https://eugenechauffeurs.com/',
       telephone: '+44 7340 801 274',
     },
-    areaServed: 'London',
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'GBP',
-      lowPrice: String(HOURLY_RATES.e_class),
-      highPrice: String(HOURLY_RATES.rolls_royce),
-    },
+    areaServed: 'London'
   };
 
   const relatedLinks = [
