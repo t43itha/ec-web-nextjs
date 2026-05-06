@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import { Plane, Clock, MapPin, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
 import FAQSchema from '@/app/components/FAQSchema';
@@ -158,7 +159,7 @@ export async function generateMetadata({
 }): Promise<Metadata | null> {
   const { airport } = await params;
   const data = AIRPORT_CONTENT[airport as AirportKey];
-  if (!data) return {};
+  if (!data) notFound();
   return {
     title: data.title,
     description: data.description,
@@ -177,7 +178,7 @@ export default async function AirportLandingPage({
   const data = AIRPORT_CONTENT[airport as AirportKey];
 
   if (!data) {
-    return <div className="py-24 text-center text-white">Airport not found</div>;
+    notFound();
   }
 
   const features = [

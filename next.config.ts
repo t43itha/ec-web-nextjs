@@ -98,6 +98,24 @@ const nextConfig: NextConfig = {
         destination: '/landing/airport/london-city-airport',
         permanent: true,
       },
+      // These URLs look like city landing pages, but `/landing/airport/:airport`
+      // is reserved for real airport slugs. Redirect them so Google never sees
+      // soft-404 airport pages with the homepage canonical.
+      {
+        source: '/landing/airport/london',
+        destination: '/landing/airport/london-city-airport',
+        permanent: true,
+      },
+      {
+        source: '/landing/airport/manchester',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/landing/airport/birmingham',
+        destination: '/services',
+        permanent: true,
+      },
       // Old root airport pages to new landing paths
       { source: '/heathrow-chauffeur', destination: '/landing/airport/heathrow', permanent: true },
       { source: '/gatwick-chauffeur', destination: '/landing/airport/gatwick', permanent: true },
