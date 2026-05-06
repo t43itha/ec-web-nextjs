@@ -153,11 +153,18 @@ export const stadiums = {
   }
 };
 
-// Generate all possible combinations for static params
+// Generate all possible service/city combinations for static params.
+//
+// Do not emit `/landing/airport/{city}` here: that pathname is owned by
+// `app/landing/airport/[airport]` for real airport pages such as Heathrow and
+// Gatwick. Generating city pages under the same prefix creates soft-404 pages
+// in production because the more specific airport route wins the match.
 export function getAllServiceCityCombinations() {
   const combinations: { service: string; city: string }[] = [];
   
   Object.keys(services).forEach(service => {
+    if (service === 'airport') return;
+
     Object.keys(cities).forEach(city => {
       combinations.push({ service, city });
     });

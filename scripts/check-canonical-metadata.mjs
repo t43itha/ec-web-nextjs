@@ -72,6 +72,23 @@ for (const { file, expectedSnippets } of dynamicMetadataChecks) {
   }
 }
 
+const landingDataSource = read('app/lib/landing-data.ts');
+if (!landingDataSource.includes("service === 'airport'")) {
+  failures.push('app/lib/landing-data.ts: airport service/city pages must be excluded because /landing/airport/:airport is reserved for real airport slugs');
+}
+
+const airportPageSource = read('app/landing/airport/[airport]/page.tsx');
+if (!airportPageSource.includes("from 'next/navigation'") || !airportPageSource.includes('notFound();')) {
+  failures.push('app/landing/airport/[airport]/page.tsx: unknown airport slugs must call notFound() instead of rendering a 200 soft-404 page');
+}
+
+const nextConfigSource = read('next.config.ts');
+for (const route of ['/landing/airport/london', '/landing/airport/manchester', '/landing/airport/birmingham']) {
+  if (!nextConfigSource.includes(`source: '${route}'`)) {
+    failures.push(`next.config.ts: missing redirect for stale soft-404 route ${route}`);
+  }
+}
+
 if (failures.length > 0) {
   console.error('Canonical metadata check failed:');
   for (const failure of failures) {
