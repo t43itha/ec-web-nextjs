@@ -12,6 +12,9 @@ import {
 } from '@/app/lib/landing-data';
 import BookingSection from '@/app/components/BookingSection';
 import StickyCTA from '@/app/components/StickyCTA';
+import BreadcrumbSchema from '@/app/components/BreadcrumbSchema';
+import FAQSchema from '@/app/components/FAQSchema';
+import LDJson from '@/app/components/LDJson';
 
 // Enable ISR for this route (24 hours)
 export const revalidate = 86400;
@@ -51,8 +54,33 @@ export default async function ServiceCityLandingPage({
     notFound();
   }
 
+  const landingPath = `/landing/${service}/${city}`;
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `https://eugenechauffeurs.com${landingPath}#service`,
+    name: `${serviceData.name} in ${cityData.name}`,
+    description: serviceData.service_description,
+    provider: { '@id': 'https://eugenechauffeurs.com/#organization' },
+    areaServed: {
+      '@type': 'City',
+      name: cityData.name,
+    },
+    serviceType: serviceData.name,
+    url: `https://eugenechauffeurs.com${landingPath}`,
+  };
+
   return (
     <>
+      <LDJson json={serviceSchema} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Services', href: '/services' },
+          { name: `${serviceData.name} in ${cityData.name}`, href: landingPath },
+        ]}
+      />
+      {serviceData.faqs && serviceData.faqs.length > 0 && <FAQSchema faqs={serviceData.faqs} />}
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-black">
         <div className="absolute inset-0 bg-gradient-to-br from-gold-400/5 to-gold-600/5"></div>

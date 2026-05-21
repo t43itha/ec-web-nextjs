@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Plane, Clock, MapPin, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
 import FAQSchema from '@/app/components/FAQSchema';
+import BreadcrumbSchema from '@/app/components/BreadcrumbSchema';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
 import { AIRPORT_FARES } from '@/app/lib/pricing';
@@ -225,6 +226,13 @@ export default async function AirportLandingPage({
   return (
     <>
       <LDJson json={jsonLd} />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', href: '/' },
+          { name: 'Airport Transfers', href: '/services' },
+          { name: `${data.name} Chauffeur Service`, href: data.canonicalPath },
+        ]}
+      />
       <FAQSchema faqs={data.faqs.map(f => ({ question: f.q, answer: f.a }))} />
 
       {/* Hero Section */}
