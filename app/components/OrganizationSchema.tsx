@@ -105,8 +105,6 @@ export default function OrganizationSchema() {
       "Private jet ground transportation",
       "Mercedes-Benz S-Class chauffeur hire",
       "Mercedes-Benz V-Class chauffeur hire",
-    ],
-    "makesOffer": [
       "London chauffeur service",
       "Airport transfer chauffeur service",
       "Corporate chauffeur service",
@@ -114,15 +112,7 @@ export default function OrganizationSchema() {
       "Event chauffeur service",
       "Private jet transfer service",
       "Hourly chauffeur hire",
-    ].map((serviceName) => ({
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": serviceName,
-        "provider": { "@id": `${BASE_URL}/#organization` },
-        "areaServed": "London and the United Kingdom",
-      },
-    })),
+    ],
   };
 
   const websiteSchema = {

@@ -89,6 +89,27 @@ for (const route of ['/landing/airport/london', '/landing/airport/manchester', '
   }
 }
 
+const schemaSourceChecks = [
+  'app/components/OrganizationSchema.tsx',
+  'app/services/page.tsx',
+];
+const forbiddenSchemaSnippets = [
+  "'@type': 'OfferCatalog'",
+  "\"@type\": \"OfferCatalog\"",
+  "'@type': 'Offer'",
+  "\"@type\": \"Offer\"",
+  'makesOffer',
+];
+
+for (const file of schemaSourceChecks) {
+  const source = read(file);
+  for (const snippet of forbiddenSchemaSnippets) {
+    if (source.includes(snippet)) {
+      failures.push(`${file}: remove merchant/product-style schema snippet ${snippet}`);
+    }
+  }
+}
+
 if (failures.length > 0) {
   console.error('Canonical metadata check failed:');
   for (const failure of failures) {

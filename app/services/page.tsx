@@ -31,11 +31,11 @@ const serviceFaqs = [
   },
 ];
 
-const serviceCatalogSchema = {
+const serviceListSchema = {
   '@context': 'https://schema.org',
-  '@type': 'OfferCatalog',
-  '@id': 'https://eugenechauffeurs.com/services#service-catalog',
-  name: 'Eugene Chauffeurs Service Catalog',
+  '@type': 'ItemList',
+  '@id': 'https://eugenechauffeurs.com/services#service-list',
+  name: 'Eugene Chauffeurs Services',
   itemListElement: [
     'Airport transfer chauffeur service',
     'Corporate chauffeur service',
@@ -44,9 +44,10 @@ const serviceCatalogSchema = {
     'Private jet chauffeur transfer',
     'Hourly chauffeur hire',
     'Luxury fleet chauffeur service',
-  ].map((name) => ({
-    '@type': 'Offer',
-    itemOffered: {
+  ].map((name, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
       '@type': 'Service',
       name,
       provider: { '@id': 'https://eugenechauffeurs.com/#organization' },
@@ -65,7 +66,7 @@ export default function ServicesPage() {
         ]}
       />
       <FAQSchema faqs={serviceFaqs} />
-      <LDJson json={serviceCatalogSchema} />
+      <LDJson json={serviceListSchema} />
       <ClientServices />
     </>
   );
