@@ -120,7 +120,7 @@ const Hero = () => {
               className="btn-luxury-outline group flex items-center justify-center gap-4 whitespace-nowrap sm:min-w-[224px]"
               onClick={() => trackPhoneCall('hero_section', '+447340801274')}
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 shrink-0 text-gold-400 group-hover:text-black" aria-hidden="true" />
               <span className="whitespace-nowrap">+44 20 8191 1882</span>
             </a>
           </div>
