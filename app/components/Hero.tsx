@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ArrowRight, MessageCircle, Plane, Shield, Star, Phone, Play, Pause } from 'lucide-react';
+import { ArrowRight, MessageCircle, Shield, Star, Phone, Play, Pause } from 'lucide-react';
 import { trackPhoneCall, trackWhatsApp } from '@/app/lib/analytics';
 import BookingModal from './BookingModal';
 
@@ -73,32 +73,32 @@ const Hero = () => {
 
       {/* Main Content - Asymmetrical Editorial Layout */}
       <div className="relative z-10 h-full max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20 flex flex-col justify-center">
-        <div className="max-w-3xl space-y-10 animate-fade-in-up">
+        <div className="max-w-3xl space-y-6 sm:space-y-8 animate-fade-in-up">
 
           {/* Minimalist Badge */}
           <div className="inline-flex items-center space-x-3">
             <div className="h-[1px] w-12 bg-gold-400"></div>
-            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">LONDON CHAUFFEUR CONCIERGE</span>
+            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">BEYOND TRAVEL</span>
           </div>
 
           {/* Editorial Heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-italiana leading-[0.92] tracking-tight">
+          <h1 className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-italiana leading-[0.92] tracking-tight">
             London Chauffeur <br />
-            <span className="text-white/40 ml-12 sm:ml-24">Concierge.</span>
+            <span className="text-white/40 ml-8 sm:ml-24">Concierge.</span>
           </h1>
 
           {/* Refined Subheading */}
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-md leading-relaxed pl-2 border-l border-white/20">
+          <p className="text-base sm:text-lg md:text-xl text-white/70 font-light max-w-md leading-relaxed pl-2 border-l border-white/20">
             Airport transfers, business travel, and VIP journeys with Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support across London and the UK.
           </p>
 
           {/* CTA Group */}
-          <div className="flex flex-col sm:flex-row items-start gap-6 pt-4">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-stretch sm:items-start gap-4 sm:gap-5 pt-2 sm:pt-4 max-w-full">
             <a
               href="https://wa.me/447340801274?text=Hello!%20I'd%20like%20a%20chauffeur%20quote%20for%20a%20London%20journey."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-luxury group"
+              className="btn-luxury group inline-flex items-center justify-center text-center whitespace-nowrap"
               onClick={() => trackWhatsApp('hero_primary_quote', '+447340801274')}
             >
               <span className="flex items-center gap-4">
@@ -109,7 +109,7 @@ const Hero = () => {
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="btn-luxury-outline group flex items-center gap-4"
+              className="btn-luxury-outline group flex items-center justify-center gap-4 whitespace-nowrap"
             >
               Plan a Journey
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -117,27 +117,12 @@ const Hero = () => {
 
             <a
               href="tel:+447340801274"
-              className="btn-luxury-outline group flex items-center gap-4"
+              className="btn-luxury-outline group flex items-center justify-center gap-4 whitespace-nowrap sm:min-w-[224px]"
               onClick={() => trackPhoneCall('hero_section', '+447340801274')}
             >
               <Phone className="w-4 h-4" />
-              <span>+44 20 8191 1882</span>
+              <span className="whitespace-nowrap">+44 20 8191 1882</span>
             </a>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl pt-2">
-            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
-              <Plane className="w-4 h-4 text-gold-400" />
-              Flight Tracking
-            </div>
-            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
-              <Shield className="w-4 h-4 text-gold-400" />
-              Direct Concierge
-            </div>
-            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
-              <Star className="w-4 h-4 text-gold-400" />
-              31 Google Reviews
-            </div>
           </div>
         </div>
       </div>
