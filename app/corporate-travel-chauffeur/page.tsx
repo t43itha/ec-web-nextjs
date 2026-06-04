@@ -12,8 +12,8 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS, AIRPORT_FARE
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Corporate Chauffeur Service London | Executive Business Travel',
-  description: 'Professional corporate chauffeur service in London. Dedicated account management, monthly billing, and priority booking for businesses. Executive vehicles with Wi-Fi, discretion guaranteed.',
+  title: 'Corporate Chauffeur Accounts London | Executive Travel Concierge',
+  description: 'Corporate chauffeur accounts in London for executive assistants, visiting clients, and business travellers. Direct concierge support, monthly invoicing, airport transfers, and Mercedes vehicles.',
   keywords: 'corporate chauffeur London, business chauffeur service, executive travel, corporate car service, company chauffeur account',
   alternates: {
     canonical: '/corporate-travel-chauffeur',
@@ -77,12 +77,13 @@ export default function CorporateTravelChauffeurPage() {
   ];
 
   const benefits = [
-    "Streamlined booking process via phone, email, or app",
+    "Streamlined booking process via WhatsApp, phone, email, or app",
+    "Direct concierge support for executive assistants and travel bookers",
     "Detailed monthly reporting by department or cost centre",
     "Volume-based preferential rates",
     "Flexible payment terms (30-day invoicing)",
     "Multi-user accounts with individual permissions",
-    "Real-time journey tracking for travel managers",
+    "Flight tracking and meet-and-greet for visiting clients",
     "Backup vehicle guarantee for critical journeys",
     "Consistent vehicle standards and chauffeur quality",
   ];
@@ -131,11 +132,11 @@ export default function CorporateTravelChauffeurPage() {
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Business Services</p>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-italiana text-white leading-[0.9] mb-8">
-              Corporate <br />
-              <span className="text-white/30">Travel.</span>
+              Executive Travel <br />
+              <span className="text-white/30">Concierge.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              Elevate your corporate travel with our executive chauffeur service. Dedicated account management, seamless billing, and the reliability your business demands.
+              Corporate journeys with direct concierge support for assistants, executives, and visiting clients. Airport transfers, monthly invoicing, and Mercedes vehicles handled by one accountable London team.
             </p>
           </div>
         </div>

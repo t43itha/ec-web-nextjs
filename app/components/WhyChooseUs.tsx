@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Shield, Users, Globe, Car, ArrowUpRight } from 'lucide-react';
+import { Shield, MessageCircle, Car, Plane, ArrowUpRight } from 'lucide-react';
 
 const WhyChooseUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,24 +24,24 @@ const WhyChooseUs = () => {
 
   const features = [
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Elite Chauffeurs",
-      description: "Vetted professionals who anticipate every need. Discretion and excellence are our standard."
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: "Direct Concierge",
+      description: "Speak to a real London-based team by WhatsApp or phone when plans change, not an anonymous platform queue."
     },
     {
-      icon: <Car className="w-6 h-6" />,
-      title: "Immaculate Fleet",
-      description: "Meticulously maintained vehicles offering the pinnacle of comfort and automotive luxury."
+      icon: <Plane className="w-6 h-6" />,
+      title: "Airport Precision",
+      description: "Flight tracking, meet-and-greet, luggage support, and calm arrivals across Heathrow, Gatwick, London City, Luton, and Stansted."
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Absolute Privacy",
-      description: "Confidentiality is paramount. Your journey remains strictly between you and your chauffeur."
+      title: "Private & Accountable",
+      description: "Discreet chauffeurs, careful handling of VIP movements, and one trusted team responsible for the whole journey."
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Network",
-      description: "Seamless coordination worldwide. The same gold standard, wherever your travels take you."
+      icon: <Car className="w-6 h-6" />,
+      title: "Mercedes Executive Fleet",
+      description: "S-Class, E-Class, and V-Class options for executives, families, events, and premium airport transfers."
     }
   ];
 
@@ -56,15 +56,15 @@ const WhyChooseUs = () => {
           }`}
         >
           <div>
-            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">The Standard</p>
+            <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Personal Concierge, Platform-Level Precision</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-italiana text-white leading-[0.9]">
-              Why London's <br />
-              <span className="text-white/30">Elite Choose Us.</span>
+              Human Support. <br />
+              <span className="text-white/30">London Accountability.</span>
             </h2>
           </div>
           <div className="pb-2">
             <p className="text-white/60 font-manrope font-light text-lg leading-relaxed max-w-md md:ml-auto">
-              More than transport—a seamless experience crafted around your schedule, your preferences, and your peace of mind.
+              Blacklane and Wheely sell convenience at scale. Eugene Chauffeurs combines that professional standard with a named London team, direct concierge access, and flexible journey handling when details matter.
             </p>
           </div>
         </div>
