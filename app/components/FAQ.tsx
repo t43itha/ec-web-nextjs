@@ -22,7 +22,7 @@ const FAQ = () => {
     },
     {
       question: "What vehicles are in your fleet?",
-      answer: "Our fleet consists exclusively of late-model luxury vehicles, including the Mercedes-Benz S-Class, V-Class, and BMW 7 Series. All are meticulously maintained and equipped with premium amenities."
+      answer: "Our fleet consists exclusively of late-model luxury vehicles, including Mercedes-Benz S-Class, Mercedes-Benz V-Class, Rolls-Royce, and Range Rover options. All are meticulously maintained and equipped with premium amenities."
     },
     {
       question: "How is privacy ensured?",

@@ -58,13 +58,13 @@ const WhyChooseUs = () => {
           <div>
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Personal Concierge, Platform-Level Precision</p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-italiana text-white leading-[0.9]">
-              Human Support. <br />
+              A Named Team. <br />
               <span className="text-white/30">London Accountability.</span>
             </h2>
           </div>
           <div className="pb-2">
             <p className="text-white/60 font-manrope font-light text-lg leading-relaxed max-w-md md:ml-auto">
-              Blacklane and Wheely sell convenience at scale. Eugene Chauffeurs combines that professional standard with a named London team, direct concierge access, and flexible journey handling when details matter.
+              Global platforms like Blacklane and Wheely deliver scale. Eugene Chauffeurs delivers the same standard with a difference — one accountable London team handling your journey end to end, reachable the moment details change.
             </p>
           </div>
         </div>

@@ -116,11 +116,11 @@ const Hero = () => {
             </button>
 
             <a
-              href="tel:+447340801274"
+              href="tel:+442081911882"
               className="btn-luxury-outline group flex items-center justify-center gap-4 whitespace-nowrap sm:min-w-[224px]"
-              onClick={() => trackPhoneCall('hero_section', '+447340801274')}
+              onClick={() => trackPhoneCall('hero_section', '+442081911882')}
             >
-              <Phone className="w-4 h-4 shrink-0 text-gold-400 group-hover:text-black" aria-hidden="true" />
+              <Phone className="w-4 h-4 shrink-0 text-white group-hover:text-black" aria-hidden="true" />
               <span className="whitespace-nowrap">+44 20 8191 1882</span>
             </a>
           </div>
