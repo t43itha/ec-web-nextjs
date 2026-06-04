@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Shield, Star, Phone, Play, Pause } from 'lucide-react';
+import { ArrowRight, MessageCircle, Plane, Shield, Star, Phone, Play, Pause } from 'lucide-react';
 import { trackPhoneCall, trackWhatsApp } from '@/app/lib/analytics';
 import BookingModal from './BookingModal';
 
@@ -78,30 +78,41 @@ const Hero = () => {
           {/* Minimalist Badge */}
           <div className="inline-flex items-center space-x-3">
             <div className="h-[1px] w-12 bg-gold-400"></div>
-            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">BEYOND TRAVEL</span>
+            <span className="text-gold-300 text-xs tracking-[0.3em] uppercase font-medium">LONDON CHAUFFEUR CONCIERGE</span>
           </div>
 
           {/* Editorial Heading */}
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white font-italiana leading-[0.9] tracking-tight">
-            Luxury <br />
-            <span className="text-white/40 ml-12 sm:ml-24">Chauffeur.</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-italiana leading-[0.92] tracking-tight">
+            London Chauffeur <br />
+            <span className="text-white/40 ml-12 sm:ml-24">Concierge.</span>
           </h1>
 
           {/* Refined Subheading */}
           <p className="text-lg md:text-xl text-white/70 font-light max-w-md leading-relaxed pl-2 border-l border-white/20">
-            More than just a driver. Your personal chauffeur for life, business, events, and airport transfers in London.
+            Airport transfers, business travel, and VIP journeys with Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support across London and the UK.
           </p>
 
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row items-start gap-6 pt-4">
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <a
+              href="https://wa.me/447340801274?text=Hello!%20I'd%20like%20a%20chauffeur%20quote%20for%20a%20London%20journey."
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-luxury group"
+              onClick={() => trackWhatsApp('hero_primary_quote', '+447340801274')}
             >
               <span className="flex items-center gap-4">
-                Reserve Now
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                Get Quote on WhatsApp
+                <MessageCircle className="w-4 h-4 transform group-hover:scale-110 transition-transform" />
               </span>
+            </a>
+
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="btn-luxury-outline group flex items-center gap-4"
+            >
+              Plan a Journey
+              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
             </button>
 
             <a
@@ -112,6 +123,21 @@ const Hero = () => {
               <Phone className="w-4 h-4" />
               <span>+44 20 8191 1882</span>
             </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl pt-2">
+            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
+              <Plane className="w-4 h-4 text-gold-400" />
+              Flight Tracking
+            </div>
+            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
+              <Shield className="w-4 h-4 text-gold-400" />
+              Direct Concierge
+            </div>
+            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 text-white/70 text-xs uppercase tracking-[0.16em]">
+              <Star className="w-4 h-4 text-gold-400" />
+              31 Google Reviews
+            </div>
           </div>
         </div>
       </div>

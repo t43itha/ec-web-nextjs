@@ -11,7 +11,7 @@ import BreadcrumbSchema from '@/app/components/BreadcrumbSchema';
 const homepageFaqs = [
   {
     question: 'What chauffeur services does Eugene Chauffeurs provide?',
-    answer: 'Eugene Chauffeurs provides luxury chauffeur services in London and across the UK, including airport transfers, corporate travel, wedding transport, event chauffeur services, private jet ground transfers, hourly hire, and concierge journeys.',
+    answer: 'Eugene Chauffeurs provides a London chauffeur concierge service for airport transfers, corporate travel, wedding transport, event chauffeur services, private jet ground transfers, hourly hire, and VIP journeys across London and the UK.',
   },
   {
     question: 'Do you offer airport meet and greet chauffeur transfers?',
@@ -36,8 +36,8 @@ const homepageFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Eugene Chauffeurs — Luxury Chauffeur Service London',
-  description: "London's premier personal chauffeur service. Luxury executive transfers for airports, business travel, weddings, and special occasions across London and the UK.",
+  title: 'London Chauffeur Concierge | Airport & Executive Transfers',
+  description: 'London chauffeur concierge for airport transfers, business travel, and VIP journeys. Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support.',
   alternates: { canonical: '/' },
 };
 
