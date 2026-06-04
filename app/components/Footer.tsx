@@ -156,7 +156,7 @@ const Footer = () => {
         <div className="border-t border-white/5 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <p className="text-white/30 text-xs tracking-wider">
-              &copy; 2025 Eugene Chauffeurs Ltd. All rights reserved.
+              &copy; 2026 Eugene Chauffeurs Ltd. All rights reserved.
             </p>
             <TfLBadge />
           </div>

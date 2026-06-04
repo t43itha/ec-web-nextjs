@@ -59,7 +59,7 @@ const FleetPreview = () => {
                 >
                     <p className="text-gold-400 text-xs uppercase tracking-[0.3em]">Our Fleet</p>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-italiana text-white">
-                        Choose Your <span className="text-white/30">Chariot.</span>
+                        The <span className="text-white/30">Fleet.</span>
                     </h2>
                 </div>
 
