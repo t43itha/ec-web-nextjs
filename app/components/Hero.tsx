@@ -84,7 +84,7 @@ const Hero = () => {
           {/* Editorial Heading */}
           <h1 className="text-4xl min-[380px]:text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-italiana leading-[0.92] tracking-tight">
             London Chauffeur <br />
-            <span className="text-white/40 ml-8 sm:ml-24">Concierge.</span>
+            <span className="text-white/40 ml-8 sm:ml-24">&amp; Concierge.</span>
           </h1>
 
           {/* Refined Subheading */}
