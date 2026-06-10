@@ -92,6 +92,10 @@ const Hero = () => {
             Airport transfers, business travel, and VIP journeys with Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support across London and the UK.
           </p>
 
+          <p className="text-xs sm:text-sm text-white/60 font-manrope tracking-wide uppercase max-w-xl">
+            Trusted by London clients for airport transfers, business travel, and VIP journeys — 4.9 stars from 31 Google reviews.
+          </p>
+
           {/* CTA Group */}
           <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-stretch sm:items-start gap-4 sm:gap-5 pt-2 sm:pt-4 max-w-full">
             <a
