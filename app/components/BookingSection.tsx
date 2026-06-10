@@ -26,12 +26,6 @@ const BookingSection = () => {
               <p className="text-white/60 font-manrope font-light leading-relaxed max-w-md">
                 Secure your vehicle in minutes with our encrypted booking system. For complex itineraries, our concierge team is at your disposal.
               </p>
-              <div className="max-w-md border border-gold-400/20 bg-gold-400/[0.06] p-5">
-                <p className="text-gold-300 text-[10px] uppercase tracking-[0.28em] mb-3">Popular this week</p>
-                <p className="text-white/70 font-manrope text-sm font-light leading-relaxed">
-                  Heathrow meet-and-greet, Mayfair executive travel, and VIP event arrivals. Send us your time, pickup, drop-off, and passenger count — we&apos;ll confirm the best vehicle.
-                </p>
-              </div>
             </div>
 
             {/* Contact Options */}
