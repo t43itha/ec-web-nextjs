@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: 'Chauffeur Service Kensington | Luxury Car Hire London W8',
   description: 'Premium chauffeur service in Kensington. S-Class & V-Class hire for Kensington High Street, Holland Park, and private residences in W8. Discreet, professional, and punctual.',
   alternates: { canonical: '/chauffeur-kensington' },
+  openGraph: {
+    title: 'Chauffeur Service Kensington | Luxury Car Hire London W8',
+    description: 'Premium chauffeur service in Kensington. S-Class & V-Class hire for Kensington High Street, Holland Park, and private residences in W8. Discreet, professional, and punctual.',
+    url: '/chauffeur-kensington',
+  },
 };
 
 export default function KensingtonPage() {
@@ -45,8 +50,8 @@ export default function KensingtonPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",

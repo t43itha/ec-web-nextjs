@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     title: 'Wedding Chauffeur Service London | Eugene Chauffeurs',
     description: 'Make your wedding day unforgettable with our luxury wedding chauffeur service. Pristine vehicles, professional chauffeurs, and bespoke arrangements.',
     images: ['/event.png'],
+    url: '/wedding-chauffeur-service',
   },
 };
 

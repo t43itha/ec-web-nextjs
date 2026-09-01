@@ -29,8 +29,8 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 pt-2">
               {[
-                { icon: MessageCircle, href: "https://wa.me/447340801274" },
-                { icon: Phone, href: "tel:+442081911882" },
+                  { icon: Phone, href: "tel:+442081911882" },
+                  { icon: MessageCircle, href: "https://wa.me/447340801274" },
                 { icon: Mail, href: "mailto:bookings@eugenechauffeurs.com" },
                 { icon: Instagram, href: "https://instagram.com/eugenechauffeurs" },
                 { icon: Linkedin, href: "https://linkedin.com/company/eugenechauffeurs" },
@@ -90,7 +90,7 @@ const Footer = () => {
                   { name: 'Luton', href: '/luton-chauffeur' },
                   { name: 'Stansted', href: '/stansted-chauffeur' },
                   { name: 'London City', href: '/london-city-airport-chauffeur' },
-                  { name: 'Farnborough', href: '/landing/airport/farnborough' }
+                  { name: 'Farnborough', href: '/farnborough-chauffeur' }
                 ].map((link) => (
                   <li key={link.name}>
                     <Link
@@ -136,15 +136,15 @@ const Footer = () => {
               <div className="space-y-4">
                 <div className="group">
                   <p className="text-[10px] uppercase tracking-widest text-white/30 mb-1">24/7 Booking Line</p>
-                  <p className="text-white text-sm font-light hover:text-gold-400 transition-colors cursor-pointer">+44 20 8191 1882</p>
+                  <a href="tel:+442081911882" className="text-white text-sm font-light hover:text-gold-400 transition-colors">+44 20 8191 1882</a>
                 </div>
                 <div className="group">
                   <p className="text-[10px] uppercase tracking-widest text-white/30 mb-1">Email Enquiries</p>
-                  <p className="text-white text-xs font-light hover:text-gold-400 transition-colors cursor-pointer">bookings@eugenechauffeurs.com</p>
+                  <a href="mailto:bookings@eugenechauffeurs.com" className="text-white text-xs font-light hover:text-gold-400 transition-colors">bookings@eugenechauffeurs.com</a>
                 </div>
                 <div className="group">
                   <p className="text-[10px] uppercase tracking-widest text-white/30 mb-1">Location</p>
-                  <p className="text-white text-xs font-light">London, United Kingdom</p>
+                  <p className="text-white text-xs font-light">Suite 130, Lewisham Tower House,<br />67-71 Lewisham High Street,<br />London SE13 5JX, United Kingdom</p>
                 </div>
               </div>
             </div>
@@ -162,6 +162,9 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-8">
             <Link href="/blog" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Journal</Link>
+            <Link href="/fleet" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Fleet</Link>
+            <Link href="/prices" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Prices</Link>
+            <Link href="/faq" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">FAQ</Link>
             <Link href="/privacy" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Privacy</Link>
             <Link href="/terms" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Terms</Link>
             <Link href="/sitemap" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Sitemap</Link>

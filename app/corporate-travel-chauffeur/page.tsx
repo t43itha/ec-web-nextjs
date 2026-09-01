@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: 'Corporate Chauffeur Service London | Eugene Chauffeurs',
     description: 'Streamline your corporate travel with our professional chauffeur service. Dedicated accounts, monthly billing, and executive vehicles.',
     images: ['/business.png'],
+    url: '/corporate-travel-chauffeur',
   },
 };
 

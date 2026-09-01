@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Clock, Shield, MapPin, CreditCard } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
+import FAQSchema from '@/app/components/FAQSchema';
 import StickyCTA from '@/app/components/StickyCTA';
 import BookingSection from '@/app/components/BookingSection';
 import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app/lib/pricing';
@@ -10,9 +11,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'London Chauffeur Service | Eugene Chauffeurs — On-Time, Discreet, Immaculate',
+  title: 'London Chauffeur Service — On-Time, Discreet, Immaculate',
   description: 'Premium London chauffeur service for business and leisure. Mercedes S-Class & V-Class, meet & greet, flight tracking, 60 mins free waiting (airport arrivals) / 15 mins elsewhere.',
   alternates: { canonical: '/chauffeur-london' },
+  openGraph: {
+    title: 'London Chauffeur Service | Eugene Chauffeurs — On-Time, Discreet, Immaculate',
+    description: 'Premium London chauffeur service for business and leisure. Mercedes S-Class & V-Class, meet & greet, flight tracking, 60 mins free waiting (airport arrivals) / 15 mins elsewhere.',
+    url: '/chauffeur-london',
+  },
 };
 
 export default function ChauffeurLondonPage() {
@@ -69,8 +75,8 @@ export default function ChauffeurLondonPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Suite 130, Lewisham Tower House, 67-71 Lewisham High Street",
@@ -87,6 +93,7 @@ export default function ChauffeurLondonPage() {
   return (
     <>
       <LDJson json={jsonLd} />
+      <FAQSchema faqs={faqs.map(({ q, a }) => ({ question: q, answer: a }))} />
       
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">

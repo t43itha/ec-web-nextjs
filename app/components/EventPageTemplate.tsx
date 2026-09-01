@@ -26,7 +26,7 @@ const EventPageTemplate: React.FC<EventPageTemplateProps> = ({ data }) => {
       '@type': 'LocalBusiness',
       name: COMPANY.name,
       url: 'https://eugenechauffeurs.com/',
-      telephone: '+44 7340 801 274',
+      telephone: '+44 20 8191 1882',
     },
     areaServed: 'London',
   };
@@ -47,7 +47,7 @@ const EventPageTemplate: React.FC<EventPageTemplateProps> = ({ data }) => {
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Event Transport</p>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-italiana text-white leading-[0.9] mb-8">
-              {data.heroTagline} <br />
+              {data.name} <br />
               <span className="text-white/30">Chauffeur.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">

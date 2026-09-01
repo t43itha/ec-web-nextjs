@@ -10,7 +10,7 @@ import { AIRPORT_FARES } from '@/app/lib/pricing';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Gatwick Chauffeur Service | Eugene Chauffeurs — Meet & Greet, Flight Tracking',
+  title: 'Gatwick Chauffeur Service — Meet & Greet, Flight Tracking',
   description: 'Premium Gatwick transfers with meet & greet, flight tracking, 60 mins free waiting (arrivals) / 15 mins (departures).',
 };
 
@@ -64,8 +64,8 @@ export default function GatwickPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Gatwick Airport",

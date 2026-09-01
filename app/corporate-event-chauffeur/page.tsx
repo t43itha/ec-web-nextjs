@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: 'Corporate Event Chauffeur London | Eugene Chauffeurs',
     description: 'Seamless transportation for corporate events. Multi-vehicle coordination and VIP guest management.',
     images: ['/event.png'],
+    url: '/corporate-event-chauffeur',
   },
 };
 

@@ -9,9 +9,14 @@ import BookingSection from '@/app/components/BookingSection';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-    title: 'Farnborough Airport Chauffeur | Private Jet Transfers | Eugene Chauffeurs',
+    title: 'Farnborough Airport Chauffeur | Private Jet Transfers',
     description: 'Premium chauffeur service for Farnborough Airport (FAB). Seamless private jet transfers to London and beyond. Tarmac access available on request.',
   alternates: { canonical: '/farnborough-chauffeur' },
+  openGraph: {
+    title: 'Farnborough Airport Chauffeur | Private Jet Transfers | Eugene Chauffeurs',
+    description: 'Premium chauffeur service for Farnborough Airport (FAB). Seamless private jet transfers to London and beyond. Tarmac access available on request.',
+    url: '/farnborough-chauffeur',
+  },
 };
 
 export default function FarnboroughPage() {
@@ -46,7 +51,7 @@ export default function FarnboroughPage() {
             "@type": "LocalBusiness",
             "name": "Eugene Chauffeurs",
             "url": "https://eugenechauffeurs.com/",
-            "telephone": "+44 7340 801 274",
+            "telephone": "+44 20 8191 1882",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Farnborough Airport",

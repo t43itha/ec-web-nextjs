@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Plane, Clock, MapPin, Shield } from 'lucide-react';
 import LDJson from '@/app/components/LDJson';
@@ -31,8 +32,8 @@ interface AirportData {
 
 const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
   heathrow: {
-    title: 'Heathrow Chauffeur Service | Eugene Chauffeurs',
-    description: 'Seamless Heathrow transfers with meet & greet, flight tracking, and luxury vehicles.',
+    title: 'Heathrow Chauffeur Service from £170',
+    description: 'Heathrow chauffeur transfers from £170 with meet and greet, flight tracking, and 60 minutes of airport waiting time.',
     name: 'Heathrow',
     subtitle: 'Chauffeur.',
     heroText: "The ultimate in airport luxury. Seamless connections between London and the world's busiest international hub.",
@@ -56,7 +57,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     canonicalPath: '/landing/airport/heathrow'
   },
   gatwick: {
-    title: 'Gatwick Chauffeur Service | Eugene Chauffeurs',
+    title: 'Gatwick Chauffeur Service',
     description: 'Premium Gatwick transfers with meet & greet, flight tracking, and luxury vehicles.',
     name: 'Gatwick',
     subtitle: 'Chauffeur.',
@@ -79,7 +80,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     canonicalPath: '/landing/airport/gatwick'
   },
   luton: {
-    title: 'Luton Chauffeur Service | Eugene Chauffeurs',
+    title: 'Luton Chauffeur Service',
     description: 'Executive Luton transfers with meet & greet, flight tracking, and luxury vehicles.',
     name: 'Luton',
     subtitle: 'Chauffeur.',
@@ -102,7 +103,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     canonicalPath: '/landing/airport/luton'
   },
   stansted: {
-    title: 'Stansted Chauffeur Service | Eugene Chauffeurs',
+    title: 'Stansted Chauffeur Service',
     description: 'Executive Stansted transfers with meet & greet, flight tracking, and luxury vehicles.',
     name: 'Stansted',
     subtitle: 'Chauffeur.',
@@ -125,7 +126,7 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     canonicalPath: '/landing/airport/stansted'
   },
   'london-city-airport': {
-    title: 'London City Airport Chauffeur | Eugene Chauffeurs',
+    title: 'London City Airport Chauffeur',
     description: 'Executive LCY transfers with meet & greet, flight tracking, and luxury vehicles.',
     name: 'London City',
     subtitle: 'Chauffeur.',
@@ -166,6 +167,11 @@ export async function generateMetadata({
     description: data.description,
     alternates: {
       canonical: data.canonicalPath,
+    },
+    openGraph: {
+      title: `${data.title} | Eugene Chauffeurs`,
+      description: data.description,
+      url: data.canonicalPath,
     },
   };
 }
@@ -213,7 +219,7 @@ export default async function AirportLandingPage({
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
       "url": "https://eugenechauffeurs.com/",
-      "telephone": "+44 7340 801 274",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",
@@ -329,6 +335,9 @@ export default async function AirportLandingPage({
               <p className="text-xs text-white/40 font-manrope">
                 Prices subject to VAT where applicable.
               </p>
+              <Link href="/prices" className="mt-5 inline-block text-sm text-gold-400 hover:underline">
+                Compare all published chauffeur prices
+              </Link>
             </div>
 
             <div className="lg:col-span-8">

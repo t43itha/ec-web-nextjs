@@ -19,7 +19,7 @@ export default function OrganizationSchema() {
     "image": `${BASE_URL}/opengraph-image`,
     "description": "Luxury chauffeur and concierge transport company in London, providing airport transfers, corporate travel, wedding chauffeur services, event transport, private jet support, and premium vehicle hire with professional chauffeurs.",
     "slogan": "Luxury chauffeur service in London for airport transfers, business travel, weddings, events, and concierge journeys.",
-    "telephone": "+44 7340 801 274",
+    "telephone": "+44 20 8191 1882",
     "email": "bookings@eugenechauffeurs.com",
     "address": {
       "@type": "PostalAddress",
@@ -66,7 +66,7 @@ export default function OrganizationSchema() {
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "telephone": "+44 7340 801 274",
+        "telephone": "+44 20 8191 1882",
         "email": "bookings@eugenechauffeurs.com",
         "contactType": "bookings",
         "areaServed": "GB",
@@ -74,15 +74,15 @@ export default function OrganizationSchema() {
       },
       {
         "@type": "ContactPoint",
-        "telephone": "+44 7340 801 274",
+        "telephone": "+44 20 8191 1882",
         "contactType": "customer service",
         "areaServed": "GB",
         "availableLanguage": ["English"],
       },
     ],
     "sameAs": [
-      "https://instagram.com/eugenechauffeurs",
-      "https://linkedin.com/company/eugenechauffeurs",
+      "https://www.instagram.com/eugenechauffeurs",
+      "https://www.linkedin.com/company/eugenechauffeurs",
       "https://x.com/eugenechauffeurs",
     ],
     "hasCredential": {

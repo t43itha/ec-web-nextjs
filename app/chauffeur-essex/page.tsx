@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Chauffeur Service Essex | Luxury Car Hire Chigwell & Brentwood',
     description: 'Premium chauffeur service in Essex. Serving Chigwell, Loughton, Brentwood, and Epping. Luxury airport transfers and wedding car hire.',
   alternates: { canonical: '/chauffeur-essex' },
+  openGraph: {
+    title: 'Chauffeur Service Essex | Luxury Car Hire Chigwell & Brentwood',
+    description: 'Premium chauffeur service in Essex. Serving Chigwell, Loughton, Brentwood, and Epping. Luxury airport transfers and wedding car hire.',
+    url: '/chauffeur-essex',
+  },
 };
 
 export default function EssexPage() {
@@ -46,7 +51,7 @@ export default function EssexPage() {
             "@type": "LocalBusiness",
             "name": "Eugene Chauffeurs",
             "url": "https://eugenechauffeurs.com/",
-            "telephone": "+44 7340 801 274",
+            "telephone": "+44 20 8191 1882",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Essex",

@@ -13,9 +13,14 @@ import { COMPANY } from '@/app/lib/config';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Battersea Heliport Chauffeur | Helicopter Transfers | Eugene Chauffeurs',
+  title: 'Battersea Heliport Chauffeur | Helicopter Transfers',
   description: 'Premium chauffeur service for Battersea Heliport. Seamless helicopter transfer connections to Central London and beyond.',
   alternates: { canonical: '/battersea-heliport-chauffeur' },
+  openGraph: {
+    title: 'Battersea Heliport Chauffeur | Helicopter Transfers | Eugene Chauffeurs',
+    description: 'Premium chauffeur service for Battersea Heliport. Seamless helicopter transfer connections to Central London and beyond.',
+    url: '/battersea-heliport-chauffeur',
+  },
 };
 
 export default function BatterseaHeliportPage() {
@@ -50,7 +55,7 @@ export default function BatterseaHeliportPage() {
       '@type': 'LocalBusiness',
       name: COMPANY.name,
       url: 'https://eugenechauffeurs.com/',
-      telephone: '+44 7340 801 274',
+      telephone: '+44 20 8191 1882',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Battersea Heliport',

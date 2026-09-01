@@ -538,7 +538,7 @@ const ServicesPage = () => {
                 <ArrowRight className="w-4 h-4" />
               </span>
             </MagneticButton>
-            <MagneticButton href="tel:+447424163636" className="btn-luxury-outline">
+            <MagneticButton href="tel:+442081911882" className="btn-luxury-outline">
               <span>Call Now</span>
             </MagneticButton>
           </div>

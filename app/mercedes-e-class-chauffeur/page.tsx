@@ -10,9 +10,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS, AIRPORT_FARE
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes E-Class Chauffeur Hire London | Eugene Chauffeurs',
+  title: 'Mercedes E-Class Chauffeur Hire London',
   description: 'Hire a Mercedes-Benz E-Class with professional chauffeur in London. The smart choice for business travel and airport transfers.',
   alternates: { canonical: '/mercedes-e-class-chauffeur' },
+  openGraph: {
+    title: 'Mercedes E-Class Chauffeur Hire London | Eugene Chauffeurs',
+    description: 'Hire a Mercedes-Benz E-Class with professional chauffeur in London. The smart choice for business travel and airport transfers.',
+    url: '/mercedes-e-class-chauffeur',
+  },
 };
 
 export default function EClassPage() {

@@ -186,7 +186,7 @@ export function generateLandingPageMetadata(service: string, city: string) {
     return null;
   }
   
-  const title = `${serviceData.name} in ${cityData.name} | Eugene Chauffeurs`;
+  const title = `${serviceData.name} in ${cityData.name}`;
   const description = `${serviceData.description} in ${cityData.name}. Professional chauffeurs, luxury vehicles, 24/7 service across ${cityData.region}.`;
   
   return {
@@ -196,6 +196,7 @@ export function generateLandingPageMetadata(service: string, city: string) {
     openGraph: {
       title,
       description,
+      url: `/landing/${service}/${city}`,
       images: [serviceData.hero_image],
     },
     alternates: {
@@ -211,7 +212,7 @@ export function generateStadiumMetadata(venue: string) {
     return null;
   }
   
-  const title = `${stadium.name} Chauffeur Service | Eugene Chauffeurs`;
+  const title = `${stadium.name} Chauffeur Service`;
   const description = `Premium chauffeur service to ${stadium.name}. Avoid match day traffic and arrive in style for ${stadium.team} games and events.`;
   
   return {
@@ -221,6 +222,7 @@ export function generateStadiumMetadata(venue: string) {
     openGraph: {
       title,
       description,
+      url: `/landing/stadium/${venue}`,
       images: [stadium.image],
     },
     alternates: {

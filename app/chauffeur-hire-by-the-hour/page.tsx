@@ -12,9 +12,14 @@ import { COMPANY } from '@/app/lib/config';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Chauffeur Hire by the Hour London | Hourly Car Hire | Eugene Chauffeurs',
+  title: 'Chauffeur Hire by the Hour London | Hourly Car Hire',
   description: 'Hire a chauffeur by the hour in London. Flexible hourly rates from £60/hr. Mercedes S-Class, V-Class, Range Rover, and Rolls-Royce available.',
   alternates: { canonical: '/chauffeur-hire-by-the-hour' },
+  openGraph: {
+    title: 'Chauffeur Hire by the Hour London | Hourly Car Hire | Eugene Chauffeurs',
+    description: 'Hire a chauffeur by the hour in London. Flexible hourly rates from £60/hr. Mercedes S-Class, V-Class, Range Rover, and Rolls-Royce available.',
+    url: '/chauffeur-hire-by-the-hour',
+  },
 };
 
 export default function ByTheHourPage() {
@@ -35,7 +40,7 @@ export default function ByTheHourPage() {
       '@type': 'LocalBusiness',
       name: COMPANY.name,
       url: 'https://eugenechauffeurs.com/',
-      telephone: '+44 7340 801 274',
+      telephone: '+44 20 8191 1882',
     },
     areaServed: 'London'
   };

@@ -43,7 +43,7 @@ export default function BoroughPageTemplate({ data }: { data: BoroughData }) {
       '@type': 'LocalBusiness',
       name: COMPANY.name,
       url: 'https://eugenechauffeurs.com/',
-      telephone: '+44 7340 801 274',
+      telephone: '+44 20 8191 1882',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'London',

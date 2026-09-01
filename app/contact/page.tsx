@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: 'Contact Eugene Chauffeurs | Book Your Luxury Transfer',
   description: 'Get in touch with Eugene Chauffeurs for luxury airport transfers, corporate travel, and special occasion transport across London and the UK.',
   alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact Eugene Chauffeurs | Book Your Luxury Transfer',
+    description: 'Get in touch with Eugene Chauffeurs for luxury airport transfers, corporate travel, and special occasion transport across London and the UK.',
+    url: '/contact',
+  },
 };
 
 const contactPageSchema = {

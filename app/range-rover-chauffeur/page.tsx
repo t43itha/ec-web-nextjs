@@ -10,9 +10,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Range Rover Chauffeur Hire London | Eugene Chauffeurs',
+  title: 'Range Rover Chauffeur Hire London',
   description: 'Hire a Range Rover Autobiography with professional chauffeur in London. Commanding presence, luxury interior, and 4x4 capability.',
   alternates: { canonical: '/range-rover-chauffeur' },
+  openGraph: {
+    title: 'Range Rover Chauffeur Hire London | Eugene Chauffeurs',
+    description: 'Hire a Range Rover Autobiography with professional chauffeur in London. Commanding presence, luxury interior, and 4x4 capability.',
+    url: '/range-rover-chauffeur',
+  },
 };
 
 export default function RangeRoverPage() {

@@ -10,9 +10,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS, AIRPORT_FARE
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes V-Class Chauffeur Hire London | Eugene Chauffeurs',
+  title: 'Mercedes V-Class Chauffeur Hire London',
   description: 'Luxury MPV chauffeur service in London. Mercedes-Benz V-Class for group travel, airport transfers, and corporate roadshows. Seats up to 7.',
   alternates: { canonical: '/mercedes-v-class-chauffeur' },
+  openGraph: {
+    title: 'Mercedes V-Class Chauffeur Hire London | Eugene Chauffeurs',
+    description: 'Luxury MPV chauffeur service in London. Mercedes-Benz V-Class for group travel, airport transfers, and corporate roadshows. Seats up to 7.',
+    url: '/mercedes-v-class-chauffeur',
+  },
 };
 
 export default function VClassPage() {

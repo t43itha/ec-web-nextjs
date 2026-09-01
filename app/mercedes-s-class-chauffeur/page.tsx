@@ -10,9 +10,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS, AIRPORT_FARE
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes S-Class Chauffeur London | Eugene Chauffeurs',
+  title: 'Mercedes S-Class Chauffeur London',
   description: 'Hire a Mercedes-Benz S-Class with professional chauffeur in London. The ultimate in luxury, comfort, and style for business and leisure.',
   alternates: { canonical: '/mercedes-s-class-chauffeur' },
+  openGraph: {
+    title: 'Mercedes S-Class Chauffeur London | Eugene Chauffeurs',
+    description: 'Hire a Mercedes-Benz S-Class with professional chauffeur in London. The ultimate in luxury, comfort, and style for business and leisure.',
+    url: '/mercedes-s-class-chauffeur',
+  },
 };
 
 export default function SClassPage() {

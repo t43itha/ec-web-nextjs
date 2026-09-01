@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: 'Chauffeur Service Chelsea | Luxury Car Hire London SW3',
   description: 'Premium chauffeur service in Chelsea. S-Class & V-Class hire for Sloane Square, King\'s Road, and private residences in SW3. Discreet, professional, and punctual.',
   alternates: { canonical: '/chauffeur-chelsea' },
+  openGraph: {
+    title: 'Chauffeur Service Chelsea | Luxury Car Hire London SW3',
+    description: 'Premium chauffeur service in Chelsea. S-Class & V-Class hire for Sloane Square, King\'s Road, and private residences in SW3. Discreet, professional, and punctual.',
+    url: '/chauffeur-chelsea',
+  },
 };
 
 export default function ChelseaPage() {
@@ -45,8 +50,8 @@ export default function ChelseaPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",

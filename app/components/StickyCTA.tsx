@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { PHONE_DISPLAY, PHONE_E164 } from "@/app/lib/config";
+import { PHONE_E164, WHATSAPP_E164 } from "@/app/lib/config";
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
 
 export default function StickyCTA({ label = "Get a Quote" }: { label?: string }) {
@@ -21,7 +21,7 @@ export default function StickyCTA({ label = "Get a Quote" }: { label?: string })
           <Phone className="w-5 h-5" />
         </a>
         <a 
-          href={`https://wa.me/${PHONE_E164}`} 
+          href={`https://wa.me/${WHATSAPP_E164}`} 
           className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#25D366] text-white hover:bg-[#20bd5a] transition-colors"
           aria-label="WhatsApp us"
         >

@@ -19,9 +19,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return {};
 
   return {
-    title: `${post.title} | Eugene Chauffeurs Blog`,
+    title: `${post.title} | Chauffeur Journal`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: `${post.title} | Eugene Chauffeurs`,
+      description: post.description,
+      url: `/blog/${post.slug}`,
+      images: [post.image],
+    },
   };
 }
 
@@ -37,7 +43,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "image": `https://ec-web-nextjs.netlify.app${post.image}`,
+    "image": `https://eugenechauffeurs.com${post.image}`,
     "datePublished": post.date,
     "author": {
       "@type": "Organization",
@@ -48,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "name": "Eugene Chauffeurs",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ec-web-nextjs.netlify.app/RGB-Eugene-Chauffeurs-Concierge-Logo.webp"
+        "url": "https://eugenechauffeurs.com/RGB-Eugene-Chauffeurs-Concierge-Logo.webp"
       }
     },
     "description": post.description
