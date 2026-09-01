@@ -108,7 +108,6 @@ const requiredRedirects = {
   '/business-london': '/landing/business/london',
   '/event-birmingham': '/landing/event/birmingham',
   '/v-class-chauffeur-hire': '/mercedes-v-class-chauffeur',
-  '/fleet': '/mercedes-s-class-chauffeur',
 };
 for (const [source, destination] of Object.entries(requiredRedirects)) {
   if (!nextConfigSource.includes(`source: '${source}'`) || !nextConfigSource.includes(`destination: '${destination}'`)) {
@@ -144,7 +143,11 @@ for (const redirectedStub of ['business-london', 'event-birmingham', 'v-class-ch
   }
 }
 
-for (const page of ['faq', 'prices', 'privacy', 'terms', 'sitemap']) {
+if (nextConfigSource.includes("source: '/fleet'")) {
+  failures.push('next.config.ts: /fleet must remain a real fleet index, not a redirect');
+}
+
+for (const page of ['faq', 'fleet', 'prices', 'privacy', 'terms', 'sitemap']) {
   read(`app/${page}/page.tsx`);
 }
 

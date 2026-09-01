@@ -140,7 +140,7 @@ const FleetPreview = () => {
                     }`}
                 >
                     <Link
-                        href="/services"
+                        href="/fleet"
                         className="inline-flex items-center gap-3 text-white/60 hover:text-gold-400 transition-colors group"
                     >
                         <span className="text-sm uppercase tracking-widest font-manrope">View All Vehicles</span>

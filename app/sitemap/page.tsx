@@ -10,7 +10,7 @@ const groups = [
     title: 'Main pages',
     links: [
       ['Home', '/'], ['Services', '/services'], ['Prices', '/prices'], ['FAQ', '/faq'],
-      ['About', '/about'], ['Contact', '/contact'], ['Privacy Policy', '/privacy'],
+      ['Fleet', '/fleet'], ['About', '/about'], ['Contact', '/contact'], ['Privacy Policy', '/privacy'],
       ['Terms and Conditions', '/terms'], ['Journal', '/blog'],
     ],
   },

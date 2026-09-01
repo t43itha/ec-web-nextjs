@@ -162,8 +162,6 @@ const nextConfig: NextConfig = {
       { source: '/testimonials/', destination: '/', permanent: true },
       { source: '/intercity-transfers', destination: '/services', permanent: true },
       { source: '/intercity-transfers/', destination: '/services', permanent: true },
-      { source: '/fleet', destination: '/mercedes-s-class-chauffeur', permanent: true },
-      { source: '/fleet/', destination: '/mercedes-s-class-chauffeur', permanent: true },
       { source: '/landing/airport/farnborough', destination: '/farnborough-chauffeur', permanent: true },
       { source: '/landing/airport/farnborough/', destination: '/farnborough-chauffeur', permanent: true },
       { source: '/business-london', destination: '/landing/business/london', permanent: true },

@@ -162,6 +162,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-8">
             <Link href="/blog" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Journal</Link>
+            <Link href="/fleet" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Fleet</Link>
             <Link href="/prices" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Prices</Link>
             <Link href="/faq" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">FAQ</Link>
             <Link href="/privacy" className="text-white/30 hover:text-white text-xs tracking-wider transition-colors">Privacy</Link>
