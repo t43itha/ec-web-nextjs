@@ -11,11 +11,11 @@ import BreadcrumbSchema from '@/app/components/BreadcrumbSchema';
 import { HOMEPAGE_FAQS } from '@/app/lib/faqs';
 
 export const metadata: Metadata = {
-  title: 'London Chauffeur Concierge | Airport & Executive Transfers',
+  title: 'London Chauffeur Concierge | Airport & Executive Transfers | Eugene Chauffeurs',
   description: 'London chauffeur concierge for airport transfers, business travel, and VIP journeys. Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'London Chauffeur Concierge | Airport & Executive Transfers',
+    title: 'London Chauffeur Concierge | Airport & Executive Transfers | Eugene Chauffeurs',
     description: 'London chauffeur concierge for airport transfers, business travel, and VIP journeys. Mercedes vehicles, flight tracking, meet-and-greet, and direct WhatsApp support.',
     url: '/',
   },
