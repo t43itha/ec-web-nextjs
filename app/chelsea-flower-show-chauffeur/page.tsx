@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: '/chelsea-flower-show-chauffeur' },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: '/chelsea-flower-show-chauffeur',
+  },
 };
 
 export default function ChelseaFlowerShowPage() {

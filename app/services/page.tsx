@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: 'Our Services | Airport Transfers, Corporate & Event Chauffeurs',
   description: 'Explore our luxury chauffeur services: airport transfers, corporate travel, wedding transport, event chauffeurs, and hourly hire across London and the UK.',
   alternates: { canonical: '/services' },
+  openGraph: {
+    title: 'Our Services | Airport Transfers, Corporate & Event Chauffeurs',
+    description: 'Explore our luxury chauffeur services: airport transfers, corporate travel, wedding transport, event chauffeurs, and hourly hire across London and the UK.',
+    url: '/services',
+  },
 };
 
 const serviceFaqs = [
@@ -68,6 +73,19 @@ export default function ServicesPage() {
       <FAQSchema faqs={serviceFaqs} />
       <LDJson json={serviceListSchema} />
       <ClientServices />
+      <section className="border-t border-white/5 bg-black px-6 py-20 text-white sm:px-12">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="mb-10 font-italiana text-4xl">Service questions</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {serviceFaqs.map((faq) => (
+              <article key={faq.question}>
+                <h3 className="mb-3 font-italiana text-xl text-gold-400">{faq.question}</h3>
+                <p className="font-manrope leading-7 text-white/60">{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

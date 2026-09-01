@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Chauffeur Service Knightsbridge | Luxury Car Hire London SW1',
     description: 'Premium chauffeur service in Knightsbridge. S-Class & V-Class hire for Harrods, Harvey Nichols, and Sloane Street. Discreet, professional, and punctual.',
   alternates: { canonical: '/chauffeur-knightsbridge' },
+  openGraph: {
+    title: 'Chauffeur Service Knightsbridge | Luxury Car Hire London SW1',
+    description: 'Premium chauffeur service in Knightsbridge. S-Class & V-Class hire for Harrods, Harvey Nichols, and Sloane Street. Discreet, professional, and punctual.',
+    url: '/chauffeur-knightsbridge',
+  },
 };
 
 export default function KnightsbridgePage() {
@@ -46,7 +51,7 @@ export default function KnightsbridgePage() {
             "@type": "LocalBusiness",
             "name": "Eugene Chauffeurs",
             "url": "https://eugenechauffeurs.com/",
-            "telephone": "+44 7340 801 274",
+            "telephone": "+44 20 8191 1882",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "London",

@@ -6,9 +6,14 @@ import { blogPosts } from '@/app/lib/blog-data';
 import BookingSection from '@/app/components/BookingSection';
 
 export const metadata: Metadata = {
-  title: 'Luxury Chauffeur Blog | Eugene Chauffeurs London',
+  title: 'Luxury Chauffeur Blog London',
   description: 'Insights, guides, and news from the world of luxury chauffeur services in London. Tips for business travel, airport transfers, and VIP events.',
   alternates: { canonical: '/blog' },
+  openGraph: {
+    title: 'Luxury Chauffeur Blog | Eugene Chauffeurs London',
+    description: 'Insights, guides, and news from the world of luxury chauffeur services in London. Tips for business travel, airport transfers, and VIP events.',
+    url: '/blog',
+  },
 };
 
 export default function BlogIndexPage() {

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: '/henley-regatta-chauffeur' },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: '/henley-regatta-chauffeur',
+  },
 };
 
 export default function HenleyPage() {

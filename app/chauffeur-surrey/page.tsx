@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Chauffeur Service Surrey | Luxury Car Hire Virginia Water & Esher',
     description: 'Premium chauffeur service in Surrey. Serving Virginia Water, Wentworth, Esher, and Cobham. Airport transfers to Heathrow & Gatwick.',
   alternates: { canonical: '/chauffeur-surrey' },
+  openGraph: {
+    title: 'Chauffeur Service Surrey | Luxury Car Hire Virginia Water & Esher',
+    description: 'Premium chauffeur service in Surrey. Serving Virginia Water, Wentworth, Esher, and Cobham. Airport transfers to Heathrow & Gatwick.',
+    url: '/chauffeur-surrey',
+  },
 };
 
 export default function SurreyPage() {
@@ -46,7 +51,7 @@ export default function SurreyPage() {
             "@type": "LocalBusiness",
             "name": "Eugene Chauffeurs",
             "url": "https://eugenechauffeurs.com/",
-            "telephone": "+44 7340 801 274",
+            "telephone": "+44 20 8191 1882",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Surrey",

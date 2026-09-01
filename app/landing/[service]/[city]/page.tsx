@@ -98,11 +98,11 @@ export default async function ServiceCityLandingPage({
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <a
-                href="tel:+447340801274"
+                href="tel:+442081911882"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-gold-400 to-gold-600 text-black px-8 py-4 rounded-lg font-montserrat font-bold text-lg hover:from-gold-500 hover:to-gold-600 transition-all duration-300 transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +44 7340 801 274
+                Call Now: +44 20 8191 1882
               </a>
               <Link
                 href="/contact"

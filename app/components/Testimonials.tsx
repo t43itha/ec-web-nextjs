@@ -54,7 +54,7 @@ const reviews = [
   },
 ];
 
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Eugene+Chauffeurs-Covering+London+%26+UK/@51.5287398,-0.2664059,11z";
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Suite%20130%2C%20Lewisham%20Tower%20House%2C%2067-71%20Lewisham%20High%20Street%2C%20London%20SE13%205JX";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

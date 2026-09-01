@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: '/farnborough-airshow-chauffeur' },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: '/farnborough-airshow-chauffeur',
+  },
 };
 
 export default function FarnboroughAirshowPage() {

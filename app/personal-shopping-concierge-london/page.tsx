@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: 'Personal Shopping Chauffeur London | Eugene Chauffeurs',
     description: 'Experience London\'s finest shopping destinations with our personal shopping chauffeur service.',
     images: ['/business.png'],
+    url: '/personal-shopping-concierge-london',
   },
 };
 

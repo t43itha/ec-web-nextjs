@@ -231,7 +231,7 @@ const AboutPage = () => {
                   <p className="text-gold-400 text-xs uppercase tracking-widest">Years</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-italiana text-white mb-2">5.0</p>
+                  <p className="text-4xl font-italiana text-white mb-2">4.9</p>
                   <p className="text-gold-400 text-xs uppercase tracking-widest">Rating</p>
                 </div>
               </div>

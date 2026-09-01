@@ -10,7 +10,7 @@ import { AIRPORT_FARES } from '@/app/lib/pricing';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Luton Chauffeur Service | Eugene Chauffeurs — Meet & Greet, Flight Tracking',
+  title: 'Luton Chauffeur Service — Meet & Greet, Flight Tracking',
   description: 'Executive Luton transfers with meet & greet, 60 mins free waiting (arrivals) / 15 mins (departures).',
 };
 
@@ -64,8 +64,8 @@ export default function LutonPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Luton Airport",

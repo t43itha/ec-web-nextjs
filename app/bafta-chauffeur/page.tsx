@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: '/bafta-chauffeur' },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: '/bafta-chauffeur',
+  },
 };
 
 export default function BaftaPage() {

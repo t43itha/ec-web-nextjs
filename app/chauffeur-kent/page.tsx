@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     title: 'Chauffeur Service Kent | Luxury Car Hire Sevenoaks & Tunbridge Wells',
     description: 'Premium chauffeur service in Kent. Serving Sevenoaks, Tunbridge Wells, and beyond. Luxury airport transfers to Gatwick & Heathrow.',
   alternates: { canonical: '/chauffeur-kent' },
+  openGraph: {
+    title: 'Chauffeur Service Kent | Luxury Car Hire Sevenoaks & Tunbridge Wells',
+    description: 'Premium chauffeur service in Kent. Serving Sevenoaks, Tunbridge Wells, and beyond. Luxury airport transfers to Gatwick & Heathrow.',
+    url: '/chauffeur-kent',
+  },
 };
 
 export default function KentPage() {
@@ -46,7 +51,7 @@ export default function KentPage() {
             "@type": "LocalBusiness",
             "name": "Eugene Chauffeurs",
             "url": "https://eugenechauffeurs.com/",
-            "telephone": "+44 7340 801 274",
+            "telephone": "+44 20 8191 1882",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Kent",

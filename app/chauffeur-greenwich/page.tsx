@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: `/chauffeur-${data.slug}` },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: `/chauffeur-${data.slug}`,
+  },
 };
 
 export default function GreenwichPage() {

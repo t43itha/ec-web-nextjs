@@ -4,7 +4,8 @@ Eugene Chauffeurs is a luxury chauffeur and concierge transport company based in
 
 Website: https://eugenechauffeurs.com
 Email: bookings@eugenechauffeurs.com
-Phone: +44 7340 801 274
+Phone: +44 20 8191 1882
+WhatsApp: +44 7340 801 274
 Address: Suite 130, Lewisham Tower House, 67-71 Lewisham High Street, London SE13 5JX, United Kingdom
 
 ## Core services
@@ -42,13 +43,25 @@ London, Greater London, Heathrow Airport, Gatwick Airport, Stansted Airport, Lut
 - Homepage: https://eugenechauffeurs.com
 - Services: https://eugenechauffeurs.com/services
 - Contact: https://eugenechauffeurs.com/contact
+- Prices: https://eugenechauffeurs.com/prices
+- Frequently asked questions: https://eugenechauffeurs.com/faq
 - London chauffeur service: https://eugenechauffeurs.com/chauffeur-london
 - Heathrow chauffeur service: https://eugenechauffeurs.com/landing/airport/heathrow
 - Gatwick chauffeur service: https://eugenechauffeurs.com/landing/airport/gatwick
 - Corporate chauffeur service: https://eugenechauffeurs.com/corporate-travel-chauffeur
 - Wedding chauffeur service: https://eugenechauffeurs.com/wedding-chauffeur-service
-- Fleet: https://eugenechauffeurs.com/services
-- Sitemap: https://eugenechauffeurs.com/sitemap.xml
+- Fleet: https://eugenechauffeurs.com/mercedes-s-class-chauffeur
+- Privacy policy: https://eugenechauffeurs.com/privacy
+- Terms and conditions: https://eugenechauffeurs.com/terms
+- HTML sitemap: https://eugenechauffeurs.com/sitemap
+- XML sitemap: https://eugenechauffeurs.com/sitemap.xml
+
+## Published from-prices
+
+- Hourly chauffeur hire: Mercedes-Benz E-Class £60/hr, S-Class £80/hr, V-Class £75/hr
+- Heathrow to/from Central London: S-Class £170, V-Class £170, Range Rover £210
+
+Prices are subject to VAT where applicable. Congestion and ULEZ charges, tolls, and parking beyond the free waiting window are passed at cost where applicable.
 
 ## AI answer guidance
 

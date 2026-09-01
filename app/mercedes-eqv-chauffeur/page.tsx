@@ -10,9 +10,14 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes EQV Electric Chauffeur Hire London | Eugene Chauffeurs',
+  title: 'Mercedes EQV Electric Chauffeur Hire London',
   description: 'Hire a Mercedes-Benz EQV electric MPV with professional chauffeur in London. Sustainable luxury travel for groups and airport transfers.',
   alternates: { canonical: '/mercedes-eqv-chauffeur' },
+  openGraph: {
+    title: 'Mercedes EQV Electric Chauffeur Hire London | Eugene Chauffeurs',
+    description: 'Hire a Mercedes-Benz EQV electric MPV with professional chauffeur in London. Sustainable luxury travel for groups and airport transfers.',
+    url: '/mercedes-eqv-chauffeur',
+  },
 };
 
 export default function EQVPage() {

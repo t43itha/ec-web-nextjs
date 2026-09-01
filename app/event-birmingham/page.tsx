@@ -4,9 +4,14 @@ import type { Metadata } from 'next';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Event Chauffeur Birmingham | Eugene Chauffeurs',
+  title: 'Event Chauffeur Birmingham',
   description: 'Luxury event chauffeur service in Birmingham for galas, concerts, and private events.',
   alternates: { canonical: '/event-birmingham' },
+  openGraph: {
+    title: 'Event Chauffeur Birmingham | Eugene Chauffeurs',
+    description: 'Luxury event chauffeur service in Birmingham for galas, concerts, and private events.',
+    url: '/event-birmingham',
+  },
 };
 
 export default function EventBirminghamPage() {

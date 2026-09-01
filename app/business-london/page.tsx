@@ -4,9 +4,14 @@ import type { Metadata } from 'next';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Business Chauffeur London | Eugene Chauffeurs',
+  title: 'Business Chauffeur London',
   description: 'Executive business chauffeur services in London for meetings, roadshows, and corporate hospitality.',
   alternates: { canonical: '/business-london' },
+  openGraph: {
+    title: 'Business Chauffeur London | Eugene Chauffeurs',
+    description: 'Executive business chauffeur services in London for meetings, roadshows, and corporate hospitality.',
+    url: '/business-london',
+  },
 };
 
 export default function BusinessLondonPage() {

@@ -169,39 +169,6 @@ Message: ${formData.message}`;
         />
       </div>
 
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Eugene Chauffeurs',
-            url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://ec-web-nextjs.netlify.app').replace(/\/$/, ''),
-            telephone: '+44 7340 801 274',
-            email: 'bookings@eugenechauffeurs.com',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'London',
-              addressRegion: 'Greater London',
-              addressCountry: 'GB',
-            },
-            areaServed: 'London and Greater London',
-            openingHours: 'Mo-Su 00:00-23:59',
-            hasCredential: {
-              '@type': 'EducationalOccupationalCredential',
-              credentialCategory: 'TfL Operator Licence',
-              name: 'TfL Operator Licence 0108860101',
-              identifier: '0108860101',
-            },
-            sameAs: [
-              'https://www.facebook.com/',
-              'https://www.instagram.com/',
-            ],
-          }),
-        }}
-      />
-
       {/* Hero Section - Minimalist Noir (UNCHANGED) */}
       <section className="relative pt-40 pb-20 bg-black overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[url('/noise.png')] pointer-events-none"></div>
@@ -240,14 +207,14 @@ Message: ${formData.message}`;
               </div>
 
               <div className="space-y-0 border-t border-white/10">
-                <a href="tel:+447340801274" className="group flex items-center justify-between py-6 border-b border-white/10 hover:bg-white/[0.02] transition-colors relative overflow-hidden">
+                <a href="tel:+442081911882" className="group flex items-center justify-between py-6 border-b border-white/10 hover:bg-white/[0.02] transition-colors relative overflow-hidden">
                   {/* Border beam on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <div className="absolute w-16 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent animate-border-beam-top" style={{ top: 0, left: '-64px' }} />
                   </div>
                   <div>
-                    <p className="text-xs text-gold-400 uppercase tracking-widest mb-1">Phone & WhatsApp</p>
-                    <p className="text-xl text-white font-italiana group-hover:text-gold-400 transition-colors">+44 7340 801 274</p>
+                    <p className="text-xs text-gold-400 uppercase tracking-widest mb-1">Booking Line</p>
+                    <p className="text-xl text-white font-italiana group-hover:text-gold-400 transition-colors">+44 20 8191 1882</p>
                   </div>
                   <ArrowUpRight className="w-4 h-4 text-white/30 group-hover:text-gold-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
@@ -264,8 +231,8 @@ Message: ${formData.message}`;
                 </a>
 
                 <div className="py-6 border-b border-white/10">
-                  <p className="text-xs text-gold-400 uppercase tracking-widest mb-1">Service Area</p>
-                  <p className="text-xl text-white font-italiana">London & Greater London</p>
+                  <p className="text-xs text-gold-400 uppercase tracking-widest mb-1">Registered Address</p>
+                  <p className="text-lg text-white font-italiana">Suite 130, Lewisham Tower House<br />67-71 Lewisham High Street<br />London SE13 5JX, United Kingdom</p>
                 </div>
 
                 <div className="py-6 border-b border-white/10">
@@ -344,7 +311,7 @@ Message: ${formData.message}`;
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full bg-transparent border-b border-white/20 py-3 text-white font-manrope focus:outline-none focus:border-gold-400 transition-colors placeholder-white/20"
-                        placeholder="+44 7340 801 274"
+                        placeholder="+44 20 8191 1882"
                       />
                     </div>
                     <div className="space-y-2">
@@ -428,7 +395,7 @@ Message: ${formData.message}`;
           <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-4 font-manrope">Need Quick Answers?</p>
           <h2 className="text-3xl md:text-4xl font-italiana text-white mb-4">Have Questions?</h2>
           <p className="text-white/60 font-manrope font-light mb-8">Check our frequently asked questions for immediate answers.</p>
-          <MagneticButton href="/#faq" className="btn-luxury-outline inline-flex items-center gap-3">
+          <MagneticButton href="/faq" className="btn-luxury-outline inline-flex items-center gap-3">
             <span>View FAQ</span>
             <ArrowUpRight className="w-4 h-4" />
           </MagneticButton>

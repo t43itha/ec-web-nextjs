@@ -5,9 +5,15 @@ import LDJson from '@/app/components/LDJson';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'London to Birmingham Chauffeur | Eugene Chauffeurs',
+  title: 'London to Birmingham Chauffeur',
   description: 'Executive chauffeur from London to Birmingham and return. Professional drivers, premium vehicles, fixed pricing.',
   alternates: { canonical: '/london-birmingham-chauffeur' },
+  openGraph: {
+    title: 'London to Birmingham Chauffeur | Eugene Chauffeurs',
+    description: 'Executive chauffeur from London to Birmingham and return. Professional drivers, premium vehicles, fixed pricing.',
+    url: '/london-birmingham-chauffeur',
+  },
+  robots: { index: false, follow: true },
 };
 
 export default function LondonBirminghamChauffeurPage() {

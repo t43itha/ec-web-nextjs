@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: 'Private Jet Chauffeur Service UK | Eugene Chauffeurs',
     description: 'Seamless ground transportation for private aviation. Aircraft-side pickup at all major UK FBOs.',
     images: ['/airport svc.png'],
+    url: '/private-jet-charter-assistance-uk',
   },
 };
 

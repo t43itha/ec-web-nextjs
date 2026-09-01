@@ -35,6 +35,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    ...['prices', 'faq', 'privacy', 'terms', 'sitemap'].map(route => ({
+      url: `${BASE_URL}/${route}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: route === 'prices' || route === 'faq' ? 0.8 : 0.4,
+    })),
   ];
 
   // Service pages - high priority
@@ -77,7 +83,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'chauffeur-kent',
     'chauffeur-surrey',
     'farnborough-chauffeur',
-    'london-birmingham-chauffeur',
   ].map(route => ({
     url: `${BASE_URL}/${route}`,
     lastModified: now,
@@ -171,24 +176,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/battersea-heliport-chauffeur`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/v-class-chauffeur-hire`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/business-london`,
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/event-birmingham`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 0.7,

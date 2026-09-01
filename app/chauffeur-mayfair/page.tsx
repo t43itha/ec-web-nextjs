@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: 'Chauffeur Service Mayfair | Luxury Car Hire London W1',
   description: 'Premium chauffeur service in Mayfair. S-Class & V-Class hire for hotels, boutiques, and private residences in W1. Discreet, professional, and punctual.',
   alternates: { canonical: '/chauffeur-mayfair' },
+  openGraph: {
+    title: 'Chauffeur Service Mayfair | Luxury Car Hire London W1',
+    description: 'Premium chauffeur service in Mayfair. S-Class & V-Class hire for hotels, boutiques, and private residences in W1. Discreet, professional, and punctual.',
+    url: '/chauffeur-mayfair',
+  },
 };
 
 export default function MayfairPage() {
@@ -45,8 +50,8 @@ export default function MayfairPage() {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Eugene Chauffeurs",
-      "url": "https://ec-web-nextjs.netlify.app/",
-      "telephone": "+44 7340 801 274",
+      "url": "https://eugenechauffeurs.com/",
+      "telephone": "+44 20 8191 1882",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "London",

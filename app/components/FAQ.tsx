@@ -3,36 +3,10 @@
 import React, { useState } from 'react';
 import { Plus, Minus, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { SiteFAQ } from '@/app/lib/faqs';
 
-const FAQ = () => {
+const FAQ = ({ faqs }: { faqs: SiteFAQ[] }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    {
-      question: "What distinguishes your service?",
-      answer: "We are a dedicated luxury concierge service, not a ride-share platform. We offer bespoke comfort, absolute privacy, and vetted professional chauffeurs trained in discretion and punctuality."
-    },
-    {
-      question: "Can you accommodate urgent requests?",
-      answer: "Yes. While advance booking is recommended, our 24/7 dispatch team is equipped to handle last-minute requirements with the same level of precision."
-    },
-    {
-      question: "Do you operate internationally?",
-      answer: "Yes. Through our network of verified global affiliates, we ensure the same gold-standard experience in major cities worldwide, from New York to Dubai."
-    },
-    {
-      question: "What vehicles are in your fleet?",
-      answer: "Our fleet consists exclusively of late-model luxury vehicles, including Mercedes-Benz S-Class, Mercedes-Benz V-Class, Rolls-Royce, and Range Rover options. All are meticulously maintained and equipped with premium amenities."
-    },
-    {
-      question: "How is privacy ensured?",
-      answer: "All chauffeurs sign strict non-disclosure agreements. We maintain rigorous protocols for client confidentiality and secure communication."
-    },
-    {
-      question: "What are the payment terms?",
-      answer: "We accept all major credit cards and corporate accounts. Monthly billing is available for regular clients, with detailed invoicing for expense management."
-    }
-  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

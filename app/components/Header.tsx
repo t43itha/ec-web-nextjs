@@ -22,6 +22,8 @@ const Header = () => {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
+    { name: 'Prices', href: '/prices' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
@@ -71,7 +73,7 @@ const Header = () => {
             {/* Right Actions */}
             <div className="flex items-center space-x-8">
               <Link
-                href="#booking"
+                href="/contact#contact-section"
                 className="hidden sm:block text-xs uppercase tracking-[0.2em] text-gold-400 border border-gold-400/30 px-6 py-3 hover:bg-gold-400 hover:text-black transition-all duration-500"
               >
                 Book Now

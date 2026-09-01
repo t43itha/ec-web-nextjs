@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: data.metaTitle,
   description: data.metaDescription,
   alternates: { canonical: '/royal-ascot-chauffeur' },
+  openGraph: {
+    title: data.metaTitle,
+    description: data.metaDescription,
+    url: '/royal-ascot-chauffeur',
+  },
 };
 
 export default function RoyalAscotPage() {

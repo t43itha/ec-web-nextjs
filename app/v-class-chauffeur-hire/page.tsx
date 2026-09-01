@@ -4,9 +4,14 @@ import type { Metadata } from 'next';
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: 'Mercedes V-Class Chauffeur Hire | Eugene Chauffeurs',
+  title: 'Mercedes V-Class Chauffeur Hire',
   description: 'Hire a Mercedes-Benz V-Class (MPV) with chauffeur for groups and families. Spacious and versatile.',
   alternates: { canonical: '/v-class-chauffeur-hire' },
+  openGraph: {
+    title: 'Mercedes V-Class Chauffeur Hire | Eugene Chauffeurs',
+    description: 'Hire a Mercedes-Benz V-Class (MPV) with chauffeur for groups and families. Spacious and versatile.',
+    url: '/v-class-chauffeur-hire',
+  },
 };
 
 export default function VClassChauffeurHirePage() {

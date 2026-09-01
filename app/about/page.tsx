@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: 'About Eugene Chauffeurs | London Premium Chauffeur Service',
   description: 'Meet the team behind London\'s most trusted luxury chauffeur service. TfL licensed, professionally trained chauffeurs delivering exceptional executive transport.',
   alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About Eugene Chauffeurs | London Premium Chauffeur Service',
+    description: 'Meet the team behind London\'s most trusted luxury chauffeur service. TfL licensed, professionally trained chauffeurs delivering exceptional executive transport.',
+    url: '/about',
+  },
 };
 
 export default function AboutPage() {
