@@ -155,10 +155,10 @@ export default function CorporateTravelChauffeurPage() {
 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    Your executives' time is valuable. Our corporate chauffeur service ensures they arrive refreshed, prepared, and on schedule. With Wi-Fi-enabled vehicles and professional chauffeurs, the journey becomes productive time.
+                    Your executives&apos; time is valuable. Our corporate chauffeur service ensures they arrive refreshed, prepared, and on schedule. With Wi-Fi-enabled vehicles and professional chauffeurs, the journey becomes productive time.
                   </p>
                   <p>
-                    From daily commutes to client meetings, airport transfers to roadshows, we provide consistent, reliable service that reflects your company's standards. One account, one invoice, complete peace of mind.
+                    From daily commutes to client meetings, airport transfers to roadshows, we provide consistent, reliable service that reflects your company&apos;s standards. One account, one invoice, complete peace of mind.
                   </p>
                 </div>
               </div>

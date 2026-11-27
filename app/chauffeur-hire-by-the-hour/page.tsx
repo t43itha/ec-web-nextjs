@@ -69,7 +69,7 @@ export default function ByTheHourPage() {
               <span className="text-white/30">Hour.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              Your chauffeur, your schedule. Hire by the hour for meetings, shopping, day trips, or any journey that doesn't fit a fixed route.
+              Your chauffeur, your schedule. Hire by the hour for meetings, shopping, day trips, or any journey that doesn&apos;t fit a fixed route.
             </p>
             <div className="mt-6">
               <TfLBadge />

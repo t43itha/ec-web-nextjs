@@ -80,7 +80,7 @@ export default function ChelseaPage() {
               <span className="text-white/30">Chauffeur.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The definitive luxury car service for London's most stylish district. Serving Sloane Square, King's Road, and private residences in SW3.
+              The definitive luxury car service for London&apos;s most stylish district. Serving Sloane Square, King&apos;s Road, and private residences in SW3.
             </p>
           </div>
         </div>
@@ -98,10 +98,10 @@ export default function ChelseaPage() {
                 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    Chelsea demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of SW3's residents and visitors.
+                    Chelsea demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of SW3&apos;s residents and visitors.
                   </p>
                   <p>
-                    Whether you require a shopping trip to King's Road, a dinner transfer to Sloane Square, or an airport transfer from your residence, we provide a seamless, stress-free experience.
+                    Whether you require a shopping trip to King&apos;s Road, a dinner transfer to Sloane Square, or an airport transfer from your residence, we provide a seamless, stress-free experience.
                   </p>
                 </div>
               </div>

@@ -96,7 +96,7 @@ export default function HeathrowPage() {
               <span className="text-white/30">Chauffeur.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The ultimate in airport luxury. Seamless connections between London and the world's busiest international hub.
+              The ultimate in airport luxury. Seamless connections between London and the world&apos;s busiest international hub.
             </p>
           </div>
         </div>
