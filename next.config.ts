@@ -183,8 +183,6 @@ const nextConfig: NextConfig = {
       { source: '/luxury-executive-chauffeur-services-in-londonexperience-unmatched-comfort/', destination: '/chauffeur-london', permanent: true },
       { source: '/meet-eugene-chauffeurs-the-gold-standard-in-luxury-transport', destination: '/about', permanent: true },
       { source: '/meet-eugene-chauffeurs-the-gold-standard-in-luxury-transport/', destination: '/about', permanent: true },
-      { source: '/top-10-chauffeur-company-in-london-the-uk-eugene-chauffeurs-leads-the-way', destination: '/', permanent: true },
-      { source: '/top-10-chauffeur-company-in-london-the-uk-eugene-chauffeurs-leads-the-way/', destination: '/', permanent: true },
       { source: '/elevate-your-special-day-wedding-transportation-with-eugene-chauffeurs', destination: '/wedding-chauffeur-service', permanent: true },
       { source: '/elevate-your-special-day-wedding-transportation-with-eugene-chauffeurs/', destination: '/wedding-chauffeur-service', permanent: true },
       { source: '/why-luxury-isnt-just-about-the-destination-the-journey-matters', destination: '/', permanent: true },

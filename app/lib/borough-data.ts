@@ -1,4 +1,5 @@
 import type { RelatedLink } from '@/app/components/RelatedServices';
+import { AIRPORT_FARES, DAY_RATES, DAY_RATE_HOURS, HOURLY_MIN_HOURS, HOURLY_RATES } from '@/app/lib/pricing';
 
 export interface BoroughData {
   name: string;
@@ -7,6 +8,8 @@ export interface BoroughData {
   metaTitle: string;
   metaDescription: string;
   heroTagline: string;
+  /** Optional H1 override as [first line, muted second line]. Defaults to [heroTagline, 'Chauffeur.']. */
+  heroHeading?: [string, string];
   heroDescription: string;
   contentTitle: string;
   contentParagraphs: string[];
@@ -191,14 +194,16 @@ export const boroughs: Record<string, BoroughData> = {
     name: 'Belgravia',
     slug: 'belgravia',
     postcode: 'SW1X',
-    metaTitle: 'Chauffeur Service Belgravia | Luxury Car Hire SW1',
-    metaDescription: 'Premium chauffeur service in Belgravia. Ultra-discreet luxury transport for SW1X. Embassy transfers, private residences, and exclusive venues.',
+    metaTitle: 'Corporate Chauffeur Services Belgravia',
+    metaDescription: 'Chauffeur services in Belgravia for corporate and private clients. S-Class from £80 an hour, Heathrow fares from £170 and monthly invoicing for accounts.',
     heroTagline: 'Belgravia',
-    heroDescription: 'Ultra-discreet luxury transport in London\'s most exclusive residential quarter. Serving embassies, private residences, and Eaton Square.',
-    contentTitle: 'Embassy',
+    heroHeading: ['Chauffeur Services', 'Belgravia.'],
+    heroDescription: 'Corporate and private chauffeur services in Belgravia. We serve embassies, offices and private residences around Eaton Square and Belgrave Square.',
+    contentTitle: 'Corporate Chauffeurs in',
     contentParagraphs: [
-      'Belgravia sets the standard for discreet luxury. Our chauffeurs are accustomed to serving embassy staff, diplomatic convoys, and residents who demand absolute privacy.',
-      'From Eaton Square to Chester Row, Elizabeth Street to Motcomb Street — we know every approach, every parking restriction, and every private entrance.',
+      'Belgravia sets the standard for discreet travel. Our chauffeurs are used to serving embassy staff, family offices and residents who expect privacy.',
+      'From Eaton Square to Chester Row, and Elizabeth Street to Motcomb Street, we know the approaches, the parking restrictions and the private entrances.',
+      'Corporate clients can book by the hour for meetings across the West End and the City, or set up an account with monthly invoicing for regular travel.',
     ],
     landmarks: ['Eaton Square', 'Belgrave Square', 'Elizabeth Street', 'Motcomb Street'],
     corporateHQs: ['Multiple Embassies', 'Grosvenor Estate'],
@@ -207,11 +212,15 @@ export const boroughs: Record<string, BoroughData> = {
     faqs: [
       { q: 'Do you provide NDA chauffeurs?', a: 'All our chauffeurs sign NDAs as standard. Additional security vetting is available on request.' },
       { q: 'Can you coordinate with embassy security?', a: 'Yes. We regularly work with diplomatic security teams and can accommodate specific protocols.' },
+      { q: 'How much do chauffeur services in Belgravia cost?', a: `Hourly hire starts at £${HOURLY_RATES.e_class} an hour in an E-Class and £${HOURLY_RATES.s_class} an hour in an S-Class, with a ${HOURLY_MIN_HOURS}-hour minimum. An S-Class day of ${DAY_RATE_HOURS} hours is £${DAY_RATES.s_class}.` },
+      { q: 'Do you offer corporate chauffeur accounts in Belgravia?', a: 'Yes. Corporate accounts include monthly invoicing and can have several authorised bookers. They suit regular client pickups, meetings and airport runs.' },
+      { q: 'How much is a Belgravia to Heathrow transfer?', a: `Fixed fares start at £${AIRPORT_FARES.heathrow.e_class} in an E-Class and £${AIRPORT_FARES.heathrow.s_class} in an S-Class or V-Class. Airport arrivals include meet and greet and 60 minutes of free waiting.` },
+      { q: 'Can my chauffeur wait between meetings?', a: 'Yes. On hourly bookings your chauffeur stays with the car and moves when you are ready, so you can go from Belgravia to Mayfair, the City or Canary Wharf without rebooking.' },
     ],
     relatedLinks: [
+      { title: 'Corporate Travel', href: '/corporate-travel-chauffeur', description: 'Accounts with monthly invoicing.' },
       { title: 'Chauffeur Knightsbridge', href: '/chauffeur-knightsbridge', description: 'Service in neighbouring Knightsbridge.' },
       { title: 'Chauffeur Mayfair', href: '/chauffeur-mayfair', description: 'Service in neighbouring Mayfair.' },
-      { title: 'Rolls-Royce Ghost', href: '/rolls-royce-chauffeur', description: 'Ultimate prestige transport.' },
       { title: 'Heathrow Transfers', href: '/landing/airport/heathrow', description: 'Fixed-rate transfers from Belgravia.' },
     ],
   },

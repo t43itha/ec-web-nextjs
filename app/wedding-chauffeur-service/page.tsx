@@ -12,16 +12,19 @@ import { HOURLY_RATES, DAY_RATES, HOURLY_MIN_HOURS, DAY_RATE_HOURS } from '@/app
 
 export const revalidate = 86400;
 
+const META_TITLE = 'Luxury Wedding Car & Chauffeur London';
+const META_DESCRIPTION = 'Complimentary champagne and ribbon decorations with our luxury wedding car and chauffeur service in London. Choose a Rolls-Royce Ghost, S-Class or V-Class.';
+
 export const metadata: Metadata = {
-  title: 'Wedding Chauffeur Service London | Luxury Bridal Car Hire',
-  description: 'Luxury wedding chauffeur service in London. Rolls-Royce, Mercedes S-Class & V-Class wedding car hire with professional chauffeurs. Ribbon decorations, champagne service, and pristine vehicles for your special day.',
+  title: META_TITLE,
+  description: META_DESCRIPTION,
   keywords: 'wedding chauffeur, wedding car hire London, bridal car service, luxury wedding transport, Rolls-Royce wedding car, Mercedes wedding car',
   alternates: {
     canonical: '/wedding-chauffeur-service',
   },
   openGraph: {
-    title: 'Wedding Chauffeur Service London | Eugene Chauffeurs',
-    description: 'Make your wedding day unforgettable with our luxury wedding chauffeur service. Pristine vehicles, professional chauffeurs, and bespoke arrangements.',
+    title: `${META_TITLE} | Eugene Chauffeurs`,
+    description: META_DESCRIPTION,
     images: ['/event.png'],
     url: '/wedding-chauffeur-service',
   },

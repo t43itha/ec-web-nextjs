@@ -77,7 +77,10 @@ export default function HTMLSitemapPage() {
     },
     {
       title: 'Journal articles',
-      links: blogPosts.map((post) => [post.title, `/blog/${post.slug}`]),
+      links: [
+        ...blogPosts.map((post) => [post.title, `/blog/${post.slug}`]),
+        ['How to Choose a Top Chauffeur Company in London', '/top-10-chauffeur-company-in-london-the-uk-eugene-chauffeurs-leads-the-way'],
+      ],
     },
   ];
 
