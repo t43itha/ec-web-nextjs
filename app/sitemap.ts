@@ -139,6 +139,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  // Standalone guides (articles with their own route outside /blog)
+  const guidePages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/top-10-chauffeur-company-in-london-the-uk-eugene-chauffeurs-leads-the-way`,
+      lastModified: '2026-11-27',
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+  ];
+
   // Borough pages
   const boroughSlugs = getAllBoroughs();
   const boroughPages: MetadataRoute.Sitemap = boroughSlugs.map(({ borough }) => ({
@@ -195,5 +205,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...stadiumPages,
     ...blogIndex,
     ...blogPostPages,
+    ...guidePages,
   ];
 }

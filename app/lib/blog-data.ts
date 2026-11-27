@@ -31,6 +31,9 @@ export const blogPosts: BlogPost[] = [
 
       <h3>3. The Service</h3>
       <p>Look for companies that offer flight tracking, meet & greet services inside the terminal, and flexible booking terms. Eugene Chauffeurs prides itself on offering 60 minutes of complimentary waiting time at airports, ensuring a stress-free arrival.</p>
+
+      <h3>4. Comparing Companies</h3>
+      <p>Shortlisting companies? Our guide to <a href="/top-10-chauffeur-company-in-london-the-uk-eugene-chauffeurs-leads-the-way">choosing a top chauffeur company in London</a> gives ten checks to run and a simple way to compare quotes.</p>
     `
   },
   {

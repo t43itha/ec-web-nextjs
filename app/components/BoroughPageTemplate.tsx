@@ -71,8 +71,8 @@ export default function BoroughPageTemplate({ data }: { data: BoroughData }) {
           <div className="max-w-4xl">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Local Service</p>
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-italiana text-white leading-[0.9] mb-8">
-              {data.heroTagline} <br />
-              <span className="text-white/30">Chauffeur.</span>
+              {data.heroHeading?.[0] ?? data.heroTagline} <br />
+              <span className="text-white/30">{data.heroHeading?.[1] ?? 'Chauffeur.'}</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
               {data.heroDescription}

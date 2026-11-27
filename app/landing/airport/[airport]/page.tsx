@@ -33,14 +33,14 @@ interface AirportData {
 const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
   heathrow: {
     title: 'Heathrow Chauffeur Service from £170',
-    description: 'Heathrow chauffeur transfers from £170 with meet and greet, flight tracking, and 60 minutes of airport waiting time.',
+    description: 'Heathrow chauffeur transfers from £170 with meet and greet, flight tracking and 60 minutes of free waiting. Meeting points at Terminals 2, 3, 4 and 5.',
     name: 'Heathrow',
     subtitle: 'Chauffeur.',
     heroText: "The ultimate in airport luxury. Seamless connections between London and the world's busiest international hub.",
     introTitle: 'Effortless Arrivals.',
     introText: [
       "Navigating Heathrow requires precision. Our service transforms the chaos of international travel into a moment of calm. From the moment you land, our team is tracking your progress.",
-      "Your chauffeur will be waiting in the arrivals hall, ready to take your bags and guide you to your waiting vehicle. No queues, no stress—just a smooth transition to your final destination."
+      "Your chauffeur will be waiting in the arrivals hall, ready to take your bags and guide you to your waiting vehicle. No queues and no waiting at the taxi rank. Just a smooth transfer to your final destination."
     ],
     meetingPoints: [
       { terminal: 'Terminal 2', location: 'Wait near the WHSmith in the arrivals hall.' },
@@ -51,14 +51,18 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     faqs: [
       { q: "Where will my chauffeur meet me?", a: "In the arrivals hall after customs, holding a nameboard." },
       { q: "What if my flight is delayed?", a: "We track your flight and adjust pickup automatically. 60 mins free waiting included." },
+      { q: "How much is a Heathrow chauffeur transfer?", a: `Fixed fares to or from Central London start at £${AIRPORT_FARES.heathrow.e_class} in an E-Class and £${AIRPORT_FARES.heathrow.s_class} in an S-Class or V-Class.` },
+      { q: "Do you cover all Heathrow terminals?", a: "Yes. We collect from and drop off at Terminals 2, 3, 4 and 5. Tell us your flight number and we confirm the terminal for you." },
+      { q: "Can you take a group with luggage?", a: "Yes. The Mercedes V-Class seats up to 7 with room for luggage, at the same fixed fare as the S-Class." },
+      { q: "How long is the journey to Central London?", a: "Usually 45 to 75 minutes, depending on traffic and where you are going. Your chauffeur picks the route on the day." },
     ],
     pricingKey: 'heathrow',
     areaServed: 'Heathrow Airport, London',
     canonicalPath: '/landing/airport/heathrow'
   },
   gatwick: {
-    title: 'Gatwick Chauffeur Service',
-    description: 'Premium Gatwick transfers with meet & greet, flight tracking, and luxury vehicles.',
+    title: 'Gatwick Chauffeur Service from £250',
+    description: 'Gatwick chauffeur transfers from £250 with meet and greet, flight tracking and 60 minutes of free waiting. Meeting points at North and South Terminals.',
     name: 'Gatwick',
     subtitle: 'Chauffeur.',
     heroText: "Premium Gatwick transfers with meet & greet, flight tracking, and luxury vehicles for a seamless journey.",
@@ -74,6 +78,10 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     faqs: [
       { q: "Where will my chauffeur meet me?", a: "In the arrivals hall after customs, holding a nameboard." },
       { q: "What if my flight is delayed?", a: "We track your flight and adjust pickup automatically. 60 mins free waiting included." },
+      { q: "How much is a Gatwick chauffeur transfer?", a: `Fixed fares to or from Central London start at £${AIRPORT_FARES.gatwick.e_class} in an E-Class and £${AIRPORT_FARES.gatwick.s_class} in an S-Class or V-Class.` },
+      { q: "Do you cover both Gatwick terminals?", a: "Yes. We meet you at the North Terminal or the South Terminal. Tell us your flight number and we confirm the terminal for you." },
+      { q: "Can you take a group with luggage?", a: "Yes. The Mercedes V-Class seats up to 7 with room for luggage, at the same fixed fare as the S-Class." },
+      { q: "How long is the journey to Central London?", a: "Usually 60 to 90 minutes, depending on traffic and where you are going. Your chauffeur picks the route on the day." },
     ],
     pricingKey: 'gatwick',
     areaServed: 'Gatwick Airport, London',
