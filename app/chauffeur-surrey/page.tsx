@@ -79,7 +79,7 @@ export default function SurreyPage() {
                             <span className="text-white/30">Chauffeur.</span>
                         </h1>
                         <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-                            The premier chauffeur service for Surrey's most exclusive addresses. Connecting Virginia Water, Esher, and Cobham with Central London and all major airports.
+                            The premier chauffeur service for Surrey&apos;s most exclusive addresses. Connecting Virginia Water, Esher, and Cobham with Central London and all major airports.
                         </p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ export default function SurreyPage() {
 
                                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                                     <p>
-                                        From the gated estates of St George's Hill to the fairways of Wentworth, our chauffeurs understand the unique requirements of Surrey residents.
+                                        From the gated estates of St George&apos;s Hill to the fairways of Wentworth, our chauffeurs understand the unique requirements of Surrey residents.
                                     </p>
                                     <p>
                                         We specialize in seamless airport transfers to Heathrow and Gatwick, as well as luxury travel into Central London for business, shopping, or evening engagements.

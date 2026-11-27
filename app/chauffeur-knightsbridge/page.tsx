@@ -80,7 +80,7 @@ export default function KnightsbridgePage() {
                             <span className="text-white/30">Chauffeur.</span>
                         </h1>
                         <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-                            The definitive luxury car service for London's most prestigious shopping district. Serving Harrods, The Berkeley, The Mandarin Oriental, and private residences in SW1.
+                            The definitive luxury car service for London&apos;s most prestigious shopping district. Serving Harrods, The Berkeley, The Mandarin Oriental, and private residences in SW1.
                         </p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ export default function KnightsbridgePage() {
 
                                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                                     <p>
-                                        Knightsbridge demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of SW1's residents and visitors.
+                                        Knightsbridge demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of SW1&apos;s residents and visitors.
                                     </p>
                                     <p>
                                         Whether you require a shopping trip to Sloane Street, a dinner transfer to Zuma, or an airport transfer from your hotel, we provide a seamless, stress-free experience.

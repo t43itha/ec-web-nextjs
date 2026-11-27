@@ -182,7 +182,7 @@ Message: ${formData.message}`;
               <span className="text-white/30">Touch.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              We're here to make your journey exceptional. Reach out anytime for bookings or inquiries.
+              We&apos;re here to make your journey exceptional. Reach out anytime for bookings or inquiries.
             </p>
           </div>
         </div>
@@ -351,7 +351,7 @@ Message: ${formData.message}`;
                   {submitStatus === 'success' && (
                     <div className="flex items-center space-x-3 bg-green-500/10 border border-green-500/30 p-4">
                       <CheckCircle className="w-5 h-5 text-green-500" />
-                      <p className="text-green-500 font-manrope text-sm">Message sent successfully. We'll respond shortly.</p>
+                      <p className="text-green-500 font-manrope text-sm">Message sent successfully. We&apos;ll respond shortly.</p>
                     </div>
                   )}
 

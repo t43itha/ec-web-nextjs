@@ -97,7 +97,7 @@ export default function KentPage() {
 
                                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                                     <p>
-                                        Our Kent chauffeur service offers a seamless link between the county's picturesque towns and the capital. Ideal for daily commuters, business executives, and leisure travelers.
+                                        Our Kent chauffeur service offers a seamless link between the county&apos;s picturesque towns and the capital. Ideal for daily commuters, business executives, and leisure travelers.
                                     </p>
                                     <p>
                                         We provide reliable transfers to Gatwick and Heathrow, ensuring a stress-free start or end to your journey.

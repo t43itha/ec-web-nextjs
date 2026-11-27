@@ -5,9 +5,9 @@ declare global {
     gtag: (
       command: 'config' | 'event' | 'js',
       targetId: string | Date,
-      parameters?: Record<string, any>
+      parameters?: Record<string, unknown>
     ) => void;
-    dataLayer: any[];
+    dataLayer: unknown[];
   }
 }
 
@@ -36,7 +36,7 @@ export const trackWhatsApp = (source: string, phoneNumber: string) => {
 };
 
 // Generic event tracking function
-export const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+export const trackEvent = (eventName: string, parameters: Record<string, unknown> = {}) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, parameters);
   }

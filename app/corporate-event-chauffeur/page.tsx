@@ -154,10 +154,10 @@ export default function CorporateEventChauffeurPage() {
 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    Corporate events reflect your organisation's standards. The transportation you provide for guests, speakers, and VIPs should match. Our event chauffeur service delivers the precision, professionalism, and polish your events deserve.
+                    Corporate events reflect your organisation&apos;s standards. The transportation you provide for guests, speakers, and VIPs should match. Our event chauffeur service delivers the precision, professionalism, and polish your events deserve.
                   </p>
                   <p>
-                    Whether you're hosting 10 board members or 200 conference delegates, we scale our service to your needs. A dedicated coordinator handles all logistics, leaving you free to focus on the event itself.
+                    Whether you&apos;re hosting 10 board members or 200 conference delegates, we scale our service to your needs. A dedicated coordinator handles all logistics, leaving you free to focus on the event itself.
                   </p>
                 </div>
               </div>

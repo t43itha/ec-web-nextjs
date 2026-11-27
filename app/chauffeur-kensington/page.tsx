@@ -80,7 +80,7 @@ export default function KensingtonPage() {
               <span className="text-white/30">Chauffeur.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              The definitive luxury car service for London's royal borough. Serving Kensington Palace Gardens, Holland Park, and private residences in W8.
+              The definitive luxury car service for London&apos;s royal borough. Serving Kensington Palace Gardens, Holland Park, and private residences in W8.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function KensingtonPage() {
                 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    Kensington demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of W8's residents and visitors.
+                    Kensington demands a level of service that goes beyond the ordinary. Our chauffeurs are well-versed in the etiquette and expectations of W8&apos;s residents and visitors.
                   </p>
                   <p>
                     Whether you require a shopping trip to Kensington High Street, a dinner transfer to a local restaurant, or an airport transfer from your residence, we provide a seamless, stress-free experience.
