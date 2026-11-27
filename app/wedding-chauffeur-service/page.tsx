@@ -154,7 +154,7 @@ export default function WeddingChauffeurServicePage() {
 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    From the moment you step into our pristine vehicle, you'll feel the magic of your wedding day begin. Our experienced wedding chauffeurs understand the importance of every moment.
+                    From the moment you step into our pristine vehicle, you&apos;ll feel the magic of your wedding day begin. Our experienced wedding chauffeurs understand the importance of every moment.
                   </p>
                   <p>
                     Whether you choose the timeless elegance of a Rolls-Royce Ghost, the sophisticated comfort of a Mercedes S-Class, or the spacious luxury of a V-Class for your bridal party, we ensure an impeccable experience.
@@ -197,7 +197,7 @@ export default function WeddingChauffeurServicePage() {
           <div className="text-center mb-16">
             <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">The Details</p>
             <h2 className="text-4xl md:text-5xl font-italiana text-white">
-              What's <span className="text-white/30">Included.</span>
+              What&apos;s <span className="text-white/30">Included.</span>
             </h2>
           </div>
 

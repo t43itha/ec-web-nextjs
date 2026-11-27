@@ -91,7 +91,7 @@ export default function BatterseaHeliportPage() {
               <span className="text-white/30">Heliport.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              Seamless ground transport for London's premier heliport. From touchdown to your final destination in minutes.
+              Seamless ground transport for London&apos;s premier heliport. From touchdown to your final destination in minutes.
             </p>
             <div className="mt-6">
               <TfLBadge />
@@ -112,10 +112,10 @@ export default function BatterseaHeliportPage() {
 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    Battersea Heliport is London's only licensed heliport, connecting you to the Home Counties, the coast, and regional airports. Our ground transfer service matches the speed and efficiency of your helicopter journey.
+                    Battersea Heliport is London&apos;s only licensed heliport, connecting you to the Home Counties, the coast, and regional airports. Our ground transfer service matches the speed and efficiency of your helicopter journey.
                   </p>
                   <p>
-                    Your chauffeur will be waiting at the heliport entrance as you land. From there, it's a direct, comfortable transfer to your hotel, office, or residence — typically within 15-20 minutes to Central London.
+                    Your chauffeur will be waiting at the heliport entrance as you land. From there, it&apos;s a direct, comfortable transfer to your hotel, office, or residence — typically within 15-20 minutes to Central London.
                   </p>
                 </div>
               </div>

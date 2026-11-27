@@ -77,7 +77,7 @@ export default function DefinitiveGuidePage() {
                 <div className="relative z-10 max-w-[1000px] mx-auto px-6 sm:px-12 lg:px-20 text-center">
                     <p className="text-gold-400 text-xs uppercase tracking-[0.3em] mb-6">Industry Insights</p>
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-italiana text-white leading-[1.1] mb-8">
-                        The Definitive Guide to London's Top Chauffeur Services.
+                        The Definitive Guide to London&apos;s Top Chauffeur Services.
                     </h1>
                     <p className="text-xl text-white/60 font-manrope font-light max-w-2xl mx-auto leading-relaxed">
                         Navigating the luxury transport market can be complex. Here is everything you need to know to make an informed choice in 2025.
@@ -91,7 +91,7 @@ export default function DefinitiveGuidePage() {
 
                     <div>
                         <p className="mb-6">
-                            London is home to hundreds of private car hire companies, ranging from app-based ride-hailing services to ultra-exclusive private fleets. For the discerning traveler, distinguishing between a "taxi" and a true "chauffeur service" is essential.
+                            London is home to hundreds of private car hire companies, ranging from app-based ride-hailing services to ultra-exclusive private fleets. For the discerning traveler, distinguishing between a &quot;taxi&quot; and a true &quot;chauffeur service&quot; is essential.
                         </p>
                         <p>
                             Whether you are booking for a corporate roadshow, a wedding, or an airport transfer, the quality of your journey depends on four key pillars.
@@ -112,7 +112,7 @@ export default function DefinitiveGuidePage() {
                     </div>
 
                     <div>
-                        <h2 className="text-3xl font-italiana text-white mb-6">2. Why "App-Based" Isn't Enough</h2>
+                        <h2 className="text-3xl font-italiana text-white mb-6">2. Why &quot;App-Based&quot; Isn&apos;t Enough</h2>
                         <p className="mb-6">
                             While convenient for short hops, app-based services often lack the consistency required for high-stakes travel. A professional chauffeur service offers pre-booked reliability, ensuring your vehicle is prepared to immaculate standards and your driver is fully briefed on your itinerary.
                         </p>
@@ -152,7 +152,7 @@ export default function DefinitiveGuidePage() {
                     <div className="bg-gold-400/10 border border-gold-400/20 p-8 text-center">
                         <h3 className="text-2xl font-italiana text-white mb-4">Experience the Difference</h3>
                         <p className="mb-8 text-white/70">
-                            Eugene Chauffeurs embodies these standards, offering a fleet of the latest vehicles driven by London's finest professionals.
+                            Eugene Chauffeurs embodies these standards, offering a fleet of the latest vehicles driven by London&apos;s finest professionals.
                         </p>
                         <Link href="/" className="inline-block bg-gold-400 text-black px-8 py-3 font-manrope font-semibold uppercase tracking-wider hover:bg-white transition-colors">
                             Book Your Journey

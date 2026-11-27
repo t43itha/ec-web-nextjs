@@ -136,7 +136,7 @@ export default function PersonalShoppingConciergeLondonPage() {
               <span className="text-white/30">Shopping.</span>
             </h1>
             <p className="text-xl text-white/60 font-manrope font-light max-w-2xl leading-relaxed border-l border-white/10 pl-8">
-              Experience London's finest shopping destinations without the hassle of parking or carrying bags. Your chauffeur waits while you shop.
+              Experience London&apos;s finest shopping destinations without the hassle of parking or carrying bags. Your chauffeur waits while you shop.
             </p>
           </div>
         </div>
@@ -154,10 +154,10 @@ export default function PersonalShoppingConciergeLondonPage() {
 
                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                   <p>
-                    London offers some of the world's finest shopping, from the iconic halls of Harrods to the exclusive boutiques of Mount Street. Our personal shopping chauffeur service ensures you experience it all in comfort and style.
+                    London offers some of the world&apos;s finest shopping, from the iconic halls of Harrods to the exclusive boutiques of Mount Street. Our personal shopping chauffeur service ensures you experience it all in comfort and style.
                   </p>
                   <p>
-                    No circling for parking, no struggling with bags, no rushing to beat a meter. Simply step out at each destination and step back into your waiting vehicle when you're ready.
+                    No circling for parking, no struggling with bags, no rushing to beat a meter. Simply step out at each destination and step back into your waiting vehicle when you&apos;re ready.
                   </p>
                 </div>
               </div>

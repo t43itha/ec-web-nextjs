@@ -97,7 +97,7 @@ export default function EssexPage() {
 
                                 <div className="space-y-6 text-white/70 font-manrope font-light text-lg leading-relaxed">
                                     <p>
-                                        Whether it's a special occasion, a business trip to the City, or an airport transfer, our Essex chauffeur service delivers unmatched quality.
+                                        Whether it&apos;s a special occasion, a business trip to the City, or an airport transfer, our Essex chauffeur service delivers unmatched quality.
                                     </p>
                                     <p>
                                         We provide luxury transport for weddings in Brentwood, corporate events in Chelmsford, and seamless connections to Stansted and London City Airport.

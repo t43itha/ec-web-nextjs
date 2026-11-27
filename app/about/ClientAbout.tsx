@@ -213,10 +213,10 @@ const AboutPage = () => {
                     Eugene Chauffeurs was born from a simple belief: luxury transportation should be more than just getting from point A to point B. It should be an experience that adds value to your journey, reduces stress, and allows you to focus on what matters most.
                   </p>
                   <p>
-                    Founded in 2014, we started with a single vehicle and an unwavering commitment to excellence. Today, we're proud to be one of London's most trusted luxury chauffeur services, serving discerning clients who expect nothing but the best.
+                    Founded in 2014, we started with a single vehicle and an unwavering commitment to excellence. Today, we&apos;re proud to be one of London&apos;s most trusted luxury chauffeur services, serving discerning clients who expect nothing but the best.
                   </p>
                   <p>
-                    Our success isn't measured just in the thousands of journeys we've completed, but in the relationships we've built, the trust we've earned, and the peace of mind we provide to every client who steps into our vehicles.
+                    Our success isn&apos;t measured just in the thousands of journeys we&apos;ve completed, but in the relationships we&apos;ve built, the trust we&apos;ve earned, and the peace of mind we provide to every client who steps into our vehicles.
                   </p>
                 </div>
               </div>
@@ -468,7 +468,7 @@ const AboutPage = () => {
             Begin Your <span className="text-white/30">Journey</span>
           </h2>
           <p className="text-white/50 font-manrope font-light text-lg mb-12 max-w-2xl mx-auto">
-            Discover why London's elite trust Eugene Chauffeurs for their most important journeys.
+            Discover why London&apos;s elite trust Eugene Chauffeurs for their most important journeys.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <MagneticButton href="/contact" className="btn-luxury">
