@@ -2,6 +2,8 @@ export interface BlogPost {
   slug: string;
   title: string;
   description: string;
+  metaTitle?: string; // optional <title> override (brand suffix added by the root template)
+  metaDescription?: string; // optional meta description override
   date: string;
   content: string; // HTML content
   image: string;
@@ -12,6 +14,8 @@ export const blogPosts: BlogPost[] = [
     slug: "definitive-guide-london-chauffeur-services",
     title: "The Definitive Guide to London's Top Chauffeur Services",
     description: "Discover what separates a standard car service from a true luxury chauffeur experience in London. From fleet quality to chauffeur etiquette.",
+    metaTitle: "Best London Chauffeur Service: A Guide",
+    metaDescription: "How to find the best chauffeur service in London: what to look for in the cars, the chauffeurs and the service, and how to compare companies.",
     date: "2025-11-20",
     image: "/business.jpg",
     content: `
@@ -64,6 +68,8 @@ export const blogPosts: BlogPost[] = [
     slug: "what-do-professional-chauffeurs-wear",
     title: "What Do Professional Chauffeurs Wear?",
     description: "The dress code of a professional chauffeur is a hallmark of the trade. Learn about the standards of attire in the luxury transport industry.",
+    metaTitle: "Chauffeur Dress Code and Uniform Guide",
+    metaDescription: "What do chauffeurs wear? The London chauffeur dress code: dark suit, white shirt, tie and polished black shoes, and why the uniform matters.",
     date: "2025-11-15",
     image: "/event.jpg",
     content: `

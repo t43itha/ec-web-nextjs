@@ -22,7 +22,7 @@ interface AirportData {
   subtitle: string;
   heroText: string;
   introTitle: string;
-  introText: string[];
+  introText: React.ReactNode[];
   meetingPoints: { terminal: string; location: string }[];
   faqs: { q: string; a: string }[];
   pricingKey: keyof typeof AIRPORT_FARES;
@@ -40,7 +40,10 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     introTitle: 'Effortless Arrivals.',
     introText: [
       "Navigating Heathrow requires precision. Our service transforms the chaos of international travel into a moment of calm. From the moment you land, our team is tracking your progress.",
-      "Your chauffeur will be waiting in the arrivals hall, ready to take your bags and guide you to your waiting vehicle. No queues and no waiting at the taxi rank. Just a smooth transfer to your final destination."
+      <>
+        Your chauffeur will be waiting in the arrivals hall, ready to take your bags and guide you to your waiting vehicle. No queues and no waiting at the taxi rank. Just a smooth transfer to your final destination. Landing at Gatwick instead? See our{' '}
+        <Link href="/landing/airport/gatwick" className="text-gold-400 hover:underline">Gatwick airport transfers</Link>.
+      </>
     ],
     meetingPoints: [
       { terminal: 'Terminal 2', location: 'Wait near the WHSmith in the arrivals hall.' },
@@ -61,10 +64,10 @@ const AIRPORT_CONTENT: Record<AirportKey, AirportData> = {
     canonicalPath: '/landing/airport/heathrow'
   },
   gatwick: {
-    title: 'Gatwick Chauffeur Service from £250',
-    description: 'Gatwick chauffeur transfers from £250 with meet and greet, flight tracking and 60 minutes of free waiting. Meeting points at North and South Terminals.',
+    title: 'Gatwick Airport Chauffeur Service from £250',
+    description: 'Gatwick airport transfers by chauffeur from £250, with meet and greet at the North and South Terminals, flight tracking and 60 minutes of free waiting.',
     name: 'Gatwick',
-    subtitle: 'Chauffeur.',
+    subtitle: 'Chauffeur Service.',
     heroText: "Premium Gatwick transfers with meet & greet, flight tracking, and luxury vehicles for a seamless journey.",
     introTitle: 'Effortless Arrivals.',
     introText: [

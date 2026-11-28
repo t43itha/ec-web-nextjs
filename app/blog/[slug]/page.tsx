@@ -18,13 +18,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const metaTitle = post.metaTitle ?? `${post.title} | Chauffeur Journal`;
+  const metaDescription = post.metaDescription ?? post.description;
+
   return {
-    title: `${post.title} | Chauffeur Journal`,
-    description: post.description,
+    title: metaTitle,
+    description: metaDescription,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: `${post.title} | Eugene Chauffeurs`,
-      description: post.description,
+      title: `${post.metaTitle ?? post.title} | Eugene Chauffeurs`,
+      description: metaDescription,
       url: `/blog/${post.slug}`,
       images: [post.image],
     },
