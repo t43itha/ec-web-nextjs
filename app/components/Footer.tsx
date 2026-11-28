@@ -86,7 +86,7 @@ const Footer = () => {
               <ul className="space-y-3 mb-8">
                 {[
                   { name: 'Heathrow', href: '/heathrow-chauffeur' },
-                  { name: 'Gatwick', href: '/gatwick-chauffeur' },
+                  { name: 'Gatwick', href: '/landing/airport/gatwick' },
                   { name: 'Luton', href: '/luton-chauffeur' },
                   { name: 'Stansted', href: '/stansted-chauffeur' },
                   { name: 'London City', href: '/london-city-airport-chauffeur' },

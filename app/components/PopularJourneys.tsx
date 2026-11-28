@@ -8,9 +8,9 @@ const popularJourneys = [
     href: '/heathrow-chauffeur',
   },
   {
-    title: 'Gatwick transfers',
+    title: 'Gatwick airport transfers',
     description: 'Premium Gatwick arrivals and departures for private and business travel.',
-    href: '/gatwick-chauffeur',
+    href: '/landing/airport/gatwick',
   },
   {
     title: 'Mayfair executive travel',

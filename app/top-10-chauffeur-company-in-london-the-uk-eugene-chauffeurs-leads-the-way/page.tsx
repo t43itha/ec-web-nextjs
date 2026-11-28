@@ -276,7 +276,7 @@ export default function TopChauffeurCompanyGuidePage() {
               We built our service around the checks above. Our prices are on the website. Our <Link href="/fleet" className="text-gold-400 hover:underline">fleet</Link> is listed by model. Our waiting policy is the same on every booking.
             </p>
             <p className="mb-6">
-              For airport travel we track your flight and meet you in arrivals at <Link href="/landing/airport/heathrow" className="text-gold-400 hover:underline">Heathrow</Link>, <Link href="/landing/airport/gatwick" className="text-gold-400 hover:underline">Gatwick</Link> and the other London airports. For business we offer <Link href="/corporate-travel-chauffeur" className="text-gold-400 hover:underline">corporate accounts</Link> with monthly invoicing.
+              For airport travel we track your flight and meet you in arrivals at <Link href="/landing/airport/heathrow" className="text-gold-400 hover:underline">Heathrow</Link> and the other London airports. Our <Link href="/landing/airport/gatwick" className="text-gold-400 hover:underline">Gatwick chauffeur service</Link> covers both the North and South Terminals. For business we offer <Link href="/corporate-travel-chauffeur" className="text-gold-400 hover:underline">corporate accounts</Link> with monthly invoicing.
             </p>
             <p className="mb-6">
               For one to three passengers, choose the <Link href="/mercedes-s-class-chauffeur" className="text-gold-400 hover:underline">Mercedes S-Class</Link> at £{HOURLY_RATES.s_class} an hour or £{DAY_RATES.s_class} a day, or the <Link href="/mercedes-v-class-chauffeur" className="text-gold-400 hover:underline">V-Class</Link> for groups of up to 7.
